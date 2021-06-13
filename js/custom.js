@@ -10,15 +10,15 @@ $(document).ready(function() {
 
   $.fn.fullpage.setAllowScrolling(false);
 
-  
+
   // - - - - - - - - - - - - -  MAPBOX BEGiNS - - - - - - - - - - - - - - - - -
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiY2lhcmFuc2xvdyIsImEiOiJja3A0b2RvNXQwZHZsMm5vdzJhMzlneHliIn0.GePUzyfjdyGc0pnYNPerqA';
   var map = new mapboxgl.Map({
-    container: 'map', // container ID
-    style: 'mapbox://styles/mapbox/streets-v11', // style URL
-    center: [168.66151801775683, -45.0303343381692], // starting position [lng, lat]
-    zoom: 6, // starting zoom
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [168.66151801775683, -45.0303343381692],
+    zoom: 6,
   });
 
   var geojson = {
@@ -30,7 +30,7 @@ $(document).ready(function() {
           coordinates: [168.9492151232965, -44.8731916471041]
         },
         properties: {
-          title: '<a href="https://www.cardrona.com/">Cardrona Website</a><br><img src="cardrona.jpg" alt="Cardrona Ski Resort" width="100">',
+          title: '<a href="https://www.cardrona.com/">Cardrona Website</a><br><img src="img/cardrona.jpg" alt="Cardrona Ski Resort" width="100">',
           description: "<strong>Cardrona Alpine Resort</strong><p>Cardrona Alpine Resort is an alpine resort in New Zealand's South Island. The ski field ranges from 1,260m to 1,860m. The distribution of slopes is 25% beginner, 25% intermediate, 30% advanced and 20% expert.</p>"
         }
       },
@@ -41,8 +41,8 @@ $(document).ready(function() {
           coordinates: [168.81431482752348, -45.053887576329835]
         },
         properties: {
-          title: '<a href="https://www.theremarkables.co.nz/">The Remarkables</a><br><img src="remark.jpg" alt="Cardrona Ski Resort" width="100">',
-          description: "<strong>Cardrona Alpine Resort</strong><p>A true alpine mountain experience with terrain and facilities to suit everyone from first timers to seasoned, expert skiers and snowboarders! They offer ski and snowboard lessons, equipment rental, scenic chairlift rides, snow sledding and a massive range of food and beverage options.</p>"
+          title: '<a href="https://www.theremarkables.co.nz/">The Remarkables</a><br><img src="img/remark.jpg" alt="The Remarkables" width="100">',
+          description: "<strong>The Remarkables</strong><p>A true alpine mountain experience with terrain and facilities to suit everyone from first timers to seasoned, expert skiers and snowboarders! They offer ski and snowboard lessons, equipment rental, scenic chairlift rides, snow sledding and a massive range of food and beverage options.</p>"
         }
       },
       {
@@ -52,7 +52,7 @@ $(document).ready(function() {
           coordinates: [168.89604382751347, -44.63336775246554]
         },
         properties: {
-          title: '<a href="https://www.treblecone.com/">Treble Cone</a><br><img src="treble.jpg" alt="Cardrona Ski Resort" width="100">',
+          title: '<a href="https://www.treblecone.com/">Treble Cone</a><br><img src="img/treble.jpg" alt="Treble Cone" width="100">',
           description: "<strong>Cardrona Alpine Resort</strong><p>Treble Cone is the closest ski area to Wanaka, New Zealand. Treble Cone is the largest ski area in the South Island, boasting the longest vertical rise in the Queenstown Southern Lakes District.</p>"
         }
       }
@@ -106,7 +106,22 @@ $(document).ready(function() {
     });
   });
 
-  // ------------------------------ MAP BOX ENDS -----------------------------
+  // ------------------------------ MAP BOX ENDS -----------------
+
+  // PARSLEY VALIDATION CONTROLS BEGIN:
+
+  var form = $('#parent').parsley();
+
+  // Parent div find the buttons and setup click event
+  $('#parent').find('#submitBtn').click(function () {
+    // Validate all internal parsley elements
+      form.validate();
+  });
+
+  // A method for final form success
+  form.subscribe('parsley:form:success', function (e) {
+     alert('Forms done!');
+  });
 
 });
 // document ENDS

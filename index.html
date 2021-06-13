@@ -11,9 +11,6 @@
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/custom.min.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/custom.min.css">
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
 </head>
 
@@ -74,15 +71,15 @@
         <div class="slide" data-anchor="slide2">
           <div id="formWrapper">
             <!-- BOOTSRAPS FORM BEGINS -->
-            <div class="form-cont">
+            <div class="form-cont" id="parent" data-parsley-validate>
               <div id="searchForm">
                 <div class="form-group">
                   <label for="nameInput">Your Name:</label>
-                  <input type="name" class="form-control" id="nameInput" placeholder="Name" required>
+                  <input type="name" class="form-control" id="nameInput" placeholder="Name" data-parsley-required="true">
                 </div>
                 <div class="form-group">
                   <label for="holidaySelect">Select Your Skifield:</label>
-                  <select class="form-control" id="skifieldInput" required>
+                  <select class="form-control" id="skifieldInput" data-parsley-required="true">
                     <option selected>Choose...</option>
                     <option>Cardrona</option>
                     <option>Treble Cone</option>
@@ -91,11 +88,11 @@
                 </div>
                 <div class="form-group">
                   <label for="nameInput">Number of Nights</label>
-                  <input type="name" class="form-control" id="nameInput" placeholder="Name" required>
+                  <input type="name" class="form-control" id="nameInput" placeholder="Name" data-parsley-required="true">
                 </div>
                 <div class="form-group">
                   <label for="nameInput">Number of Guests</label>
-                  <input type="name" class="form-control" id="nameInput" placeholder="Name" required>
+                  <input type="name" class="form-control" id="nameInput" placeholder="Name" data-parsley-required="true">
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="familyCheck">
@@ -103,10 +100,8 @@
                     Family Friendly
                   </label>
                 </div>
-                <a href="#section1/slide5"><button id="submitBtn">See available rooms!</button></a>
+                <button id="submitBtn">See available rooms!</button>
               </div>
-
-
             </div>
             <!-- BOOTSRAPS FORM ENDS -->
           </div>
@@ -176,7 +171,7 @@
               <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House">
               <div class="card-body">
                 <h5 class="card-title">Cardrona House</h5>
-                <p class="card-text">$240 per night<br>Min 2 Nigths<br>Max 15nights<br><i class="fa fa-wifi" aria-hidden="true"></i></p>
+                <p class="card-text">$240 per night<br>Min 2 Nigths<br>Max 15nights<br></p>
                 <a href="#" class="btn btn-primary card-btn">View Site</a>
               </div>
             </div>
@@ -184,7 +179,7 @@
               <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House">
               <div class="card-body">
                 <h5 class="card-title">Cardrona House</h5>
-                <p class="card-text">$240 per night<br>Min 2 Nigths<br>Max 15nights<br><i class="fa fa-wifi" aria-hidden="true"></i></p>
+                <p class="card-text">$240 per night<br>Min 2 Nigths<br>Max 15nights<br></p>
                 <a href="#" class="btn btn-primary card-btn">View Site</a>
               </div>
             </div>
@@ -192,7 +187,7 @@
               <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House">
               <div class="card-body">
                 <h5 class="card-title">Cardrona House</h5>
-                <p class="card-text">$240 per night<br>Min 2 Nigths<br>Max 15nights<br><i class="fa fa-wifi" aria-hidden="true"></i></p>
+                <p class="card-text">$240 per night<br>Min 2 Nigths<br>Max 15nights<br></p>
                 <a href="#" class="btn btn-primary card-btn">View Site</a>
               </div>
             </div>
@@ -200,7 +195,7 @@
               <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House">
               <div class="card-body">
                 <h5 class="card-title">Cardrona House</h5>
-                <p class="card-text">$240 per night<br>Min 2 Nigths<br>Max 15nights<br><i class="fa fa-wifi" aria-hidden="true"></i></p>
+                <p class="card-text">$240 per night<br>Min 2 Nigths<br>Max 15nights<br></p>
                 <a href="#" class="btn btn-primary card-btn">View Site</a>
               </div>
             </div>
@@ -228,7 +223,7 @@
   <script src="js/jquery.fullpage.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.js"></script>
-  <script src="js/jquery.textillate.js"></script>
+  <script src="js/parsley.js"></script>
 
   <!-- - - - - - - - - - - - - - - CUSTOM JS TAG - - - - - - - - - - - - - - -->
   <script src="js/custom.js"></script>
