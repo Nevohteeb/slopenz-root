@@ -1,0 +1,328 @@
+
+// FONT IMPORTS:
+@font-face {
+  font-family: ArchivoBlack;
+  src: url('../fonts/archivoBlack.otf');
+}
+
+@font-face {
+  font-family: InterstateBold;
+  src: url('../fonts/interstatebold.otf');
+}
+
+@font-face {
+  font-family: InterstateReg;
+  src: url('../fonts/interstatereg.otf');
+}
+
+// VARIABLES - - - - - - -
+
+$white: #EDEFE9;
+$darkblue: #454A59;
+$gold: #F2DCC9;
+// ----------- GLOBAL CSS BEGINS ---------------------
+
+html {
+  font-size: 100%;
+}
+
+
+ #fullpage {
+   background-image: url('../img/background.jpg');
+   background-attachment: fixed;
+   background-size: cover;
+ }
+
+.section,
+.slide {
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  justify-content: center !important;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+// /* TURN OFF FULLPAGE NAV ARROWS */
+.fp-controlArrow {
+  display: none;
+}
+
+// /* ----------- GLOBAL CSS ENDS --------------------- */
+
+// /* ----------- HEADER SET BEGINS ----------------- */
+h1 {
+  font-family: ArchivoBlack;
+  font-size: 4em;
+}
+
+h2 {
+  font-family: ArchivoBlack;
+  font-size: 3em;
+}
+
+p {
+  font-family: InterstateReg;
+  font-size: 1.25em;
+}
+// /* ----------- HEADER SET ENDS ----------------- */
+
+// /* ----------- NAV BAR CSS BEGINS ------------------- */
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  top: 0px;
+  position: absolute;
+  z-index: 999;
+  padding-top: 2em;
+}
+
+#navbar a {
+  font-family: InterstateBold;
+  color: #EDEFE9;
+  font-size: 1.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+#navbar a:link {
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  text-decoration: underline;
+  color: #F2DCC9;
+}
+
+
+// /* NAVBAR CSS ENDS */
+
+// -------------- SECTIONAL STYLING ----------------------
+
+#homeLeft,
+#qualLeft,
+#skifieldLeft {
+  display: inline-block;
+  width: 50vw;
+  height: 100vh;
+}
+
+#homeRight,
+#qualRight,
+#skifieldRight {
+  display: inline-block;
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+}
+
+#skifieldRight {
+  padding-right: 2em;
+  color: $white;
+}
+
+#homeLeftTop,
+#homeLeftBottom {
+  display: flex;
+  justify-content: center;
+  width: 100;
+}
+
+#homeLeftTop{
+  height: 66%;
+}
+
+#homeTextWrapper {
+  width: 100%;
+  height: 100%;
+  margin-left: 0em;
+}
+
+#homeBodyText,
+#qualBodyText {
+  max-width: 100%;
+  color: #EDEFE9;
+	padding-right: 2em;
+}
+
+#skiLogosCont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.output {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10em;
+}
+
+// -------------- TEXT STYLING -----------------------------
+
+#taglineHeader,
+#skifieldHeader {
+  color: #F2DCC9;
+  margin-top: 3em;
+}
+
+#taglineSubtitle {
+  color: #EDEFE9;
+}
+
+// ------------- IMAGE STYLING ----------------
+
+#slopeLogo {
+  position: absolute;
+  max-height: 6em;
+  padding-left: 2em;
+  left: 1em;
+}
+
+#slopeLarge {
+  max-height: 25em;
+  margin-top: 10em;
+}
+
+#tnzLogoLrg {
+  max-height: 11em;
+}
+
+#qualLogo {
+	max-height: 25em;
+  margin-top: 15em;
+}
+
+#cardronaLogo,
+#trebleLogo,
+#remarkLogo {
+  display: inline-block;
+  max-height: 3em;
+}
+
+
+
+// ---------- FORM STYLING --------------
+
+#formWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+	margin-left: 30%;
+	background-color: #fff;
+	width: 40%;
+	padding-top: 4em;
+	padding-bottom: 4em;
+	border-radius: 30px;
+}
+
+#searchForm {
+  font-family: InterstateReg;
+  font-size: 1.25em;
+  color: #454A59;
+}
+
+.form-check {
+  font-family: InterstateReg;
+  margin-top: 1em;
+  color: #454A59;
+}
+
+#form-check-input{
+  background-color: #EDEFE9;
+}
+
+// ------------------- BUTTON STYLING ---------------------
+
+#submitBtn,
+#findBtn,
+.card-btn {
+  border: 0px;
+  border-radius: 50px;
+  padding: 15px;
+  font-family: InterstateBold;
+  background-color: $darkblue;
+  color: #EDEFE9;
+}
+
+#submitBtn:hover,
+#findBtn:hover,
+.card-btn:hover {
+  background-color: $gold;
+  color: $darkblue;
+}
+
+#findBtn {
+	margin-left: 35%;
+}
+
+#submitBtn {
+  margin-top: 1em;
+}
+
+//------------------ CARD STYLISATION ----------------------
+
+.card-title{
+  font-family: InterstateBold;
+}
+
+.card-text {
+  font-family: InterstateReg;
+  font-size: 1em;
+}
+
+
+//--------------- MAP BOX STYLING ------------------
+
+
+.map-container {
+  margin-top: 12em;
+  padding-left: 6em;
+}
+
+.marker {
+  background-image: url('mapbox-icon.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 400px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.map-button {
+  position: absolute;
+  left: 2em;
+  z-index: 999999;
+  font-size: 1.5em;
+  font-family: InterstateBold;
+  background-color: $darkblue;
+  border: 0px;
+  border-radius: 150px;
+  padding: 10px;
+  color: $white;
+}
+
+.map-button:hover {
+  cursor: pointer;
+}
+
+#flyA {
+  bottom: 9em;;
+}
+
+#flyB {
+  bottom: 6em;
+}
+
+#flyC {
+  bottom: 3em;
+}

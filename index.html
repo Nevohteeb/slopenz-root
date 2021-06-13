@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="js/jquery.fullpage.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/custom.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/custom.min.css">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+</head>
+
+<body>
+  <!-- - - - - - - - - - - - - OUTER WRAPPER BEGINS - - - - -  - - - - -->
+  <div id="wrapper">
+    <!-- NAVBAR BEGINS -->
+    <div id="navbar">
+      <img id=slopeLogo src="img/slopenzlogo.png" alt="SlopeNZ">
+      <a href="#section1/slide1">HOME</a>
+      <a href="#section1/slide3">QUALMARK</a>
+      <a href="#section1/slide4">SKI FIELDS</a>
+    </div>
+    <!-- NAV BAR ENDS -->
+
+    <!-- FULLPAGE CONTAINER BEGINS -->
+    <div id="fullpage">
+      <div class="section" data-anchor="section1">
+
+        <!-- - - - - - - - - - - - - - - - - SLIDE 1 BEGINS - - - - - - - - - - - -->
+        <div class="slide" data-anchor="slide1">
+          <!-- HOMESCREEN LEFT BEGINS -->
+          <div id="homeLeft">
+            <div id="homeLeftTop">
+              <img id="slopeLarge" src="img/slopenzlogo.png" alt="SlopeNZ">
+            </div>
+            <div id="homeLeftBottom">
+              <img id="tnzLogoLrg" src="img/tnz-logo.png" alt="Tourism New Zealand">
+            </div>
+          </div>
+          <!-- HOMESCREEN LEFT ENDS -->
+          <!-- HOMESCREEN RIGHT BEGINS -->
+          <div id="homeRight">
+            <!-- homeTextWrapper BEGINS -->
+            <div id="homeTextWrapper">
+              <h1 class="tlt" data-in-effect="rollIn" id="taglineHeader">Found the slope?</h1>
+              <h2 id="taglineSubtitle">Let us find the room!</h2>
+              <div id="homeBodyText">
+                <p>We've taken the hardwork out of finding the best accomodation close the slopes.<br>
+                  <br>
+                  Thanks to Qualmark, New Zealand tourism’s official quality assurance organisation,
+                  we have been able to hand pick only the best providers in the region.<br>
+                  <br>
+                  This ensures your experience is one of the most high-quality experiences <br>
+                  New Zealand has to offer.
+                </p>
+                <a href="#section1/slide2"><button id="findBtn">Find my room!</button></a>
+              </div>
+              <!-- homeBodyText ENDS -->
+            </div>
+            <!-- homeTextWrapper ENDS -->
+          </div>
+          <!-- HOMESCREEN RIGHT ENDS -->
+        </div>
+        <!-- SLIDE 1 ENDS -->
+
+        <!-- - - - - - - - - - - - - - - - - SLIDE 2 BEGINS - - - - - - -  - - - - - - - - -->
+        <div class="slide" data-anchor="slide2">
+          <div id="formWrapper">
+            <!-- BOOTSRAPS FORM BEGINS -->
+            <div class="form-cont">
+              <div id="searchForm">
+                <div class="form-group">
+                  <label for="nameInput">Your Name:</label>
+                  <input type="name" class="form-control" id="nameInput" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                  <label for="holidaySelect">Select Your Skifield:</label>
+                  <select class="form-control" id="skifieldInput" required>
+                    <option selected>Choose...</option>
+                    <option>Cardrona</option>
+                    <option>Treble Cone</option>
+                    <option>The Remarkables</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="nameInput">Number of Nights</label>
+                  <input type="name" class="form-control" id="nameInput" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                  <label for="nameInput">Number of Guests</label>
+                  <input type="name" class="form-control" id="nameInput" placeholder="Name" required>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="familyCheck">
+                  <label class="form-check-label" for="defaultCheck2">
+                    Family Friendly
+                  </label>
+                </div>
+                <a href="#section1/slide5"><button id="submitBtn">See available rooms!</button></a>
+              </div>
+
+
+            </div>
+            <!-- BOOTSRAPS FORM ENDS -->
+          </div>
+          <!-- FROM WRAPPER ENDS -->
+        </div>
+        <!-- SLIDE 2 ENDS -->
+
+        <!-- - - - - - - - - - - - - - - -  SLIDE 3 BEGINS - - - - - - -  - - - - - - - - -->
+        <div class="slide" data-anchor="slide3">
+          <div id="qualLeft">
+            <img id=qualLogo src="img/qualmark-gold-logo.svg" alt="Qualmark Gold Logo">
+          </div>
+          <!-- QUALMARK LEFT ENDS -->
+
+          <!-- QUALMARK RIGHT BEGINS -->
+          <div id="qualRight">
+            <!-- qualTextWrapper BEGINS -->
+            <div id="qualTextWrapper">
+              <h1 id="taglineHeader">Qualmark</h1>
+              <h2 id="taglineSubtitle">Quality Assurance</h2>
+              <!-- qualBodyText BEGINS -->
+              <div id="qualBodyText">
+                <p>Qualmark is trusted, independent, backed by leading industry associations and is an endorsement of visitor activities, accommodation, service and transport providers that deliver a pure New Zealand experience.<br><br>
+                  Only those businesses that are delivering a quality sustainable experience, who have undergone an independent safety check, and showcase true New Zealand hospitality, are recognised through a Qualmark award.<br><br>
+                  A business displaying a Qualmark award means you can book with confidence and peace of mind that the experience you are choosing is one of the most trusted and sustainable experiences in New Zealand.
+                </p>
+              </div>
+              <!-- qualBodyText ENDS -->
+            </div>
+            <!-- homeTextWrapper ENDS -->
+          </div>
+          <!-- QUALMARK RIGHT ENDS -->
+        </div>
+        <!-- SLIDE 3 ENDS -->
+
+        <!-- - - - - - - - - - - - - - - -  SLIDE 4 BEGINS - - - - - - -  - - - - - - - - -->
+        <div class="slide" data-anchor="slide4">
+          <div id="skifieldLeft">
+            <div class="map-container">
+              <div id='map' style='width: 40vw; height: 60vh;'>
+                <button class="map-button" id=flyA>Cardrona</button>
+                <button class="map-button" id=flyB>The Remarkables</button>
+                <button class="map-button" id=flyC>Treble Cone</button>
+              </div>
+            </div>
+          </div>
+          <div id="skifieldRight">
+            <div id="skifieldText">
+              <h1 id="skifieldHeader">Ski Fields</h1>
+              <p>New Zealand offers ski and snowboard enthusiasts a great variety of commercial or club fields. <br><br>Commercial fields offer snowmaking, state of the art snow grooming, cafes, gear rental facilities and more.<br><br>Club fields are
+                often less crowded but offer fewer facilities. Fields are maintained by their ski club and facilities often include rope tow or T-bar lifts only with generally no snow grooming.<br><br>
+                Click the buttons on the map to see the different skifield locations</p>
+              <div id="skiLogosCont">
+                <img id=cardronaLogo src="img/cardrona-logo.jpeg" alt="Cardrona Alpine Resort">
+                <img id=trebleLogo src="img/treble-cone-logo.png" alt="Treble Cone">
+                <img id=remarkLogo src="img/the-remarkables-logo.png" alt="The Remarkables">
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- SLIDE 4 ENDS -->
+
+        <div class="slide" data-anchor="slide5">
+          <div class="output">
+            <div class="card" style="width: 18rem;">
+              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House">
+              <div class="card-body">
+                <h5 class="card-title">Cardrona House</h5>
+                <p class="card-text">$240 per night<br>Min 2 Nigths<br>Max 15nights<br><i class="fa fa-wifi" aria-hidden="true"></i></p>
+                <a href="#" class="btn btn-primary card-btn">View Site</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House">
+              <div class="card-body">
+                <h5 class="card-title">Cardrona House</h5>
+                <p class="card-text">$240 per night<br>Min 2 Nigths<br>Max 15nights<br><i class="fa fa-wifi" aria-hidden="true"></i></p>
+                <a href="#" class="btn btn-primary card-btn">View Site</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House">
+              <div class="card-body">
+                <h5 class="card-title">Cardrona House</h5>
+                <p class="card-text">$240 per night<br>Min 2 Nigths<br>Max 15nights<br><i class="fa fa-wifi" aria-hidden="true"></i></p>
+                <a href="#" class="btn btn-primary card-btn">View Site</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House">
+              <div class="card-body">
+                <h5 class="card-title">Cardrona House</h5>
+                <p class="card-text">$240 per night<br>Min 2 Nigths<br>Max 15nights<br><i class="fa fa-wifi" aria-hidden="true"></i></p>
+                <a href="#" class="btn btn-primary card-btn">View Site</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+      <!-- SECTION ONE ENDS --------------------------------------------------------->
+    </div>
+    <!-- FULLPAGE ONE ENDS ------------------------------------------------------->
+  </div>
+  <!-- OUTER WRAPPER ENDS ------------------------------------------------------>
+
+  </div>
+
+
+
+
+  <!-- - - - - - - - - - - JS LIBRARY SCRIPT TAGS- - - - - - - - - - - - - - - -  -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.fullpage.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/jquery.textillate.js"></script>
+
+  <!-- - - - - - - - - - - - - - - CUSTOM JS TAG - - - - - - - - - - - - - - -->
+  <script src="js/custom.js"></script>
+
+</body>
+
+</html>

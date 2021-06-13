@@ -1,0 +1,210 @@
+@font-face {
+  font-family: ArchivoBlack;
+  src: url('../fonts/archivoBlack.otf');
+}
+
+@font-face {
+  font-family: InterstateBold;
+  src: url('../fonts/interstatebold.otf');
+}
+
+@font-face {
+  font-family: InterstateReg;
+  src: url('../fonts/interstatereg.otf');
+}
+
+/* ----------- GLOBAL CSS BEGINS --------------------- */
+html {
+  font-size: 100%;
+}
+
+button {
+  border: 0px;
+  border-radius: 50px;
+  padding: 15px;
+  font-family: InterstateBold;
+  background-color: #454A59;
+  color: #EDEFE9;
+}
+
+.section,
+.slide {
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  justify-content: center !important;
+  background-image: url('../img/background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.fp-tablecell {
+  display: flex;
+}
+
+/* TURN OFF FULLPAGE NAV ARROWS */
+.fp-controlArrow {
+  display: none;
+}
+
+/* ----------- GLOBAL CSS ENDS --------------------- */
+
+/* ----------- HEADER SET BEGINS ----------------- */
+h1 {
+  font-family: ArchivoBlack;
+  font-size: 4em;
+}
+
+h2 {
+  font-family: ArchivoBlack;
+  font-size: 3em;
+}
+
+p {
+  font-family: InterstateReg;
+  font-size: 1.25em;
+}
+/* ----------- HEADER SET ENDS ----------------- */
+
+/* ----------- NAV BAR CSS BEGINS ------------------- */
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  top: 0px;
+  position: absolute;
+  z-index: 999;
+  padding-top: 2em;
+}
+
+#navbar a {
+  font-family: InterstateBold;
+  color: #EDEFE9;
+  font-size: 1.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+#navbar a:link {
+  text-decoration: none;
+}
+
+#navbar a:visited {
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  text-decoration: underline;
+  color: #F2DCC9;
+}
+
+#navbar a:active {
+  text-decoration: underline;
+}
+
+#slopeLogo {
+  position: absolute;
+  max-height: 6em;
+  padding-left: 2em;
+  left: 1em;
+}
+
+/* NAVBAR CSS ENDS */
+
+/* HOMESCREEN CSS BEGINS */
+
+#homeLeft {
+  display: inline-block;
+  width: 50vw;
+  height: 100vh;
+}
+
+#homeRight {
+  display: inline-block;
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+}
+
+#homeLeftTop,
+#homeLeftBottom {
+  display: flex;
+  justify-content: center;
+  width: 100;
+}
+
+#homeLeftTop{
+  height: 66%;
+}
+
+#slopeLarge {
+  max-height: 25em;
+  margin-top: 10em;
+}
+
+#tnzLogoLrg {
+  max-height: 11em;
+}
+
+#homeTextWrapper {
+  width: 100%;
+  height: 100%;
+  margin-left: 0em;
+}
+
+#taglineHeader {
+  color: #F2DCC9;
+  margin-top: 3em;
+}
+
+#taglineSubtitle {
+  color: #EDEFE9;
+}
+
+#homeBodyText {
+  max-width: 100%;
+  color: #EDEFE9;
+}
+
+/* HOMESCREEN CSS ENDS */
+
+/* SEARCH SLIDE CSS BEGIN */
+#searchWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20em;
+}
+
+form {
+  font-family: InterstateReg;
+  font-size: 1.25em;
+  color: #454A59;
+}
+
+.form-check {
+  font-family: InterstateReg;
+  margin-top: 1em;
+  color: #454A59;
+}
+
+#form-check-input:checked {
+  background-color: #454A59;
+}
+
+#submit {
+  border: 0px;
+  border-radius: 50px;
+  padding: 15px;
+  font-family: InterstateBold;
+  background-color: #454A59;
+  color: #EDEFE9;
+}
+
+#footer {
+  width: 100%;
+  bottom: 0px;
+  position: absolute;
+  z-index: 999;
+  padding-bottom: 1em;
+}
