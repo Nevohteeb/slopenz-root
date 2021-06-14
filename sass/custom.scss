@@ -206,11 +206,11 @@ p {
 #formWrapper {
   display: flex;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 7em;
 	margin-left: 30%;
 	background-color: #fff;
 	width: 40%;
-	padding-top: 4em;
+	padding-top: 2em;
 	padding-bottom: 4em;
 	border-radius: 30px;
 }
@@ -229,6 +229,33 @@ p {
 
 #form-check-input{
   background-color: #EDEFE9;
+}
+
+// Parlsey Form Validation Styling:
+
+input.parsley-error,
+select.parsley-error,
+textarea.parsley-error {
+    border-color:#843534;
+    box-shadow: none;
+}
+
+
+input.parsley-error:focus,
+select.parsley-error:focus,
+textarea.parsley-error:focus {
+    border-color:#843534;
+    box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483
+}
+
+.parsley-required {
+  color: red;
+  list-style: none;
+  font-size: 0.75em;
+}
+.parsley-errors-list  {
+  padding-left: 0px;
+  margin-top: 10px;
 }
 
 // ------------------- BUTTON STYLING ---------------------
@@ -280,7 +307,7 @@ p {
 }
 
 .marker {
-  background-image: url('mapbox-icon.png');
+  background-image: url('../img/mapbox-icon.png');
   background-size: cover;
   width: 50px;
   height: 50px;
@@ -290,12 +317,13 @@ p {
 
 .mapboxgl-popup {
   max-width: 400px;
-  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: InterstateReg;
+  font-size: 1em;
 }
 
 .mapboxgl-popup-content {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: InterstateReg;
 }
 
 .map-button {

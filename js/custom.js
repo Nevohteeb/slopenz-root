@@ -5,7 +5,6 @@ $(document).ready(function() {
     resize: true,
     sectionSelector: '.section',
     slideSelector: '.slide'
-
   });
 
   $.fn.fullpage.setAllowScrolling(false);
@@ -18,8 +17,10 @@ $(document).ready(function() {
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
     center: [168.66151801775683, -45.0303343381692],
-    zoom: 6,
+    zoom: 8,
   });
+
+  map.addControl(new mapboxgl.FullscreenControl());
 
   var geojson = {
     type: 'FeatureCollection',
@@ -53,7 +54,7 @@ $(document).ready(function() {
         },
         properties: {
           title: '<a href="https://www.treblecone.com/">Treble Cone</a><br><img src="img/treble.jpg" alt="Treble Cone" width="100">',
-          description: "<strong>Cardrona Alpine Resort</strong><p>Treble Cone is the closest ski area to Wanaka, New Zealand. Treble Cone is the largest ski area in the South Island, boasting the longest vertical rise in the Queenstown Southern Lakes District.</p>"
+          description: "<strong>Treble Cone</strong><p>Treble Cone is the closest ski area to Wanaka, New Zealand. Treble Cone is the largest ski area in the South Island, boasting the longest vertical rise in the Queenstown Southern Lakes District.</p>"
         }
       }
     ]
@@ -106,22 +107,20 @@ $(document).ready(function() {
     });
   });
 
-  // ------------------------------ MAP BOX ENDS -----------------
+  //  MAP BOX ENDS
 
-  // PARSLEY VALIDATION CONTROLS BEGIN:
+  // ------------------ PARSLEY VALIDATION CONTROLS BEGIN: --------------------
 
   var form = $('#parent').parsley();
-
-  // Parent div find the buttons and setup click event
   $('#parent').find('#submitBtn').click(function () {
-    // Validate all internal parsley elements
       form.validate();
   });
 
-  // A method for final form success
   form.subscribe('parsley:form:success', function (e) {
-     alert('Forms done!');
+     $.fn.fullpage.silentMoveTo(1,2);
   });
+
+  // PARSLEY ENDS
 
 });
 // document ENDS
