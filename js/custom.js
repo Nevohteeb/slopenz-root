@@ -122,5 +122,11 @@ $(document).ready(function() {
 
   // PARSLEY ENDS
 
+  // Textillate:
+
+  $(function() {
+    $('.tlt').textillate({ in: { effect: 'fadeIn' } });
+  })
+
 });
 // document ENDS
