@@ -12,6 +12,8 @@ $(document).ready(function() {
 
   // - - - - - - - - - - - - -  MAPBOX BEGiNS - - - - - - - - - - - - - - - - -
 
+  // Ski Field Map
+
   mapboxgl.accessToken = 'pk.eyJ1IjoiY2lhcmFuc2xvdyIsImEiOiJja3A0b2RvNXQwZHZsMm5vdzJhMzlneHliIn0.GePUzyfjdyGc0pnYNPerqA';
   var map = new mapboxgl.Map({
     container: 'map',

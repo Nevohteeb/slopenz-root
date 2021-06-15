@@ -20,6 +20,7 @@
 $white: #EDEFE9;
 $darkblue: #454A59;
 $gold: #F2DCC9;
+
 // ----------- GLOBAL CSS BEGINS ---------------------
 
 html {
@@ -80,7 +81,7 @@ p {
 
 #navbar a {
   font-family: InterstateBold;
-  color: #EDEFE9;
+  color: $white;
   font-size: 1.5em;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -92,7 +93,7 @@ p {
 
 #navbar a:hover {
   text-decoration: underline;
-  color: #F2DCC9;
+  color: $gold;
 }
 
 
@@ -142,7 +143,7 @@ p {
 #homeBodyText,
 #qualBodyText {
   max-width: 100%;
-  color: #EDEFE9;
+  color: $white;
 	padding-right: 2em;
 }
 
@@ -161,12 +162,12 @@ p {
 
 #taglineHeader,
 #skifieldHeader {
-  color: #F2DCC9;
+  color: $gold;
   margin-top: 3em;
 }
 
 #taglineSubtitle {
-  color: #EDEFE9;
+  color: $white;
 }
 
 // ------------- IMAGE STYLING ----------------
@@ -218,20 +219,20 @@ p {
 #searchForm {
   font-family: InterstateReg;
   font-size: 1.25em;
-  color: #454A59;
+  color: $darkblue;
 }
 
 .form-check {
   font-family: InterstateReg;
   margin-top: 1em;
-  color: #454A59;
+  color: $darkblue;
 }
 
 #form-check-input{
-  background-color: #EDEFE9;
+  background-color: $white;
 }
 
-// Parlsey Form Validation Styling:
+// ----------- Parlsey Form Validation Styling ----------
 
 input.parsley-error,
 select.parsley-error,
@@ -268,7 +269,7 @@ textarea.parsley-error:focus {
   padding: 15px;
   font-family: InterstateBold;
   background-color: $darkblue;
-  color: #EDEFE9;
+  color: $white;
 }
 
 #submitBtn:hover,
@@ -342,6 +343,8 @@ textarea.parsley-error:focus {
 .map-button:hover {
   cursor: pointer;
 }
+
+// --------------- MapBox Fly over buttons ---------------
 
 #flyA {
   bottom: 9em;;

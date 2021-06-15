@@ -39,9 +39,6 @@ button {
   background-size: cover;
 }
 
-.fp-tablecell {
-  display: flex;
-}
 
 /* TURN OFF FULLPAGE NAV ARROWS */
 .fp-controlArrow {
