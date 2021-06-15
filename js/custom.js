@@ -12,11 +12,11 @@ $(document).ready(function() {
 
   // - - - - - - - - - - - - -  MAPBOX BEGiNS - - - - - - - - - - - - - - - - -
 
-  // Ski Field Map
+  // ----- Ski Field Map Begins -------
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiY2lhcmFuc2xvdyIsImEiOiJja3A0b2RvNXQwZHZsMm5vdzJhMzlneHliIn0.GePUzyfjdyGc0pnYNPerqA';
   var map = new mapboxgl.Map({
-    container: 'map',
+    container: 'skiFieldMap',
     style: 'mapbox://styles/mapbox/streets-v11',
     center: [168.66151801775683, -45.0303343381692],
     zoom: 8,
@@ -77,7 +77,6 @@ $(document).ready(function() {
   });
 
   document.getElementById('flyA').addEventListener('click', function() {
-    console.log('flyA');
     map.flyTo({
       center: [
         168.9492151232965, -44.8731916471041
@@ -88,7 +87,6 @@ $(document).ready(function() {
   });
 
   document.getElementById('flyB').addEventListener('click', function() {
-    console.log('flyB');
     map.flyTo({
       center: [
         168.81431482752348, -45.053887576329835
@@ -99,7 +97,6 @@ $(document).ready(function() {
   });
 
   document.getElementById('flyC').addEventListener('click', function() {
-    console.log('flyC');
     map.flyTo({
       center: [
         168.89604382751347, -44.63336775246554
@@ -108,6 +105,8 @@ $(document).ready(function() {
       essential: true
     });
   });
+
+  // ------ Ski Field Map Ends --------
 
   //  MAP BOX ENDS
 
