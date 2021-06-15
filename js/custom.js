@@ -125,7 +125,7 @@ $(document).ready(function() {
   // Textillate:
 
   $(function() {
-    $('.tlt').textillate({ in: { effect: 'fadeIn' } });
+    $('.tlt').textillate();
   });
 
 });
