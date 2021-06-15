@@ -126,7 +126,7 @@ $(document).ready(function() {
 
   $(function() {
     $('.tlt').textillate({ in: { effect: 'fadeIn' } });
-  })
+  });
 
 });
 // document ENDS
