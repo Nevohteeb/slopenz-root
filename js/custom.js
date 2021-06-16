@@ -119,7 +119,7 @@ $(document).ready(function() {
   var map2 = new mapboxgl.Map({
     container: 'accomodationMap',
     style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-77.038659, 38.931567],
+    center: [168.66151801775683, -45.0303343381692],
     zoom: 11.15
   });
 
@@ -133,11 +133,11 @@ $(document).ready(function() {
         'features': [{
             'type': 'Feature',
             'properties': {
-              'description': '<strong>Make it Mount Pleasant</strong><p>Make it Mount Pleasant is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>'
+              'description': '<a href="https://www.treblecone.com/">Treble Cone</a><br><img src="img/treble.jpg" alt="Treble Cone" width="100"><br><p>Treble Cone is the closest ski area to Wanaka, New Zealand. Treble Cone is the largest ski area in the South Island, boasting the longest vertical rise in the Queenstown Southern Lakes District.</p>'
             },
             'geometry': {
               'type': 'Point',
-              'coordinates': [-77.038659, 38.931567]
+              'coordinates': [168.89604382751347, -44.63336775246554]
             }
           },
           {
