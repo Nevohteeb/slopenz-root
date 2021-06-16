@@ -193,5 +193,37 @@ $(document).ready(function() {
 
   // ---------------------- PARSLEY ENDS --------------------------------------
 
+  // --------------------- DATA VARIABLES FOR ACCOMODATION --------------------
+
+  var hotelData = {
+  hotel: {
+    pricePerNight: 157,
+    minNight: 1,
+    maxNight: 5,
+    minCapacity: 1,
+    maxCapacity: 2
+  },
+  hostel: {
+    pricePerNight: 30,
+    minNight: 1,
+    maxNight: 10,
+    maxCapacity: 1
+  },
+  motel: {
+    pricePerNight: 90,
+    minNight: 3,
+    maxNight: 10,
+    minCapacity: 2,
+    maxCapacity: 4
+  },
+  hotel: {
+    pricePerNight: 157,
+    minNight: 1,
+    maxNight: 5,
+    minCapacity: 1,
+    maxCapacity: 4
+  }
+}
+
 });
 // document ENDS
