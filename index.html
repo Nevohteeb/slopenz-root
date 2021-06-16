@@ -8,12 +8,12 @@
   <title>Document</title>
   <link rel="stylesheet" href="js/jquery.fullpage.css">
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/custom.min.css">
-  <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js'></script>
 </head>
 
 <body>
@@ -40,7 +40,8 @@
               <img id="slopeLarge" src="img/slopenzlogo.png" alt="SlopeNZ">
             </div>
             <div id="homeLeftBottom">
-              <img id="tnzLogoLrg" src="img/tnz-logo.png" alt="Tourism New Zealand">
+              <a href="https://www.tourismnewzealand.com/" target="_blank"><img id="tnzLogoLrg" src="img/tnz-logo.png" alt="Tourism New Zealand"></a>
+
             </div>
           </div>
           <!-- HOMESCREEN LEFT ENDS -->
@@ -51,7 +52,8 @@
               <h1 class=“tlt” data-in-effect="fadeIn" id="taglineHeader">Found the slope?</h1>
               <h2 id="taglineSubtitle">Let us find the room!</h2>
               <div id="homeBodyText">
-                <p>We've taken the hardwork out of finding the best accomodation close the slopes. Thanks to Qualmark, New Zealand tourism’s official quality assurance organisation, we have been able to hand pick only the best providers in the region. This ensures your experience is one of the most high-quality experiences New Zealand has to offer.
+                <p>We've taken the hardwork out of finding the best accomodation close the slopes. Thanks to Qualmark, New Zealand tourism’s official quality assurance organisation, we have been able to hand pick only the best providers in the
+                  region. This ensures your experience is one of the most high-quality experiences New Zealand has to offer.
                 </p>
                 <a href="#section1/slide2"><button id="findBtn">Find my room!</button></a>
               </div>
@@ -64,6 +66,7 @@
         <!-- SLIDE 1 ENDS -->
 
         <!-- - - - - - - - - - - - - - - - - SLIDE 2 BEGINS - - - - - - -  - - - - - - - - -->
+        <!-- ***FORM SLIDE*** -->
         <div class="slide" data-anchor="slide2">
           <div id="formWrapper">
             <!-- BOOTSRAPS FORM BEGINS -->
@@ -84,7 +87,8 @@
                 </div>
                 <div class="form-group">
                   <label for="nameInput">Number of Nights</label>
-                  <input type="name" class="form-control" id="nameInput" placeholder="Max of 15 nights" data-parsley-required-message="Please enter number of nights you wish to stay" data-parsley-required="true" data-parsley-type="number" data-parsley-max="15">
+                  <input type="name" class="form-control" id="nameInput" placeholder="Max of 15 nights" data-parsley-required-message="Please enter number of nights you wish to stay" data-parsley-required="true" data-parsley-type="number"
+                    data-parsley-max="15">
                 </div>
                 <div class="form-group">
                   <label for="nameInput">Number of Guests</label>
@@ -106,43 +110,70 @@
         <!-- SLIDE 2 ENDS -->
 
         <!-- - - - - - - - - - - - - - - -  SLIDE 3 BEGINS - - - - - - -  - - - - - - - - -->
-        <div class="slide" data-anchor="slide3">
-          <div class="output">
-            <div class="card" style="width: 18rem;">
-              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House">
-              <div class="card-body">
-                <h5 class="card-title">Cardrona House</h5>
-                <p class="card-text">$240 per night<br>Min 2 Nigths<br>Max 15nights<br></p>
-                <a href="#" class="btn btn-primary card-btn">View Site</a>
-              </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House">
-              <div class="card-body">
-                <h5 class="card-title">Cardrona House</h5>
-                <p class="card-text">$240 per night<br>Min 2 Nigths<br>Max 15nights<br></p>
-                <a href="#" class="btn btn-primary card-btn">View Site</a>
-              </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House">
-              <div class="card-body">
-                <h5 class="card-title">Cardrona House</h5>
-                <p class="card-text">$240 per night<br>Min 2 Nigths<br>Max 15nights<br></p>
-                <a href="#" class="btn btn-primary card-btn">View Site</a>
-              </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House">
-              <div class="card-body">
-                <h5 class="card-title">Cardrona House</h5>
-                <p class="card-text">$240 per night<br>Min 2 Nigths<br>Max 15nights<br></p>
-                <a href="#" class="btn btn-primary card-btn">View Site</a>
+        <!-- ****Output slide**** -->
+        <div class="slide output" data-anchor="slide3" id="ouputSlide">
+          <div class="outputleft">
+            <div class="map-container2">
+              <div id="accomodationMap" style='width: 40vw; height: 60vh;'>
               </div>
             </div>
           </div>
-          <div class="map-container">
-            <div id='accomodationMap' style='width: 40vw; height: 60vh;'>
+          <div class="outputRight">
+            <div class="card" style="width: 18rem;">
+              <img id="accomImage" src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House">
+              <div class="card-body">
+                <h5 class="card-title" id="accomName">Cardrona House</h5>
+                <p class="card-text" id="pricePerNight">$240 per night</p>
+                <p class="card-text" id="minNight">Min 2 Nigths</p>
+                <p class="card-text" id="maxNight">Max 15 Nights</p>
+                <p class="card-text" id="minGuest">Min 1 Guest</p>
+                <p class="card-text" id="maxGuest">Max 4 Guests</p>
+                <div class="ammenitiesContainer">
+                  <div class="ammenities">
+                    <i class="fa fa-wifi" aria-hidden="true"></i>
+                    <p>Free<br>Wifi</p>
+                  </div>
+                  <div class="ammenities">
+                    <i class="fa fa-wheelchair" aria-hidden="true"></i>
+                    <p>Disability<br>Access</p>
+                  </div>
+                  <div class="ammenities">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    <p>Family<br>Friendly</p>
+                  </div>
+                </div>
+                <a href="#" class="btn btn-primary card-btn" target="_blank" id="cardBtn">View Site</a>
+                <button id="viewOnMapBtn">View on Map</button>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House">
+              <div class="card-body">
+                <h5 class="card-title" id="accomName">Cardrona House</h5>
+                <p class="card-text" id="pricePerNight">$240 per night</p>
+                <p class="card-text" id="minNight">Min 2 Nigths</p>
+                <p class="card-text" id="maxNight">Max 15 Nights</p>
+                <p class="card-text" id="minGuest">Min 1 Guest</p>
+                <p class="card-text" id="maxGuest">Max 4 Guests</p>
+                <div class="ammenitiesContainer">
+                  <div class="ammenities">
+                    <i class="fa fa-wifi" aria-hidden="true"></i>
+                    <p>Free<br>Wifi</p>
+                  </div>
+                  <div class="ammenities">
+                    <i class="fa fa-wheelchair" aria-hidden="true"></i>
+                    <p>Disability<br>Access</p>
+                  </div>
+                  <div class="ammenities">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    <p>Family<br>Friendly</p>
+                  </div>
+                </div>
+
+
+                <a href="#" class="btn btn-primary card-btn" target="_blank" id="cardBtn">View Site</a>
+                <button id="viewOnMapBtn">View on Map</button>
+              </div>
             </div>
           </div>
         </div>
@@ -151,7 +182,7 @@
         <!-- - - - - - - - - - - - - - - -  SLIDE 4 BEGINS - - - - - - -  - - - - - - - - -->
         <div class="slide" data-anchor="slide4">
           <div id="qualLeft">
-            <img id=qualLogo src="img/qualmark-gold-logo.svg" alt="Qualmark Gold Logo">
+            <a href="https://www.qualmark.co.nz/" target="_blank"><img id=qualLogo src="img/qualmark-gold-logo.svg" alt="Qualmark Gold Logo"></a>
           </div>
           <!-- QUALMARK LEFT ENDS -->
 
@@ -207,10 +238,9 @@
       </div>
       <!-- SECTION ONE ENDS --------------------------------------------------------->
     </div>
-    <!-- FULLPAGE ONE ENDS ------------------------------------------------------->
+    <!-- FULLPAGE ENDS ------------------------------------------------------>
   </div>
-  <!-- OUTER WRAPPER ENDS ------------------------------------------------------>
-  </div>
+  <!-- OUTER WRAPPER ENDS - - - - - - - - - - - -->
 
 
 

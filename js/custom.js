@@ -119,63 +119,130 @@ $(document).ready(function() {
   var map2 = new mapboxgl.Map({
     container: 'accomodationMap',
     style: 'mapbox://styles/mapbox/streets-v11',
-    center: [168.66151801775683, -45.0303343381692],
-    zoom: 8,
+    center: [-77.038659, 38.931567],
+    zoom: 11.15
   });
 
   map2.addControl(new mapboxgl.FullscreenControl());
 
-  var geojson2 = {
-    type: 'FeatureCollection',
-    features: [{
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
-          coordinates: [168.9492151232965, -44.8731916471041]
-        },
-        properties: {
-          title: '<a href="https://www.cardrona.com/">Cardrona Website</a><br><img src="img/cardrona.jpg" alt="Cardrona Ski Resort" width="100">',
-          description: "<strong>Cardrona Alpine Resort</strong><p>Cardrona Alpine Resort is an alpine resort in New Zealand's South Island. The ski field ranges from 1,260m to 1,860m. The distribution of slopes is 25% beginner, 25% intermediate, 30% advanced and 20% expert.</p>"
-        }
-      },
-      {
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
-          coordinates: [168.81431482752348, -45.053887576329835]
-        },
-        properties: {
-          title: '<a href="https://www.theremarkables.co.nz/">The Remarkables</a><br><img src="img/remark.jpg" alt="The Remarkables" width="100">',
-          description: "<strong>The Remarkables</strong><p>A true alpine mountain experience with terrain and facilities to suit everyone from first timers to seasoned, expert skiers and snowboarders! They offer ski and snowboard lessons, equipment rental, scenic chairlift rides, snow sledding and a massive range of food and beverage options.</p>"
-        }
-      },
-      {
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
-          coordinates: [168.89604382751347, -44.63336775246554]
-        },
-        properties: {
-          title: '<a href="https://www.treblecone.com/">Treble Cone</a><br><img src="img/treble.jpg" alt="Treble Cone" width="100">',
-          description: "<strong>Treble Cone</strong><p>Treble Cone is the closest ski area to Wanaka, New Zealand. Treble Cone is the largest ski area in the South Island, boasting the longest vertical rise in the Queenstown Southern Lakes District.</p>"
-        }
+  map2.on('load', function() {
+    map2.addSource('places', {
+      'type': 'geojson',
+      'data': {
+        'type': 'FeatureCollection',
+        'features': [{
+            'type': 'Feature',
+            'properties': {
+              'description': '<strong>Make it Mount Pleasant</strong><p>Make it Mount Pleasant is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>'
+            },
+            'geometry': {
+              'type': 'Point',
+              'coordinates': [-77.038659, 38.931567]
+            }
+          },
+          {
+            'type': 'Feature',
+            'properties': {
+              'description': '<strong>Mad Men Season Five Finale Watch Party</strong><p>Head to Lounge 201 (201 Massachusetts Avenue NE) Sunday for a Mad Men Season Five Finale Watch Party, complete with 60s costume contest, Mad Men trivia, and retro food and drink. 8:00-11:00 p.m. $10 general admission, $20 admission and two hour open bar.</p>'
+            },
+            'geometry': {
+              'type': 'Point',
+              'coordinates': [-77.003168, 38.894651]
+            }
+          },
+          {
+            'type': 'Feature',
+            'properties': {
+              'description': '<strong>Big Backyard Beach Bash and Wine Fest</strong><p>EatBar (2761 Washington Boulevard Arlington VA) is throwing a Big Backyard Beach Bash and Wine Fest on Saturday, serving up conch fritters, fish tacos and crab sliders, and Red Apron hot dogs. 12:00-3:00 p.m. $25.</p>'
+            },
+            'geometry': {
+              'type': 'Point',
+              'coordinates': [-77.090372, 38.881189]
+            }
+          },
+          {
+            'type': 'Feature',
+            'properties': {
+              'description': '<strong>Ballston Arts & Crafts Market</strong><p>The Ballston Arts & Crafts Market sets up shop next to the Ballston metro this Saturday for the first of five dates this summer. Nearly 35 artists and crafters will be on hand selling their wares. 10:00-4:00 p.m.</p>'
+            },
+            'geometry': {
+              'type': 'Point',
+              'coordinates': [-77.111561, 38.882342]
+            }
+          },
+          {
+            'type': 'Feature',
+            'properties': {
+              'description': "<strong>Seersucker Bike Ride and Social</strong><p>Feeling dandy? Get fancy, grab your bike, and take part in this year's Seersucker Social bike ride from Dandies and Quaintrelles. After the ride enjoy a lawn party at Hillwood with jazz, cocktails, paper hat-making, and more. 11:00-7:00 p.m.</p>"
+            },
+            'geometry': {
+              'type': 'Point',
+              'coordinates': [-77.052477, 38.943951]
+            }
+          },
+          {
+            'type': 'Feature',
+            'properties': {
+              'description': '<strong>Capital Pride Parade</strong><p>The annual Capital Pride Parade makes its way through Dupont this Saturday. 4:30 p.m. Free.</p>'
+            },
+            'geometry': {
+              'type': 'Point',
+              'coordinates': [-77.043444, 38.909664]
+            }
+          },
+          {
+            'type': 'Feature',
+            'properties': {
+              'description': '<strong>Muhsinah</strong><p>Jazz-influenced hip hop artist Muhsinah plays the Black Cat (1811 14th Street NW) tonight with Exit Clov and Gods’illa. 9:00 p.m. $12.</p>'
+            }
+          }
+        ]
       }
-    ]
-  };
+    });
+    // Add a layer showing the places.
+    map2.addLayer({
+      'id': 'places',
+      'type': 'circle',
+      'source': 'places',
+      'paint': {
+        'circle-color': '#4264fb',
+        'circle-radius': 6,
+        'circle-stroke-width': 2,
+        'circle-stroke-color': '#ffffff'
+      }
+    });
 
-  geojson2.features.forEach(function(marker) {
+    // Create a popup, but don't add it to the map yet.
+    var popup = new mapboxgl.Popup({
+      closeButton: false,
+      closeOnClick: false
+    });
 
-    var el = document.createElement('div');
-    el.className = 'marker';
+    map2.on('mouseenter', 'places', function(e) {
+      // Change the cursor style as a UI indicator.
+      map2.getCanvas().style.cursor = 'pointer';
 
-    new mapboxgl.Marker(el)
-      .setLngLat(marker.geometry.coordinates)
-      .setPopup(new mapboxgl.Popup({
-          offset: 25
-        })
-        .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
-      .addTo(map);
+      var coordinates = e.features[0].geometry.coordinates.slice();
+      var description = e.features[0].properties.description;
+
+      // Ensure that if the map is zoomed out such that multiple
+      // copies of the feature are visible, the popup appears
+      // over the copy being pointed to.
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+      }
+
+      // Populate the popup and set its coordinates
+      // based on the feature found.
+      popup.setLngLat(coordinates).setHTML(description).addTo(map2);
+    });
+
+    map2.on('mouseleave', 'places', function() {
+      map2.getCanvas().style.cursor = '';
+      popup.remove();
+    });
   });
+
 
 
   //  MAP BOX ENDS
@@ -196,34 +263,38 @@ $(document).ready(function() {
   // --------------------- DATA VARIABLES FOR ACCOMODATION --------------------
 
   var hotelData = {
-  hotel: {
-    pricePerNight: 157,
-    minNight: 1,
-    maxNight: 5,
-    minCapacity: 1,
-    maxCapacity: 2
-  },
-  hostel: {
-    pricePerNight: 30,
-    minNight: 1,
-    maxNight: 10,
-    maxCapacity: 1
-  },
-  motel: {
-    pricePerNight: 90,
-    minNight: 3,
-    maxNight: 10,
-    minCapacity: 2,
-    maxCapacity: 4
-  },
-  hotel: {
-    pricePerNight: 157,
-    minNight: 1,
-    maxNight: 5,
-    minCapacity: 1,
-    maxCapacity: 4
-  }
-}
+    hostel: {
+      pricePerNight: 30,
+      minNight: 1,
+      maxNight: 10,
+      maxCapacity: 1,
+      familyFriendly: false
+    },
+    motel: {
+      pricePerNight: 90,
+      minNight: 3,
+      maxNight: 10,
+      minCapacity: 2,
+      maxCapacity: 4,
+      familyFriendly: true
+    },
+    hotel: {
+      pricePerNight: 157,
+      minNight: 1,
+      maxNight: 5,
+      minCapacity: 1,
+      maxCapacity: 2,
+      familyFriendly: false
+    },
+    house: {
+      pricePerNight: 240,
+      minNight: 2,
+      maxNight: 15,
+      minCapacity: 1,
+      maxCapacity: 4,
+      familyFriendly: true
+    }
+  };
 
 });
 // document ENDS
