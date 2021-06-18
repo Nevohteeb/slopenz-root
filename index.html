@@ -77,7 +77,7 @@
               <div id="searchForm">
                 <div class="form-group">
                   <label for="nameInput">Your Name:</label>
-                  <input type="name" class="form-control" id="nameInput" data-parsley-required-message="Please enter your name" required data-parsley-pattern="^[a-zA-Z ]+$" placeholder="Max 10 char." data-parsley-required="true" maxlength="10">
+                  <input type="name" class="form-control" id="nameInput" data-parsley-required-message="Please enter your name" data-parsley-pattern="^[a-zA-Z ]+$" placeholder="Max 10 char." data-parsley-required="true" maxlength="10">
                 </div>
                 <div class="form-group">
                   <label for="holidaySelect">Select Your Skifield:</label>
@@ -113,7 +113,7 @@
         <!-- SLIDE 2 ENDS -->
 
         <!-- - - - - - - - - - - - - - - -  SLIDE 3 BEGINS - - - - - - -  - - - - - - - - -->
-        <!-- ****Output slide**** -->
+        <!-- * * * * Output slide * * * * -->
         <div class="slide output" data-anchor="slide3" id="ouputSlide">
           <div class="outputleft">
             <div class="map-container2">
@@ -121,7 +121,9 @@
               </div>
             </div>
           </div>
+          <!-- Carousel is attatached to outputRight container via JS -->
           <div class="outputRight">
+            <!-- Card One Begins -->
             <div class="card" style="width: 18rem;">
               <img id="accomImage" src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House">
               <div class="card-body">
@@ -132,34 +134,7 @@
                 <p class="card-text" id="minGuest">Min 1 Guest</p>
                 <p class="card-text" id="maxGuest">Max 4 Guests</p>
                 <div class="ammenitiesContainer">
-                  <div class="ammenities">
-                    <i class="fa fa-wifi" aria-hidden="true"></i>
-                    <p>Free<br>Wifi</p>
-                  </div>
-                  <div class="ammenities">
-                    <i class="fa fa-wheelchair" aria-hidden="true"></i>
-                    <p>Disability<br>Access</p>
-                  </div>
-                  <div class="ammenities">
-                    <i class="fa fa-users" aria-hidden="true"></i>
-                    <p>Family<br>Friendly</p>
-                  </div>
-                </div>
-                <a href="#" class="btn btn-primary card-btn" target="_blank" id="cardBtn">View Site</a>
-                <button id="viewOnMapBtn">View on Map</button>
-              </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage2">
-              <div class="card-body">
-                <h5 class="card-title" id="accomName2">Cardrona House</h5>
-                <p class="card-text" id="pricePerNight2">$240 per night</p>
-                <p class="card-text" id="minNight2">Min 2 Nigths</p>
-                <p class="card-text" id="maxNight2">Max 15 Nights</p>
-                <p class="card-text" id="minGuest2">Min 1 Guest</p>
-                <p class="card-text" id="maxGuest2">Max 4 Guests</p>
-                <div class="ammenitiesContainer">
-                  <div class="ammenities" id=wifi>
+                  <div class="ammenities" id="wifi">
                     <i class="fa fa-wifi" aria-hidden="true"></i>
                     <p>Free<br>Wifi</p>
                   </div>
@@ -173,9 +148,11 @@
                   </div>
                 </div>
                 <a href="#" class="btn btn-primary card-btn" target="_blank" id="cardBtn">View Site</a>
-                <button id="viewOnMapBtn">View on Map</button>
+                <button class="viewOnMapBtn" id="viewOnMapBtn1">View on Map</button>
               </div>
             </div>
+            <!-- Card One Ends -->
+            <!-- Card Two Begins -->
             <div class="card" style="width: 18rem;">
               <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage2">
               <div class="card-body">
@@ -186,105 +163,142 @@
                 <p class="card-text" id="minGuest2">Min 1 Guest</p>
                 <p class="card-text" id="maxGuest2">Max 4 Guests</p>
                 <div class="ammenitiesContainer">
-                  <div class="ammenities" id=wifi>
+                  <div class="ammenities" id=wifi2>
                     <i class="fa fa-wifi" aria-hidden="true"></i>
                     <p>Free<br>Wifi</p>
                   </div>
-                  <div class="ammenities" id="disabled">
+                  <div class="ammenities" id="disabled2">
                     <i class="fa fa-wheelchair" aria-hidden="true"></i>
                     <p>Disability<br>Access</p>
                   </div>
-                  <div class="ammenities" id="family">
+                  <div class="ammenities" id="family2">
                     <i class="fa fa-users" aria-hidden="true"></i>
                     <p>Family<br>Friendly</p>
                   </div>
                 </div>
                 <a href="#" class="btn btn-primary card-btn" target="_blank" id="cardBtn">View Site</a>
-                <button id="viewOnMapBtn">View on Map</button>
+                <button class="viewOnMapBtn" id="viewOnMapBtn2">View on Map</button>
               </div>
             </div>
+            <!-- Card Two Ends -->
+            <!-- Card Three Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage2">
+              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage3">
               <div class="card-body">
-                <h5 class="card-title" id="accomName2">Cardrona House</h5>
-                <p class="card-text" id="pricePerNight2">$240 per night</p>
-                <p class="card-text" id="minNight2">Min 2 Nigths</p>
-                <p class="card-text" id="maxNight2">Max 15 Nights</p>
-                <p class="card-text" id="minGuest2">Min 1 Guest</p>
-                <p class="card-text" id="maxGuest2">Max 4 Guests</p>
+                <h5 class="card-title" id="accomName3">Cardrona House</h5>
+                <p class="card-text" id="pricePerNight3">$240 per night</p>
+                <p class="card-text" id="minNight3">Min 2 Nigths</p>
+                <p class="card-text" id="maxNight3">Max 15 Nights</p>
+                <p class="card-text" id="minGuest3">Min 1 Guest</p>
+                <p class="card-text" id="maxGuest3">Max 4 Guests</p>
                 <div class="ammenitiesContainer">
                   <div class="ammenities" id=wifi>
-                    <i class="fa fa-wifi" aria-hidden="true"></i>
+                    <i class="fa fa-wifi" aria-hidden="true3"></i>
                     <p>Free<br>Wifi</p>
                   </div>
-                  <div class="ammenities" id="disabled">
+                  <div class="ammenities" id="disabled3">
                     <i class="fa fa-wheelchair" aria-hidden="true"></i>
                     <p>Disability<br>Access</p>
                   </div>
-                  <div class="ammenities" id="family">
+                  <div class="ammenities" id="family3">
                     <i class="fa fa-users" aria-hidden="true"></i>
                     <p>Family<br>Friendly</p>
                   </div>
                 </div>
                 <a href="#" class="btn btn-primary card-btn" target="_blank" id="cardBtn">View Site</a>
-                <button id="viewOnMapBtn">View on Map</button>
+                <button class="viewOnMapBtn" id="viewOnMapBtn3">View on Map</button>
               </div>
             </div>
+            <!-- Card Three Ends -->
+            <!-- Card Four Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage2">
+              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage4">
               <div class="card-body">
-                <h5 class="card-title" id="accomName2">Cardrona House</h5>
-                <p class="card-text" id="pricePerNight2">$240 per night</p>
-                <p class="card-text" id="minNight2">Min 2 Nigths</p>
-                <p class="card-text" id="maxNight2">Max 15 Nights</p>
-                <p class="card-text" id="minGuest2">Min 1 Guest</p>
-                <p class="card-text" id="maxGuest2">Max 4 Guests</p>
+                <h5 class="card-title" id="accomName4">Cardrona House</h5>
+                <p class="card-text" id="pricePerNight4">$240 per night</p>
+                <p class="card-text" id="minNight4">Min 2 Nigths</p>
+                <p class="card-text" id="maxNight4">Max 15 Nights</p>
+                <p class="card-text" id="minGuest4">Min 1 Guest</p>
+                <p class="card-text" id="maxGuest4">Max 4 Guests</p>
                 <div class="ammenitiesContainer">
                   <div class="ammenities" id=wifi>
-                    <i class="fa fa-wifi" aria-hidden="true"></i>
+                    <i class="fa fa-wifi" aria-hidden="true4"></i>
                     <p>Free<br>Wifi</p>
                   </div>
-                  <div class="ammenities" id="disabled">
+                  <div class="ammenities" id="disabled4">
                     <i class="fa fa-wheelchair" aria-hidden="true"></i>
                     <p>Disability<br>Access</p>
                   </div>
-                  <div class="ammenities" id="family">
+                  <div class="ammenities" id="family4">
                     <i class="fa fa-users" aria-hidden="true"></i>
                     <p>Family<br>Friendly</p>
                   </div>
                 </div>
                 <a href="#" class="btn btn-primary card-btn" target="_blank" id="cardBtn">View Site</a>
-                <button id="viewOnMapBtn">View on Map</button>
+                <button class="viewOnMapBtn" id="viewOnMapBtn4">View on Map</button>
               </div>
             </div>
+            <!-- Card Four Ends -->
+            <!-- Card Five Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage2">
+              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage5">
               <div class="card-body">
-                <h5 class="card-title" id="accomName2">Cardrona House</h5>
-                <p class="card-text" id="pricePerNight2">$240 per night</p>
-                <p class="card-text" id="minNight2">Min 2 Nigths</p>
-                <p class="card-text" id="maxNight2">Max 15 Nights</p>
-                <p class="card-text" id="minGuest2">Min 1 Guest</p>
-                <p class="card-text" id="maxGuest2">Max 4 Guests</p>
+                <h5 class="card-title" id="accomName5">Cardrona House</h5>
+                <p class="card-text" id="pricePerNight5">$240 per night</p>
+                <p class="card-text" id="minNight5">Min 2 Nigths</p>
+                <p class="card-text" id="maxNight5">Max 15 Nights</p>
+                <p class="card-text" id="minGuest5">Min 1 Guest</p>
+                <p class="card-text" id="maxGuest5">Max 4 Guests</p>
                 <div class="ammenitiesContainer">
                   <div class="ammenities" id=wifi>
-                    <i class="fa fa-wifi" aria-hidden="true"></i>
+                    <i class="fa fa-wifi" aria-hidden="true5"></i>
                     <p>Free<br>Wifi</p>
                   </div>
-                  <div class="ammenities" id="disabled">
+                  <div class="ammenities" id="disabled5">
                     <i class="fa fa-wheelchair" aria-hidden="true"></i>
                     <p>Disability<br>Access</p>
                   </div>
-                  <div class="ammenities" id="family">
+                  <div class="ammenities" id="family5">
                     <i class="fa fa-users" aria-hidden="true"></i>
                     <p>Family<br>Friendly</p>
                   </div>
                 </div>
                 <a href="#" class="btn btn-primary card-btn" target="_blank" id="cardBtn">View Site</a>
-                <button id="viewOnMapBtn">View on Map</button>
+                <button class="viewOnMapBtn" id="viewOnMapBtn5">View on Map</button>
               </div>
             </div>
+            <!-- Card Five Ends -->
+            <!-- Card Six Begins -->
+            <div class="card" style="width: 18rem;">
+              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage6">
+              <div class="card-body">
+                <h5 class="card-title" id="accomName6">Cardrona House</h5>
+                <p class="card-text" id="pricePerNight6">$240 per night</p>
+                <p class="card-text" id="minNight6">Min 2 Nigths</p>
+                <p class="card-text" id="maxNight6">Max 15 Nights</p>
+                <p class="card-text" id="minGuest6">Min 1 Guest</p>
+                <p class="card-text" id="maxGuest6">Max 4 Guests</p>
+                <div class="ammenitiesContainer">
+                  <div class="ammenities" id=wifi6>
+                    <i class="fa fa-wifi" aria-hidden="true"></i>
+                    <p>Free<br>Wifi</p>
+                  </div>
+                  <div class="ammenities" id="disabled6">
+                    <i class="fa fa-wheelchair" aria-hidden="true"></i>
+                    <p>Disability<br>Access</p>
+                  </div>
+                  <div class="ammenities" id="family6">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    <p>Family<br>Friendly</p>
+                  </div>
+                </div>
+                <a href="#" class="btn btn-primary card-btn" target="_blank" id="cardBtn">View Site</a>
+                <button class="viewOnMapBtn" id="viewOnMapBtn6">View on Map</button>
+              </div>
+            </div>
+            <!-- Card Six Ends -->
           </div>
+          <!-- outputRight Ends -->
         </div>
         <!-- SLIDE 3 ENDS -->
 

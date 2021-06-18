@@ -289,12 +289,14 @@ textarea.parsley-error:focus {
     box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483
 }
 
-.parsley-required {
+.parsley-required,
+.parsley-max,
+.parsley-type {
   color: red;
   list-style: none;
   font-size: 0.75em;
 }
-.parsley-errors-list  {
+.parsley-errors-list {
   padding-left: 0px;
   margin-top: 10px;
 }
@@ -304,7 +306,7 @@ textarea.parsley-error:focus {
 #submitBtn,
 #findBtn,
 #startAgainBtn,
-#viewOnMapBtn,
+.viewOnMapBtn,
 .card-btn {
   border: 0px;
   border-radius: 50px;
@@ -317,7 +319,7 @@ textarea.parsley-error:focus {
 #submitBtn:hover,
 #findBtn:hover,
 #startAgainBtn:hover,
-#viewOnMapBtn:hover,
+.viewOnMapBtn:hover,
 .card-btn:hover {
   background-color: $gold;
   color: $darkblue;
@@ -337,7 +339,7 @@ textarea.parsley-error:focus {
   margin-left: 22%;
 }
 
-#viewOnMapBtn {
+.viewOnMapBtn {
   margin-top: 1em;
   margin-left: 20%;
 }
