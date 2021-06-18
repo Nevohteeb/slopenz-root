@@ -1,4 +1,77 @@
-$(document).ready(function() {
+(function() {
+  'use strict';
+
+  // --------------------- VARIABLES -----------------------------
+
+  // DATA VARIABLES FOR ACCOMODATION:
+
+  var hotelData = {
+    hostel: {
+      pricePerNight: 30,
+      minNight: 1,
+      maxNight: 10,
+      maxCapacity: 1,
+      familyFriendly: false
+    },
+    motel: {
+      pricePerNight: 90,
+      minNight: 3,
+      maxNight: 10,
+      minCapacity: 2,
+      maxCapacity: 4,
+      familyFriendly: true
+    },
+    hotel: {
+      pricePerNight: 157,
+      minNight: 1,
+      maxNight: 5,
+      minCapacity: 1,
+      maxCapacity: 2,
+      familyFriendly: false
+    },
+    house: {
+      pricePerNight: 240,
+      minNight: 2,
+      maxNight: 15,
+      minCapacity: 1,
+      maxCapacity: 4,
+      familyFriendly: true
+    }
+  };
+
+  // GET FORM INPUTS:
+  var skifeildInput = document.getElementById('skifieldInput');
+  var nameinput = document.getElementById('nameInput');
+  var nightInput = document.getElementById('nightInput');
+  var guestInput = document.getElementById('guestInput');
+  var familyCheck = document.getElementById('familyCheck');
+
+  // GET CARD ELEMENTS:
+
+  // Card 1:
+  var accomImage = document.getElementById('accomImage');
+  var accomName = document.getElementById('accomName');
+  var pricePerNight = document.getElementById('pricePerNight');
+  var minNight = document.getElementById('minNight');
+  var maxNight = document.getElementById('maxNight');
+  var minGuest = document.getElementById('minGuest');
+  var maxGuest = document.getElementById('maxGuest');
+
+  // Card 2:
+  var accomImage2 = document.getElementById('accomImage2');
+  var accomName2 = document.getElementById('accomName2');
+  var pricePerNight2 = document.getElementById('pricePerNight2');
+  var minNight2 = document.getElementById('minNight2');
+  var minGuest2 = document.getElementById('minGuest2');
+  var maxGuest2 = document.getElementById('maxGuest2');
+
+  // Form Submit Button
+  var submitBtn = document.getElementById('submitBtn');
+
+// --------------------- PLUGINS BEGIN --------------------
+
+// Fullpage Begins:
+
   $('#fullpage').fullpage({
     css3: true,
     verticalCentered: true,
@@ -10,14 +83,70 @@ $(document).ready(function() {
   $.fn.fullpage.setAllowScrolling(false);
 
   // Textillate Begins:
+  function doText () {
+    $('.tlt').textillate({
+      in: {
+        effect: 'fadeInLeft',
+        sync: true
+      }
+    });
+  }
+  // doText ENDS
 
-  $(function() {
-    $('.tlt').textillate();
+  doText();
+
+
+  var getHome = document.getElementById('home');
+  var getQual = document.getElementById('qual');
+
+  $(getHome).click(function() {
+    $('.tlt').textillate({
+      in: {
+        effect: 'fadeInLeft',
+        sync: true
+      }
+    });
   });
 
-  // - - - - - - - - - - - - -  MAPBOX BEGiNS - - - - - - - - - - - - - - - - -
+  $(getQual).click(function() {
+    $('.tlt').textillate({
+      in: {
+        effect: 'fadeInLeft',
+        sync: true
+      }
+    });
+  });
 
-  // ----- Ski Field Map Begins -------
+  //  Slick Carousel:
+
+  $('.outputRight').slick({
+    arrows: true,
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  });
+
+  // Parlsey Validation:
+
+  var form = $('#parent').parsley();
+  $('#parent').find('#submitBtn').click(function() {
+    form.validate();
+  });
+
+  form.subscribe('parsley:form:success', function(e) {
+    $.fn.fullpage.silentMoveTo(1, 2);
+  });
+
+  // Parsley Ends
+
+
+
+
+  // - - - - - - - - -   Mapbox Begins - - - - - - - - - - - -
+
+
+  // Ski Field Map Begins:
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiY2lhcmFuc2xvdyIsImEiOiJja3A0b2RvNXQwZHZsMm5vdzJhMzlneHliIn0.GePUzyfjdyGc0pnYNPerqA';
   var map = new mapboxgl.Map({
@@ -81,6 +210,8 @@ $(document).ready(function() {
       .addTo(map);
   });
 
+  // Fly to Click Events:
+
   document.getElementById('flyA').addEventListener('click', function() {
     map.flyTo({
       center: [
@@ -110,10 +241,11 @@ $(document).ready(function() {
       essential: true
     });
   });
+  // Ski Field Map Ends
 
-  // ------ Ski Field Map Ends --------
 
-  // ------- Accomodation Map Begins ----------------
+
+  // Accomodation Map Begins
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiY2lhcmFuc2xvdyIsImEiOiJja3A0b2RvNXQwZHZsMm5vdzJhMzlneHliIn0.GePUzyfjdyGc0pnYNPerqA';
   var map2 = new mapboxgl.Map({
@@ -242,59 +374,45 @@ $(document).ready(function() {
       popup.remove();
     });
   });
-
-
+  // Accomodation Map Ends
 
   //  MAP BOX ENDS
 
-  // ------------------ PARSLEY VALIDATION CONTROLS BEGIN: --------------------
+  // -------------------- FUNCTIONS ----------------------------
 
-  var form = $('#parent').parsley();
-  $('#parent').find('#submitBtn').click(function() {
-    form.validate();
-  });
+  $(submitBtn).click(function() {
 
-  form.subscribe('parsley:form:success', function(e) {
-    $.fn.fullpage.silentMoveTo(1, 2);
-  });
+    var skifeildInput = document.getElementById('skifieldInput');
+    var getNightInput = document.getElementById('nightInput');
+    var nightInput = parseInt(getNightInput.value);
+    console.log(nightInput);
+    var getGuestInput = document.getElementById('guestInput');
+    var guestInput = parseInt(getGuestInput.value);
+    var accomName = document.getElementById('accomName');
+    var accomName2 = document.getElementById('accomName2');
+    var minNight = document.getElementById('minNight');
+    var maxNight = document.getElementById('maxNight');
+    var pricePerNight = document.getElementById('pricePerNight');
+    var pricePerNight2 = document.getElementById('pricePerNight2');
 
-  // ---------------------- PARSLEY ENDS --------------------------------------
 
-  // --------------------- DATA VARIABLES FOR ACCOMODATION --------------------
+    // TREBLE CONE HOTEL ARGUEMENT
 
-  var hotelData = {
-    hostel: {
-      pricePerNight: 30,
-      minNight: 1,
-      maxNight: 10,
-      maxCapacity: 1,
-      familyFriendly: false
-    },
-    motel: {
-      pricePerNight: 90,
-      minNight: 3,
-      maxNight: 10,
-      minCapacity: 2,
-      maxCapacity: 4,
-      familyFriendly: true
-    },
-    hotel: {
-      pricePerNight: 157,
-      minNight: 1,
-      maxNight: 5,
-      minCapacity: 1,
-      maxCapacity: 2,
-      familyFriendly: false
-    },
-    house: {
-      pricePerNight: 240,
-      minNight: 2,
-      maxNight: 15,
-      minCapacity: 1,
-      maxCapacity: 4,
-      familyFriendly: true
+    if ((skifeildInput.value === 'Treble Cone') && (getNightInput.value <= hotelData.hotel.maxNight) && (getGuestInput.value <= hotelData.hotel.maxCapacity)) {
+      accomName.textContent = 'Treble Cone Hotel 1';
+      accomName2.textContent = 'Treble Cone Hotel 2';
+      pricePerNight.textContent = '$ ' + hotelData.hotel.pricePerNight;
+      pricePerNight2.textContent = '$ ' + hotelData.hotel.pricePerNight;
+      minNight.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
+      minNight2.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
+      maxNight.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
+      maxNight2.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
+      minGuest.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
+      maxGuest.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
     }
-  };
 
-});
+  });
+
+
+}());
 // document ENDS
