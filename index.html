@@ -97,12 +97,6 @@
                   <label for="nameInput">Number of Guests</label>
                   <input type="name" class="form-control" id="guestInput" placeholder="Max of 4" data-parsley-required-message="Please enter number of guests" data-parsley-required="true" data-parsley-type="number" data-parsley-max="4">
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="familyCheck">
-                  <label class="form-check-label" for="defaultCheck2">
-                    Family Friendly
-                  </label>
-                </div>
                 <button id="submitBtn">See available rooms!</button>
               </div>
             </div>
@@ -125,7 +119,7 @@
           <div class="outputRight">
             <!-- Card One Begins -->
             <div class="card" style="width: 18rem;">
-              <img id="accomImage" src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House">
+              <img id="accomImage" src="img/house.jpeg" class="card-img-top" alt="Cardrona House">
               <div class="card-body">
                 <h5 class="card-title" id="accomName">Cardrona House</h5>
                 <p class="card-text" id="pricePerNight">$240 per night</p>
@@ -154,7 +148,7 @@
             <!-- Card One Ends -->
             <!-- Card Two Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage2">
+              <img src="img/house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage2">
               <div class="card-body">
                 <h5 class="card-title" id="accomName2">Cardrona House</h5>
                 <p class="card-text" id="pricePerNight2">$240 per night</p>
@@ -183,7 +177,7 @@
             <!-- Card Two Ends -->
             <!-- Card Three Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage3">
+              <img src="img/house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage3">
               <div class="card-body">
                 <h5 class="card-title" id="accomName3">Cardrona House</h5>
                 <p class="card-text" id="pricePerNight3">$240 per night</p>
@@ -192,8 +186,8 @@
                 <p class="card-text" id="minGuest3">Min 1 Guest</p>
                 <p class="card-text" id="maxGuest3">Max 4 Guests</p>
                 <div class="ammenitiesContainer">
-                  <div class="ammenities" id=wifi>
-                    <i class="fa fa-wifi" aria-hidden="true3"></i>
+                  <div class="ammenities" id="wifi3">
+                    <i class="fa fa-wifi" aria-hidden="true"></i>
                     <p>Free<br>Wifi</p>
                   </div>
                   <div class="ammenities" id="disabled3">
@@ -212,7 +206,7 @@
             <!-- Card Three Ends -->
             <!-- Card Four Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage4">
+              <img src="img/house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage4">
               <div class="card-body">
                 <h5 class="card-title" id="accomName4">Cardrona House</h5>
                 <p class="card-text" id="pricePerNight4">$240 per night</p>
@@ -221,8 +215,8 @@
                 <p class="card-text" id="minGuest4">Min 1 Guest</p>
                 <p class="card-text" id="maxGuest4">Max 4 Guests</p>
                 <div class="ammenitiesContainer">
-                  <div class="ammenities" id=wifi>
-                    <i class="fa fa-wifi" aria-hidden="true4"></i>
+                  <div class="ammenities" id="wifi4">
+                    <i class="fa fa-wifi" aria-hidden="true"></i>
                     <p>Free<br>Wifi</p>
                   </div>
                   <div class="ammenities" id="disabled4">
@@ -241,7 +235,7 @@
             <!-- Card Four Ends -->
             <!-- Card Five Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage5">
+              <img src="img/house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage5">
               <div class="card-body">
                 <h5 class="card-title" id="accomName5">Cardrona House</h5>
                 <p class="card-text" id="pricePerNight5">$240 per night</p>
@@ -250,8 +244,8 @@
                 <p class="card-text" id="minGuest5">Min 1 Guest</p>
                 <p class="card-text" id="maxGuest5">Max 4 Guests</p>
                 <div class="ammenitiesContainer">
-                  <div class="ammenities" id=wifi>
-                    <i class="fa fa-wifi" aria-hidden="true5"></i>
+                  <div class="ammenities" id="wifi5">
+                    <i class="fa fa-wifi" aria-hidden="true"></i>
                     <p>Free<br>Wifi</p>
                   </div>
                   <div class="ammenities" id="disabled5">
@@ -270,7 +264,7 @@
             <!-- Card Five Ends -->
             <!-- Card Six Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="img/cardrona-house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage6">
+              <img src="img/house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage6">
               <div class="card-body">
                 <h5 class="card-title" id="accomName6">Cardrona House</h5>
                 <p class="card-text" id="pricePerNight6">$240 per night</p>
@@ -336,9 +330,9 @@
           <div id="skifieldLeft">
             <div class="map-container">
               <div id='skiFieldMap' style='width: 40vw; height: 60vh;'>
-                <button class="map-button" id=flyA>Cardrona</button>
-                <button class="map-button" id=flyB>The Remarkables</button>
-                <button class="map-button" id=flyC>Treble Cone</button>
+                <button class="map-button" id="flyA">Cardrona</button>
+                <button class="map-button" id="flyB">The Remarkables</button>
+                <button class="map-button" id="flyC">Treble Cone</button>
               </div>
             </div>
           </div>
@@ -349,9 +343,9 @@
                 often less crowded but offer fewer facilities. Fields are maintained by their ski club and facilities often include rope tow or T-bar lifts only with generally no snow grooming.<br><br>
                 Click the buttons on the map to see the different skifield locations</p>
               <div id="skiLogosCont">
-                <img id=cardronaLogo src="img/cardrona-logo.jpeg" alt="Cardrona Alpine Resort">
-                <img id=trebleLogo src="img/treble-cone-logo.png" alt="Treble Cone">
-                <img id=remarkLogo src="img/the-remarkables-logo.png" alt="The Remarkables">
+                <img id="cardronaLogo" src="img/cardrona-logo.jpeg" alt="Cardrona Alpine Resort">
+                <img id="trebleLogo" src="img/treble-cone-logo.png" alt="Treble Cone">
+                <img id="remarkLogo" src="img/the-remarkables-logo.png" alt="The Remarkables">
               </div>
             </div>
 

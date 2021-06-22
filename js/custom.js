@@ -10,9 +10,8 @@
       pricePerNight: 30,
       minNight: 1,
       maxNight: 10,
-      minCapacity: 10,
+      minCapacity: 1,
       maxCapacity: 1,
-      familyFriendly: false
     },
     motel: {
       pricePerNight: 90,
@@ -20,7 +19,6 @@
       maxNight: 10,
       minCapacity: 2,
       maxCapacity: 4,
-      familyFriendly: true
     },
     hotel: {
       pricePerNight: 157,
@@ -28,7 +26,6 @@
       maxNight: 5,
       minCapacity: 1,
       maxCapacity: 2,
-      familyFriendly: false
     },
     house: {
       pricePerNight: 240,
@@ -36,55 +33,24 @@
       maxNight: 15,
       minCapacity: 1,
       maxCapacity: 4,
-      familyFriendly: true
     }
   };
 
-  // All variables requiring higher scope:
+
   function cloudVariables () {
+
+    // Input Variables
+    var skifeildInput = document.getElementById('skifieldInput');
+    var getNightInput = document.getElementById('nightInput');
+    var nightInput = parseInt(getNightInput.value);
+    var getGuestInput = document.getElementById('guestInput');
+    var guestInput = parseInt(getGuestInput.value);
+    var getfamilyCheck = document.getElementById('familyCheck');
+    var familyCheck = getfamilyCheck.checked;
 
   }
 
-  // Input Variables
-  var skifeildInput = document.getElementById('skifieldInput');
-  var getNightInput = document.getElementById('nightInput');
-  var nightInput = parseInt(getNightInput.value);
-  var getGuestInput = document.getElementById('guestInput');
-  var guestInput = parseInt(getGuestInput.value);
-  var getfamilyCheck = document.getElementById('familyCheck');
-  var familyCheck = getfamilyCheck.checked;
 
-  // Get Card Elements:
-  var accomName = document.getElementById('accomName');
-  var accomName2 = document.getElementById('accomName2');
-  var accomName3 = document.getElementById('accomName3');
-  var accomName4 = document.getElementById('accomName4');
-  var accomName5 = document.getElementById('accomName5');
-  var accomName6 = document.getElementById('accomName6');
-
-  var pricePerNight = document.getElementById('pricePerNight');
-  var pricePerNight2 = document.getElementById('pricePerNight2');
-  var pricePerNight3 = document.getElementById('pricePerNight3');
-  var pricePerNight4 = document.getElementById('pricePerNight4');
-  var pricePerNight5 = document.getElementById('pricePerNight5');
-  var pricePerNight6 = document.getElementById('pricePerNight6');
-
-  var minNight = document.getElementById('minNight');
-  var minNight2 = document.getElementById('minNight2');
-  var minNight3 = document.getElementById('minNight3');
-  var minNight4 = document.getElementById('minNight4');
-  var minNight5 = document.getElementById('minNight5');
-  var minNight6 = document.getElementById('minNight6');
-
-  var maxNight = document.getElementById('maxNight');
-  var maxNight2 = document.getElementById('maxNight2');
-  var maxNight3 = document.getElementById('maxNight3');
-  var maxNight4 = document.getElementById('maxNight4');
-  var maxNight5 = document.getElementById('maxNight5');
-  var maxNight6 = document.getElementById('maxNight6');
-
-  // Form Submit Button
-  var submitBtn = document.getElementById('submitBtn');
 
 // --------------------- PLUGINS BEGIN --------------------
 
@@ -109,31 +75,8 @@
       }
     });
   }
-  // doText ENDS
 
   doText();
-
-
-  var getHome = document.getElementById('home');
-  var getQual = document.getElementById('qual');
-
-  $(getHome).click(function() {
-    $('.tlt').textillate({
-      in: {
-        effect: 'fadeInLeft',
-        sync: true
-      }
-    });
-  });
-
-  $(getQual).click(function() {
-    $('.tlt').textillate({
-      in: {
-        effect: 'fadeInLeft',
-        sync: true
-      }
-    });
-  });
 
   //  Slick Carousel:
 
@@ -396,6 +339,56 @@
 
   //  MAP BOX ENDS
 
+  // --------------------- VIEW ON MAP CLICKS ----------------------
+
+  function viewOnMapHostel () {
+    $(viewOnMap).click(function(){
+      map2.flyTo({
+        center: [
+          168.9492151232965, -44.8731916471041
+        ],
+        zoom: 15,
+        essential: true
+      });
+    });
+  }
+
+  function viewOnMapHotel () {
+    $(viewOnMap).click(function(){
+      map2.flyTo({
+        center: [
+          168.9492151232965, -44.8731916471041
+        ],
+        zoom: 15,
+        essential: true
+      });
+    });
+  }
+
+  function viewOnMapMotel () {
+    $(viewOnMap).click(function(){
+      map2.flyTo({
+        center: [
+          168.9492151232965, -44.8731916471041
+        ],
+        zoom: 15,
+        essential: true
+      });
+    });
+  }
+
+  function viewOnMapHouse () {
+    $(viewOnMap).click(function(){
+      map2.flyTo({
+        center: [
+          168.9492151232965, -44.8731916471041
+        ],
+        zoom: 15,
+        essential: true
+      });
+    });
+  }
+
   // -------------------- CLICK FUNCTIONS ----------------------------
 
   $(submitBtn).click(function() {
@@ -406,10 +399,18 @@
     var nightInput = parseInt(getNightInput.value);
     var getGuestInput = document.getElementById('guestInput');
     var guestInput = parseInt(getGuestInput.value);
-    var getfamilyCheck = document.getElementById('familyCheck');
-    var familyCheck = getfamilyCheck.checked;
 
     // Get Card Elements:
+
+    // Images
+    var accomImage = document.getElementById('accomImage');
+    var accomImage2 = document.getElementById('accomImage2');
+    var accomImage3 = document.getElementById('accomImage3');
+    var accomImage4 = document.getElementById('accomImage4');
+    var accomImage5 = document.getElementById('accomImage5');
+    var accomImage6 = document.getElementById('accomImage6');
+
+    // Accomodation Name
     var accomName = document.getElementById('accomName');
     var accomName2 = document.getElementById('accomName2');
     var accomName3 = document.getElementById('accomName3');
@@ -417,6 +418,7 @@
     var accomName5 = document.getElementById('accomName5');
     var accomName6 = document.getElementById('accomName6');
 
+    // Price Per Night
     var pricePerNight = document.getElementById('pricePerNight');
     var pricePerNight2 = document.getElementById('pricePerNight2');
     var pricePerNight3 = document.getElementById('pricePerNight3');
@@ -424,6 +426,7 @@
     var pricePerNight5 = document.getElementById('pricePerNight5');
     var pricePerNight6 = document.getElementById('pricePerNight6');
 
+    // Min Night
     var minNight = document.getElementById('minNight');
     var minNight2 = document.getElementById('minNight2');
     var minNight3 = document.getElementById('minNight3');
@@ -431,6 +434,7 @@
     var minNight5 = document.getElementById('minNight5');
     var minNight6 = document.getElementById('minNight6');
 
+    // Max Night
     var maxNight = document.getElementById('maxNight');
     var maxNight2 = document.getElementById('maxNight2');
     var maxNight3 = document.getElementById('maxNight3');
@@ -438,440 +442,1391 @@
     var maxNight5 = document.getElementById('maxNight5');
     var maxNight6 = document.getElementById('maxNight6');
 
+    // Min Guest
+    var minGuest = document.getElementById('minGuest');
+    var minGuest2 = document.getElementById('minGuest2');
+    var minGuest3 = document.getElementById('minGuest3');
+    var minGuest4 = document.getElementById('minGuest4');
+    var minGuest5 = document.getElementById('minGuest5');
+    var minGuest6 = document.getElementById('minGuest6');
 
+    // Max Guest
+    var maxGuest = document.getElementById('minGuest');
+    var maxGuest2 = document.getElementById('minGuest2');
+    var maxGuest3 = document.getElementById('minGuest3');
+    var maxGuest4 = document.getElementById('minGuest4');
+    var maxGuest5 = document.getElementById('minGuest5');
+    var maxGuest6 = document.getElementById('minGuest6');
+
+    // Ammenites Removal
+    var wifi = document.getElementById('wifi');
+    var wifi2 = document.getElementById('wifi2');
+    var disabled = document.getElementById('disabled');
+    var disabled2 = document.getElementById('disabled2');
+    var family = document.getElementById('family');
+    var family2 = document.getElementById('family2');
+
+    // Get "View On Map" Buttons
+    var viewOnMap = document.getElementById('viewOnMapBtn1');
+    var viewOnMap2 = document.getElementById('viewOnMapBtn2');
+    var viewOnMap3 = document.getElementById('viewOnMapBtn3');
+    var viewOnMap4 = document.getElementById('viewOnMapBtn4');
+    var viewOnMap5 = document.getElementById('viewOnMapBtn5');
+    var viewOnMap6 = document.getElementById('viewOnMapBtn6');
 
 
     // ---------------- CONDITIONALS -----------------
+    // ** Conditionals are organized into sections based on location **
 
-    // - - - - - - - - HOTEL CONDITIONALS - - - - - - - - -
+    // ----Treble Cone:------
 
-    // Treble Cone Hotel:
+    // Hostel & Hotel
 
-    if ((skifeildInput.value === 'Treble Cone') && (getNightInput.value <= hotelData.hotel.maxNight) && (getGuestInput.value <= hotelData.hotel.maxCapacity)) {
+    if ((skifeildInput.value == 'Treble Cone') && (getGuestInput.value == 1) && (getNightInput.value <= 1)) {
+
+      // Change Image
+      accomImage.src = 'img/hostel.jpeg';
+      accomImage2.src = 'img/hostel.jpeg';
+      accomImage3.src = 'img/hotel.jpeg';
+      accomImage4.src = 'img/hotel.jpeg';
+      accomImage5.src = 'img/hotel.jpeg';
+      accomImage6.src = 'img/hotel.jpeg';
+
       // Change Accomodation
-      accomName.textContent = 'Treble Cone Hotel 1';
-      accomName2.textContent = 'Treble Cone Hotel 2';
-      accomName3.textContent = 'Treble Cone Hotel 3';
-      accomName4.textContent = 'Treble Cone Hotel 4';
-      accomName5.textContent = 'Treble Cone Hotel 5';
-      accomName6.textContent = 'Treble Cone Hotel 6';
+      accomName.textContent = 'Treble Cone Hostel';
+      accomName2.textContent = 'Treble Cone Hostel';
+      accomName3.textContent = 'Treble Cone Hotel';
+      accomName4.textContent = 'Treble Cone Hotel';
+      accomName5.textContent = 'Treble Cone Hotel';
+      accomName6.textContent = 'Treble Cone Hotel';
+
       // Change Price Per Night
-      pricePerNight.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
-      pricePerNight2.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
-      pricePerNight3.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
-      pricePerNight4.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
-      pricePerNight5.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
-      pricePerNight6.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
+      pricePerNight.textContent = '$' + hotelData.hostel.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.hostel.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+
       // Change Min Nights
-      minNight.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
-      minNight2.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
-      minNight3.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
-      minNight4.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
-      minNight5.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
-      minNight6.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
+      minNight.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+
       // Change Max Nights
-      maxNight.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
-      maxNight2.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
-      maxNight3.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
-      maxNight4.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
-      maxNight5.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
-      maxNight6.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
+      maxNight.textContent = 'Max ' + hotelData.hostel.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.hostel.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+
       // Change Min Guests
-      minGuest.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
-      minGuest2.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
-      minGuest3.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
-      minGuest4.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
-      minGuest5.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
-      minGuest6.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
+      minGuest.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+
       // Change Max Guests
-      maxGuest.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
-      maxGuest2.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
-      maxGuest3.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
-      maxGuest4.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
-      maxGuest5.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
-      maxGuest6.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
+      maxGuest.textContent = 'Max ' + hotelData.hostel.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.hostel.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+
+      // Remove ammenities
+      wifi.remove();
+      wifi2.remove();
+      disabled.remove();
+      disabled2.remove();
+      family.remove();
+      family2.remove();
+
     }
 
-    // Cardona Hotel
+    // Hotel & House
 
-    else if ((skifeildInput.value === 'Cardrona') && (getNightInput.value <= hotelData.hotel.maxNight) && (getGuestInput.value <= hotelData.hotel.maxCapacity)) {
+  else if ((skifeildInput.value === 'Treble Cone') && (getGuestInput.value == 2) && (getNightInput.value <= 10)) {
+
+    // Change Image
+    accomImage.src = 'img/hotel.jpeg';
+    accomImage2.src = 'img/hotel.jpeg';
+    accomImage3.src = 'img/hotel.jpeg';
+    accomImage4.src = 'img/house.jpeg';
+    accomImage5.src = 'img/house.jpeg';
+    accomImage6.src = 'img/house.jpeg';
+
+    // Change Accomodation
+    accomName.textContent = 'Treble Cone Hotel';
+    accomName2.textContent = 'Treble Cone Hotel';
+    accomName3.textContent = 'Treble Cone Hotel';
+    accomName4.textContent = 'Treble Cone House';
+    accomName5.textContent = 'Treble Cone House';
+    accomName6.textContent = 'Treble Cone House';
+
+    // Change Price Per Night
+    pricePerNight.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+    pricePerNight2.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+    pricePerNight3.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+    pricePerNight4.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+    pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+    pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+    // Change Min Nights
+    minNight.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+    minNight2.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+    minNight3.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+    minNight4.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+    minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+    minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
+    // Change Max Nights
+    maxNight.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+    maxNight2.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+    maxNight3.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+    maxNight4.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+    maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+    maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
+    // Change Min Guests
+    minGuest.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+    minGuest2.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+    minGuest3.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+    minGuest4.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+    minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+    minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
+    // Change Max Guests
+    maxGuest.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+    maxGuest2.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+    maxGuest3.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+    maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+    maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+    maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+    }
+
+    // Hostel, Hotel & House
+    else if ((skifeildInput.value == 'Treble Cone') && (getGuestInput.value == 1) && (getNightInput.value <= 5)) {
+
+      // Change Image
+      accomImage.src = 'img/hostel.jpeg';
+      accomImage2.src = 'img/hostel.jpeg';
+      accomImage3.src = 'img/hotel.jpeg';
+      accomImage4.src = 'img/hotel.jpeg';
+      accomImage5.src = 'img/house.jpeg';
+      accomImage6.src = 'img/house.jpeg';
+
       // Change Accomodation
-      accomName.textContent = 'Cardrona Hotel 1';
-      accomName2.textContent = 'Cardrona Hotel 2';
-      accomName3.textContent = 'Cardrona Hotel 3';
-      accomName4.textContent = 'Cardrona Hotel 4';
-      accomName5.textContent = 'Cardrona Hotel 5';
-      accomName6.textContent = 'Cardrona Hotel 6';
+      accomName.textContent = 'Treble Cone Hostel';
+      accomName2.textContent = 'Treble Cone Hostel';
+      accomName3.textContent = 'Treble Cone Hotel';
+      accomName4.textContent = 'Treble Cone Hotel';
+      accomName5.textContent = 'Treble Cone House';
+      accomName6.textContent = 'Treble Cone House';
+
       // Change Price Per Night
-      pricePerNight.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
-      pricePerNight2.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
-      pricePerNight3.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
-      pricePerNight4.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
-      pricePerNight5.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
-      pricePerNight6.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
-      // Change Min Night
-      minNight.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
-      minNight2.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
-      minNight3.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
-      minNight4.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
-      minNight5.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
-      minNight6.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
-      // Change Max Nights
-      maxNight.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
-      maxNight2.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
-      maxNight3.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
-      maxNight4.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
-      maxNight5.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
-      maxNight6.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
-      // Change Min Night
-      minGuest.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
-      minGuest2.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
-      minGuest3.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
-      minGuest4.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
-      minGuest5.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
-      minGuest6.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
-      // Chnage Max Night
-      maxGuest.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
-      maxGuest2.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
-      maxGuest3.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
-      maxGuest4.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
-      maxGuest5.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
-      maxGuest6.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
-    }
+      pricePerNight.textContent = '$' + hotelData.hostel.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.hostel.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
 
-    // The Remarkables Hotel
-
-    else if ((skifeildInput.value === 'The Remarkables') && (getNightInput.value <= hotelData.hotel.maxNight) && (getGuestInput.value <= hotelData.hotel.maxCapacity)) {
-      // Change Accomodation
-      accomName.textContent = 'The Remarkables Hotel 1';
-      accomName2.textContent = 'The Remarkables Hotel 2';
-      accomName3.textContent = 'The Remarkables Hotel 3';
-      accomName4.textContent = 'The Remarkables Hotel 4';
-      accomName5.textContent = 'The Remarkables Hotel 5';
-      accomName6.textContent = 'The Remarkables Hotel 6';
-      // Change Price Per Night
-      pricePerNight.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
-      pricePerNight2.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
-      pricePerNight3.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
-      pricePerNight4.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
-      pricePerNight5.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
-      pricePerNight6.textContent = '$ ' + hotelData.hotel.pricePerNight + ' per night';
-      // Change Min Night
-      minNight.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
-      minNight2.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
-      minNight3.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
-      minNight4.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
-      minNight5.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
-      minNight6.textContent = 'Min Nights = ' + hotelData.hotel.minNight;
-      // Change Max Nights
-      maxNight.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
-      maxNight2.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
-      maxNight3.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
-      maxNight4.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
-      maxNight5.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
-      maxNight6.textContent = 'Max Nights = ' + hotelData.hotel.maxNight;
-      // Change Min Night
-      minGuest.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
-      minGuest2.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
-      minGuest3.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
-      minGuest4.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
-      minGuest5.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
-      minGuest6.textContent = 'Min Guests = ' + hotelData.hotel.minCapacity;
-      // Chnage Max Night
-      maxGuest.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
-      maxGuest2.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
-      maxGuest3.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
-      maxGuest4.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
-      maxGuest5.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
-      maxGuest6.textContent = 'Max Guests = ' + hotelData.hotel.maxCapacity;
-    }
-
-    // - - - - - - MOTEL CONDITIONALS - - - - - - - -
-
-    // Treble Cone Motel
-
-    else if ((skifeildInput.value === 'Treble Cone') && (getNightInput.value <= hotelData.motel.maxNight) && (getGuestInput.value <= hotelData.motel.maxCapacity)) {
-      // Change Accomodation:
-      accomName.textContent = 'Treble Cone Hotel 1';
-      accomName2.textContent = 'Treble Cone Hotel 2';
-      accomName2.textContent = 'Treble Cone Hotel 3';
-      accomName2.textContent = 'Treble Cone Hotel 4';
-      accomName2.textContent = 'Treble Cone Hotel 5';
-      accomName2.textContent = 'Treble Cone Hotel 6';
-      //  Change Price Per Night:
-      pricePerNight.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
-      pricePerNight2.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
-      pricePerNight3.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
-      pricePerNight4.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
-      pricePerNight5.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
-      pricePerNight6.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
       // Change Min Nights
-      minNight.textContent = 'Min Nights = ' + hotelData.motel.minNight;
-      minNight2.textContent = 'Min Nights = ' + hotelData.motel.minNight;
-      minNight3.textContent = 'Min Nights = ' + hotelData.motel.minNight;
-      minNight4.textContent = 'Min Nights = ' + hotelData.motel.minNight;
-      minNight5.textContent = 'Min Nights = ' + hotelData.motel.minNight;
-      minNight6.textContent = 'Min Nights = ' + hotelData.motel.minNight;
+      minNight.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
       // Change Max Nights
-      maxNight.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
-      maxNight2.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
-      maxNight3.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
-      maxNight4.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
-      maxNight5.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
-      maxNight6.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
+      maxNight.textContent = 'Max ' + hotelData.hostel.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.hostel.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
       // Change Min Guests
-      minGuest.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
-      minGuest2.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
-      minGuest3.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
-      minGuest4.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
-      minGuest5.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
-      minGuest6.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
+      minGuest.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
       // Change Max Guests
-      maxGuest.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
-      maxGuest2.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
-      maxGuest3.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
-      maxGuest4.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
-      maxGuest5.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
-      maxGuest6.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
+      maxGuest.textContent = 'Max ' + hotelData.hostel.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.hostel.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+      // Remove ammenities
+      wifi.remove();
+      wifi2.remove();
+      disabled.remove();
+      disabled2.remove();
+      family.remove();
+      family2.remove();
+
     }
 
-    // Cardrona Motel
+    // House
+    else if ((skifeildInput.value == 'Treble Cone') && ((getGuestInput.value == 1) && (getNightInput.value >= 10)) || ( ((getNightInput.value == 2) && ((getGuestInput.value >= 3) || (getGuestInput.value <= 4)))))    {
 
-    else if ((skifeildInput.value === 'Cardrona') && (getNightInput.value <= hotelData.motel.maxNight) && (getGuestInput.value <= hotelData.motel.maxCapacity)) {
+      // Change Image
+      accomImage.src = 'img/house.jpeg';
+      accomImage2.src = 'img/house.jpeg';
+      accomImage3.src = 'img/house.jpeg';
+      accomImage4.src = 'img/house.jpeg';
+      accomImage5.src = 'img/house.jpeg';
+      accomImage6.src = 'img/house.jpeg';
+
       // Change Accomodation
-      accomName.textContent = 'Cardrona Motel 1';
-      accomName2.textContent = 'Cardrona Motel 2';
-      accomName3.textContent = 'Cardrona Motel 3';
-      accomName4.textContent = 'Cardrona Motel 4';
-      accomName5.textContent = 'Cardrona Motel 5';
-      accomName6.textContent = 'Cardrona Motel 6';
+      accomName.textContent = 'Treble Cone House';
+      accomName2.textContent = 'Treble Cone House';
+      accomName3.textContent = 'Treble Cone House';
+      accomName4.textContent = 'Treble Cone House';
+      accomName5.textContent = 'Treble Cone House';
+      accomName6.textContent = 'Treble Cone House';
+
       // Change Price Per Night
-      pricePerNight.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
-      pricePerNight2.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
-      pricePerNight3.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
-      pricePerNight4.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
-      pricePerNight5.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
-      pricePerNight6.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
-      // Change Min Night
-      minNight.textContent = 'Min Nights = ' + hotelData.motel.minNight;
-      minNight2.textContent = 'Min Nights = ' + hotelData.motel.minNight;
-      minNight3.textContent = 'Min Nights = ' + hotelData.motel.minNight;
-      minNight4.textContent = 'Min Nights = ' + hotelData.motel.minNight;
-      minNight5.textContent = 'Min Nights = ' + hotelData.motel.minNight;
-      minNight6.textContent = 'Min Nights = ' + hotelData.motel.minNight;
+      pricePerNight.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
       // Change Max Nights
-      maxNight.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
-      maxNight2.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
-      maxNight3.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
-      maxNight4.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
-      maxNight5.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
-      maxNight6.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
+      maxNight.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
       // Change Min Guests
-      minGuest.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
-      minGuest2.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
-      minGuest3.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
-      minGuest4.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
-      minGuest5.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
-      minGuest6.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
+      minGuest.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
       // Change Max Guests
-      maxGuest.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
-      maxGuest2.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
-      maxGuest3.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
-      maxGuest4.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
-      maxGuest5.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
-      maxGuest6.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
+      maxGuest.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
     }
 
-    // The Remarkables Motel
+    // Motel, Hotel & House
+    else if ((skifeildInput.value == 'Treble Cone') && (getGuestInput.value == 2) && ((getNightInput.value >= 3) || (getNightInput.value <= 5 )) ) {
 
-    else if ((skifeildInput.value === 'The Remarkables') && (getNightInput.value <= hotelData.motel.maxNight) && (getGuestInput.value <= hotelData.motel.maxCapacity)) {
+      // Change Image
+      accomImage.src = 'img/motel.jpeg';
+      accomImage2.src = 'img/motel.jpeg';
+      accomImage3.src = 'img/hotel.jpeg';
+      accomImage4.src = 'img/hotel.jpeg';
+      accomImage5.src = 'img/house.jpeg';
+      accomImage6.src = 'img/house.jpeg';
+
       // Change Accomodation
-      accomName.textContent = 'The Remarkables Motel 1';
-      accomName2.textContent = 'The Remarkables Motel 2';
-      accomName3.textContent = 'The Remarkables Motel 3';
-      accomName4.textContent = 'The Remarkables Motel 4';
-      accomName5.textContent = 'The Remarkables Motel 5';
-      accomName6.textContent = 'The Remarkables Motel 6';
+      accomName.textContent = 'Treble Cone Motel';
+      accomName2.textContent = 'Treble Cone Motel';
+      accomName3.textContent = 'Treble Cone Hotel';
+      accomName4.textContent = 'Treble Cone Hotel';
+      accomName5.textContent = 'Treble Cone House';
+      accomName6.textContent = 'Treble Cone House';
+
       // Change Price Per Night
-      pricePerNight.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
-      pricePerNight2.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
-      pricePerNight3.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
-      pricePerNight4.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
-      pricePerNight5.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
-      pricePerNight6.textContent = '$ ' + hotelData.motel.pricePerNight + ' per night';
-      // Change Min Night
-      minNight.textContent = 'Min Nights = ' + hotelData.motel.minNight;
-      minNight2.textContent = 'Min Nights = ' + hotelData.motel.minNight;
-      minNight3.textContent = 'Min Nights = ' + hotelData.motel.minNight;
-      minNight4.textContent = 'Min Nights = ' + hotelData.motel.minNight;
-      minNight5.textContent = 'Min Nights = ' + hotelData.motel.minNight;
-      minNight6.textContent = 'Min Nights = ' + hotelData.motel.minNight;
+      pricePerNight.textContent = '$' + hotelData.motel.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.motel.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
       // Change Max Nights
-      maxNight.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
-      maxNight2.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
-      maxNight3.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
-      maxNight4.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
-      maxNight5.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
-      maxNight6.textContent = 'Max Nights = ' + hotelData.motel.maxNight;
+      maxNight.textContent = 'Max ' + hotelData.motel.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.motel.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
       // Change Min Guests
-      minGuest.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
-      minGuest2.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
-      minGuest3.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
-      minGuest4.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
-      minGuest5.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
-      minGuest6.textContent = 'Min Guests = ' + hotelData.motel.minCapacity;
+      minGuest.textContent = 'Max ' + hotelData.motel.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.motel.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
       // Change Max Guests
-      maxGuest.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
-      maxGuest2.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
-      maxGuest3.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
-      maxGuest4.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
-      maxGuest5.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
-      maxGuest6.textContent = 'Max Guests = ' + hotelData.motel.maxCapacity;
+      maxGuest.textContent = 'Max ' + hotelData.motel.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.motel.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
     }
 
-    // - - - - - - - HOSTEL CONDITIONALS - - - - - - -
 
-    // Treble Cone Hostel
+    // Motel & House
+    else if ((skifeildInput.value == 'Treble Cone') && ((getGuestInput.value >= 2) && (getGuestInput.value <= 4) && (getNightInput.value > 3)) ) {
 
-    else if ((skifeildInput.value === 'Treble Cone') && (getNightInput.value <= hotelData.hostel.maxNight) && (getGuestInput.value <= hotelData.hostel.maxCapacity)) {
+      // Change Image
+      accomImage.src = 'img/motel.jpeg';
+      accomImage2.src = 'img/motel.jpeg';
+      accomImage3.src = 'img/motel.jpeg';
+      accomImage4.src = 'img/house.jpeg';
+      accomImage5.src = 'img/house.jpeg';
+      accomImage6.src = 'img/house.jpeg';
+
       // Change Accomodation
-      accomName.textContent = 'Treble Cone 1';
-      accomName2.textContent = 'Treble Cone 2';
-      accomName3.textContent = 'Treble Cone 3';
-      accomName4.textContent = 'Treble Cone 4';
-      accomName5.textContent = 'Treble Cone 5';
-      accomName6.textContent = 'Treble Cone 6';
+      accomName.textContent = 'Treble Cone Motel';
+      accomName2.textContent = 'Treble Cone Motel';
+      accomName3.textContent = 'Treble Cone Motel';
+      accomName4.textContent = 'Treble Cone House';
+      accomName5.textContent = 'Treble Cone House';
+      accomName6.textContent = 'Treble Cone House';
+
       // Change Price Per Night
-      pricePerNight.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      pricePerNight2.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      pricePerNight3.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      pricePerNight4.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      pricePerNight5.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      pricePerNight6.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      // Change Min Night
-      minNight.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
-      minNight2.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
-      minNight3.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
-      minNight4.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
-      minNight5.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
-      minNight6.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
+      pricePerNight.textContent = '$' + hotelData.motel.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.motel.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.motel.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
       // Change Max Nights
-      maxNight.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      maxNight2.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      maxNight3.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      maxNight4.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      maxNight5.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      maxNight6.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      // Change Min Guest
-      minGuest.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      minGuest2.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      minGuest3.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      minGuest4.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      minGuest5.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      minGuest6.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      // Change Max Guest
-      maxGuest.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
-      maxGuest2.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
-      maxGuest3.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
-      maxGuest4.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
-      maxGuest5.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
-      maxGuest6.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
+      maxNight.textContent = 'Max ' + hotelData.motel.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.motel.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.motel.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.motel.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.motel.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.motel.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.motel.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.motel.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.motel.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
     }
 
-    // Cardrona Hostel
+    // Hotel Output
+    if ((skifeildInput.value == 'Treble Cone') && (getGuestInput.value == 2) && (getNightInput.value == 1)) {
 
-    else if ((skifeildInput.value === 'Cardrona') && (getNightInput.value <= hotelData.hostel.maxNight) && (getGuestInput.value <= hotelData.hostel.maxCapacity)) {
+      // Change Image
+      accomImage.src = 'img/hotel.jpeg';
+      accomImage2.src = 'img/hotel.jpeg';
+      accomImage3.src = 'img/hotel.jpeg';
+      accomImage4.src = 'img/hotel.jpeg';
+      accomImage5.src = 'img/hotel.jpeg';
+      accomImage6.src = 'img/hotel.jpeg';
+
       // Change Accomodation
-      accomName.textContent = 'Cardrona Motel 1';
-      accomName2.textContent = 'Cardrona Motel 2';
-      accomName3.textContent = 'Cardrona Motel 3';
-      accomName4.textContent = 'Cardrona Motel 4';
-      accomName5.textContent = 'Cardrona Motel 5';
-      accomName6.textContent = 'Cardrona Motel 6';
+      accomName.textContent = 'Treble Cone Hotel';
+      accomName2.textContent = 'Treble Cone Hotel';
+      accomName3.textContent = 'Treble Cone Hotel';
+      accomName4.textContent = 'Treble Cone Hotel';
+      accomName5.textContent = 'Treble Cone Hotel';
+      accomName6.textContent = 'Treble Cone Hotel';
+
       // Change Price Per Night
-      pricePerNight.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      pricePerNight2.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      pricePerNight3.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      pricePerNight4.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      pricePerNight5.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      pricePerNight6.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      // Change Min Night
-      minNight.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
-      minNight2.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
-      minNight3.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
-      minNight4.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
-      minNight5.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
-      minNight6.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
+      pricePerNight.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+
       // Change Max Nights
-      maxNight.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      maxNight2.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      maxNight3.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      maxNight4.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      maxNight5.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      maxNight6.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      // Change Min Guest
-      minGuest.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      minGuest2.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      minGuest3.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      minGuest4.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      minGuest5.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      minGuest6.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      // Change Max Guest
-      maxGuest.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
-      maxGuest2.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
-      maxGuest3.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
-      maxGuest4.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
-      maxGuest5.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
-      maxGuest6.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
+      maxNight.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+
     }
 
-    // The Remarkables Hostel
 
-    else if ((skifeildInput.value === 'The Remarkables') && (getNightInput.value <= hotelData.hostel.maxNight) && (getGuestInput.value <= hotelData.hostel.maxCapacity)) {
+
+    // ----Cardrona Conditionals:------
+
+    // Hostel & Hotel
+
+    if ((skifeildInput.value == 'Cardrona') && (getGuestInput.value == 1) && (getNightInput.value <= 1)) {
+
+      // Change Image
+      accomImage.src = 'img/hostel.jpeg';
+      accomImage2.src = 'img/hostel.jpeg';
+      accomImage3.src = 'img/hotel.jpeg';
+      accomImage4.src = 'img/hotel.jpeg';
+      accomImage5.src = 'img/hotel.jpeg';
+      accomImage6.src = 'img/hotel.jpeg';
+
       // Change Accomodation
-      accomName.textContent = 'The Remarkables Motel 1';
-      accomName2.textContent = 'The Remarkables Motel 2';
-      accomName3.textContent = 'The Remarkables Motel 3';
-      accomName4.textContent = 'The Remarkables Motel 4';
-      accomName5.textContent = 'The Remarkables Motel 5';
-      accomName6.textContent = 'The Remarkables Motel 6';
+      accomName.textContent = 'Cardrona Hostel';
+      accomName2.textContent = 'Cardrona Hostel';
+      accomName3.textContent = 'Cardrona Hotel';
+      accomName4.textContent = 'Cardrona Hotel';
+      accomName5.textContent = 'Cardrona Hotel';
+      accomName6.textContent = 'Cardrona Hotel';
+
       // Change Price Per Night
-      pricePerNight.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      pricePerNight2.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      pricePerNight3.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      pricePerNight4.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      pricePerNight5.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      pricePerNight6.textContent = '$ ' + hotelData.hostel.pricePerNight + ' per night';
-      // Change Min Night
-      minNight.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
-      minNight2.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
-      minNight3.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
-      minNight4.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
-      minNight5.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
-      minNight6.textContent = 'Min Nights = ' + hotelData.hostel.minNight;
+      pricePerNight.textContent = '$' + hotelData.hostel.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.hostel.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+
       // Change Max Nights
-      maxNight.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      maxNight2.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      maxNight3.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      maxNight4.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      maxNight5.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      maxNight6.textContent = 'Max Nights = ' + hotelData.hostel.maxNight;
-      // Change Min Guest
-      minGuest.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      minGuest2.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      minGuest3.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      minGuest4.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      minGuest5.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      minGuest6.textContent = 'Min Guests = ' + hotelData.hostel.minCapacity;
-      // Change Max Guest
-      maxGuest.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
-      maxGuest2.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
-      maxGuest3.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
-      maxGuest4.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
-      maxGuest5.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
-      maxGuest6.textContent = 'Max Guests = ' + hotelData.hostel.maxCapacity;
+      maxNight.textContent = 'Max ' + hotelData.hostel.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.hostel.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.hostel.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.hostel.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+
+      // Remove ammenities
+      wifi.remove();
+      wifi2.remove();
+      disabled.remove();
+      disabled2.remove();
+      family.remove();
+      family2.remove();
+
     }
 
+    // Hotel & House
+
+    else if ((skifeildInput.value === 'Cardrona') && (getGuestInput.value == 2) && (getNightInput.value <= 10)) {
+
+      // Change Image
+      accomImage.src = 'img/hotel.jpeg';
+      accomImage2.src = 'img/hotel.jpeg';
+      accomImage3.src = 'img/hotel.jpeg';
+      accomImage4.src = 'img/house.jpeg';
+      accomImage5.src = 'img/house.jpeg';
+      accomImage6.src = 'img/house.jpeg';
+
+      // Change Accomodation
+      accomName.textContent = 'Cardrona Hotel';
+      accomName2.textContent = 'Cardrona Hotel';
+      accomName3.textContent = 'Cardrona Hotel';
+      accomName4.textContent = 'Cardrona House';
+      accomName5.textContent = 'Cardrona House';
+      accomName6.textContent = 'Cardrona House';
+
+      // Change Price Per Night
+      pricePerNight.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
+      // Change Max Nights
+      maxNight.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+    }
+
+    // Hostel, Hotel & House
+    else if ((skifeildInput.value == 'Cardrona') && (getGuestInput.value == 1) && (getNightInput.value <= 5)) {
+
+      // Change Image
+      accomImage.src = 'img/hostel.jpeg';
+      accomImage2.src = 'img/hostel.jpeg';
+      accomImage3.src = 'img/hotel.jpeg';
+      accomImage4.src = 'img/hotel.jpeg';
+      accomImage5.src = 'img/house.jpeg';
+      accomImage6.src = 'img/house.jpeg';
+
+      // Change Accomodation
+      accomName.textContent = 'Cardrona Hostel';
+      accomName2.textContent = 'Cardrona Hostel';
+      accomName3.textContent = 'Cardrona Hotel';
+      accomName4.textContent = 'Cardrona Hotel';
+      accomName5.textContent = 'Cardrona House';
+      accomName6.textContent = 'Cardrona House';
+
+      // Change Price Per Night
+      pricePerNight.textContent = '$' + hotelData.hostel.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.hostel.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
+      // Change Max Nights
+      maxNight.textContent = 'Max ' + hotelData.hostel.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.hostel.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.hostel.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.hostel.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+      // Remove ammenities
+      wifi.remove();
+      wifi2.remove();
+      disabled.remove();
+      disabled2.remove();
+      family.remove();
+      family2.remove();
+
+    }
+
+    // House
+    else if ((skifeildInput.value == 'Cardrona') && ((getGuestInput.value == 1) && (getNightInput.value >= 10)) || ( ((getNightInput.value == 2) && ((getGuestInput.value >= 3) || (getGuestInput.value <= 4)))))    {
+
+      // Change Image
+      accomImage.src = 'img/house.jpeg';
+      accomImage2.src = 'img/house.jpeg';
+      accomImage3.src = 'img/house.jpeg';
+      accomImage4.src = 'img/house.jpeg';
+      accomImage5.src = 'img/house.jpeg';
+      accomImage6.src = 'img/house.jpeg';
+
+      // Change Accomodation
+      accomName.textContent = 'Cardrona House';
+      accomName2.textContent = 'Cardrona House';
+      accomName3.textContent = 'Cardrona House';
+      accomName4.textContent = 'Cardrona House';
+      accomName5.textContent = 'Cardrona House';
+      accomName6.textContent = 'Cardrona House';
+
+      // Change Price Per Night
+      pricePerNight.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
+      // Change Max Nights
+      maxNight.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+    }
+
+    // Motel, Hotel & House
+    else if ((skifeildInput.value == 'Cardrona') && (getGuestInput.value == 2) && ((getNightInput.value >= 3) || (getNightInput.value <= 5 )) ) {
+
+      // Change Image
+      accomImage.src = 'img/motel.jpeg';
+      accomImage2.src = 'img/motel.jpeg';
+      accomImage3.src = 'img/hotel.jpeg';
+      accomImage4.src = 'img/hotel.jpeg';
+      accomImage5.src = 'img/house.jpeg';
+      accomImage6.src = 'img/house.jpeg';
+
+      // Change Accomodation
+      accomName.textContent = 'Cardrona Motel';
+      accomName2.textContent = 'Cardrona Motel';
+      accomName3.textContent = 'Cardrona Hotel';
+      accomName4.textContent = 'Cardrona Hotel';
+      accomName5.textContent = 'Cardrona House';
+      accomName6.textContent = 'Cardrona House';
+
+      // Change Price Per Night
+      pricePerNight.textContent = '$' + hotelData.motel.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.motel.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
+      // Change Max Nights
+      maxNight.textContent = 'Max ' + hotelData.motel.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.motel.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.motel.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.motel.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.motel.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.motel.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+    }
+
+
+    // Motel & House
+    else if ((skifeildInput.value == 'Cardrona') && ((getGuestInput.value >= 2) && (getGuestInput.value <= 4) && (getNightInput.value > 3)) ) {
+
+      // Change Image
+      accomImage.src = 'img/motel.jpeg';
+      accomImage2.src = 'img/motel.jpeg';
+      accomImage3.src = 'img/motel.jpeg';
+      accomImage4.src = 'img/house.jpeg';
+      accomImage5.src = 'img/house.jpeg';
+      accomImage6.src = 'img/house.jpeg';
+
+      // Change Accomodation
+      accomName.textContent = 'Cardrona Motel';
+      accomName2.textContent = 'Cardrona Motel';
+      accomName3.textContent = 'Cardrona Motel';
+      accomName4.textContent = 'Cardrona House';
+      accomName5.textContent = 'Cardrona House';
+      accomName6.textContent = 'Cardrona House';
+
+      // Change Price Per Night
+      pricePerNight.textContent = '$' + hotelData.motel.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.motel.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.motel.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
+      // Change Max Nights
+      maxNight.textContent = 'Max ' + hotelData.motel.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.motel.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.motel.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.motel.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.motel.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.motel.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.motel.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.motel.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.motel.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+    }
+
+    // Hotel Output
+    if ((skifeildInput.value == 'Cardrona') && (getGuestInput.value == 2) && (getNightInput.value == 1)) {
+
+      // Change Image
+      accomImage.src = 'img/hotel.jpeg';
+      accomImage2.src = 'img/hotel.jpeg';
+      accomImage3.src = 'img/hotel.jpeg';
+      accomImage4.src = 'img/hotel.jpeg';
+      accomImage5.src = 'img/hotel.jpeg';
+      accomImage6.src = 'img/hotel.jpeg';
+
+      // Change Accomodation
+      accomName.textContent = 'Cardrona Hotel';
+      accomName2.textContent = 'Cardrona Hotel';
+      accomName3.textContent = 'Cardrona Hotel';
+      accomName4.textContent = 'Cardrona Hotel';
+      accomName5.textContent = 'Cardrona Hotel';
+      accomName6.textContent = 'Cardrona Hotel';
+
+      // Change Price Per Night
+      pricePerNight.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+
+      // Change Max Nights
+      maxNight.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+
+    }
+
+
+
+    // ----The Remarkables Conditionals:------
+
+    // Hostel & Hotel
+
+    if ((skifeildInput.value == 'The Remarkables') && (getGuestInput.value == 1) && (getNightInput.value <= 1)) {
+
+      // Change Image
+      accomImage.src = 'img/hostel.jpeg';
+      accomImage2.src = 'img/hostel.jpeg';
+      accomImage3.src = 'img/hotel.jpeg';
+      accomImage4.src = 'img/hotel.jpeg';
+      accomImage5.src = 'img/hotel.jpeg';
+      accomImage6.src = 'img/hotel.jpeg';
+
+      // Change Accomodation
+      accomName.textContent = 'The Remarkables Hostel';
+      accomName2.textContent = 'The Remarkables Hostel';
+      accomName3.textContent = 'The Remarkables Hotel';
+      accomName4.textContent = 'The Remarkables Hotel';
+      accomName5.textContent = 'The Remarkables Hotel';
+      accomName6.textContent = 'The Remarkables Hotel';
+
+      // Change Price Per Night
+      pricePerNight.textContent = '$' + hotelData.hostel.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.hostel.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+
+      // Change Max Nights
+      maxNight.textContent = 'Max ' + hotelData.hostel.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.hostel.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.hostel.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.hostel.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+
+      // Remove ammenities
+      wifi.remove();
+      wifi2.remove();
+      disabled.remove();
+      disabled2.remove();
+      family.remove();
+      family2.remove();
+
+    }
+
+    // Hotel & House
+
+    else if ((skifeildInput.value === 'The Remarkables') && (getGuestInput.value == 2) && (getNightInput.value <= 10)) {
+
+      // Change Image
+      accomImage.src = 'img/hotel.jpeg';
+      accomImage2.src = 'img/hotel.jpeg';
+      accomImage3.src = 'img/hotel.jpeg';
+      accomImage4.src = 'img/house.jpeg';
+      accomImage5.src = 'img/house.jpeg';
+      accomImage6.src = 'img/house.jpeg';
+
+      // Change Accomodation
+      accomName.textContent = 'The Remarkables Hotel';
+      accomName2.textContent = 'The Remarkables Hotel';
+      accomName3.textContent = 'The Remarkables Hotel';
+      accomName4.textContent = 'The Remarkables House';
+      accomName5.textContent = 'The Remarkables House';
+      accomName6.textContent = 'The Remarkables House';
+
+      // Change Price Per Night
+      pricePerNight.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
+      // Change Max Nights
+      maxNight.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+    }
+
+    // Hostel, Hotel & House
+    else if ((skifeildInput.value == 'The Remarkables') && (getGuestInput.value == 1) && (getNightInput.value <= 5)) {
+
+      // Change Image
+      accomImage.src = 'img/hostel.jpeg';
+      accomImage2.src = 'img/hostel.jpeg';
+      accomImage3.src = 'img/hotel.jpeg';
+      accomImage4.src = 'img/hotel.jpeg';
+      accomImage5.src = 'img/house.jpeg';
+      accomImage6.src = 'img/house.jpeg';
+
+      // Change Accomodation
+      accomName.textContent = 'The Remarkables Hostel';
+      accomName2.textContent = 'The Remarkables Hostel';
+      accomName3.textContent = 'The Remarkables Hotel';
+      accomName4.textContent = 'The Remarkables Hotel';
+      accomName5.textContent = 'The Remarkables House';
+      accomName6.textContent = 'The Remarkables House';
+
+      // Change Price Per Night
+      pricePerNight.textContent = '$' + hotelData.hostel.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.hostel.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
+      // Change Max Nights
+      maxNight.textContent = 'Max ' + hotelData.hostel.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.hostel.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.hostel.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.hostel.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.hostel.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+      // Remove ammenities
+      wifi.remove();
+      wifi2.remove();
+      disabled.remove();
+      disabled2.remove();
+      family.remove();
+      family2.remove();
+
+    }
+
+    // House
+    else if ((skifeildInput.value == 'The Remarkables') && ((getGuestInput.value == 1) && (getNightInput.value >= 10)) || ( ((getNightInput.value == 2) && ((getGuestInput.value >= 3) || (getGuestInput.value <= 4)))))    {
+
+      // Change Image
+      accomImage.src = 'img/house.jpeg';
+      accomImage2.src = 'img/house.jpeg';
+      accomImage3.src = 'img/house.jpeg';
+      accomImage4.src = 'img/house.jpeg';
+      accomImage5.src = 'img/house.jpeg';
+      accomImage6.src = 'img/house.jpeg';
+
+      // Change Accomodation
+      accomName.textContent = 'The Remarkables House';
+      accomName2.textContent = 'The Remarkables House';
+      accomName3.textContent = 'The Remarkables House';
+      accomName4.textContent = 'The Remarkables House';
+      accomName5.textContent = 'The Remarkables House';
+      accomName6.textContent = 'The Remarkables House';
+
+      // Change Price Per Night
+      pricePerNight.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
+      // Change Max Nights
+      maxNight.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+    }
+
+    // Motel, Hotel & House
+    else if ((skifeildInput.value == 'The Remarkables') && (getGuestInput.value == 2) && ((getNightInput.value >= 3) || (getNightInput.value <= 5 )) ) {
+
+      // Change Image
+      accomImage.src = 'img/motel.jpeg';
+      accomImage2.src = 'img/motel.jpeg';
+      accomImage3.src = 'img/hotel.jpeg';
+      accomImage4.src = 'img/hotel.jpeg';
+      accomImage5.src = 'img/house.jpeg';
+      accomImage6.src = 'img/house.jpeg';
+
+      // Change Accomodation
+      accomName.textContent = 'The Remarkables Motel';
+      accomName2.textContent = 'The Remarkables Motel';
+      accomName3.textContent = 'The Remarkables Hotel';
+      accomName4.textContent = 'The Remarkables Hotel';
+      accomName5.textContent = 'The Remarkables House';
+      accomName6.textContent = 'The Remarkables House';
+
+      // Change Price Per Night
+      pricePerNight.textContent = '$' + hotelData.motel.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.motel.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
+      // Change Max Nights
+      maxNight.textContent = 'Max ' + hotelData.motel.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.motel.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.motel.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.motel.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.motel.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.motel.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+    }
+
+
+    // Motel & House
+    else if ((skifeildInput.value == 'The Remarkables') && ((getGuestInput.value >= 2) && (getGuestInput.value <= 4) && (getNightInput.value > 3)) ) {
+
+      // Change Image
+      accomImage.src = 'img/motel.jpeg';
+      accomImage2.src = 'img/motel.jpeg';
+      accomImage3.src = 'img/motel.jpeg';
+      accomImage4.src = 'img/house.jpeg';
+      accomImage5.src = 'img/house.jpeg';
+      accomImage6.src = 'img/house.jpeg';
+
+      // Change Accomodation
+      accomName.textContent = 'The Remarkables Motel';
+      accomName2.textContent = 'The Remarkables Motel';
+      accomName3.textContent = 'The Remarkables Motel';
+      accomName4.textContent = 'The Remarkables House';
+      accomName5.textContent = 'The Remarkables House';
+      accomName6.textContent = 'The Remarkables House';
+
+      // Change Price Per Night
+      pricePerNight.textContent = '$' + hotelData.motel.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.motel.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.motel.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
+      // Change Max Nights
+      maxNight.textContent = 'Max ' + hotelData.motel.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.motel.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.motel.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.motel.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.motel.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.motel.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.motel.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.motel.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.motel.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+    }
+
+    // Hotel Output
+    if ((skifeildInput.value == 'The Remarkables') && (getGuestInput.value == 2) && (getNightInput.value == 1)) {
+
+      // Change Image
+      accomImage.src = 'img/hotel.jpeg';
+      accomImage2.src = 'img/hotel.jpeg';
+      accomImage3.src = 'img/hotel.jpeg';
+      accomImage4.src = 'img/hotel.jpeg';
+      accomImage5.src = 'img/hotel.jpeg';
+      accomImage6.src = 'img/hotel.jpeg';
+
+      // Change Accomodation
+      accomName.textContent = 'The Remarkables Hotel';
+      accomName2.textContent = 'The Remarkables Hotel';
+      accomName3.textContent = 'The Remarkables Hotel';
+      accomName4.textContent = 'The Remarkables Hotel';
+      accomName5.textContent = 'The Remarkables Hotel';
+      accomName6.textContent = 'The Remarkables Hotel';
+
+      // Change Price Per Night
+      pricePerNight.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
+
+      // Change Max Nights
+      maxNight.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.hotel.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.hotel.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+
+    }
+
+    // }
 
   });
 
