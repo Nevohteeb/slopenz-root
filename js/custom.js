@@ -1,5 +1,14 @@
+
+
 (function() {
   'use strict';
+
+	$(window).load(function() {
+		$(".loader-cont").fadeOut(750);
+	});
+
+  // Bring back Map Buttons on Page Load:
+  $(".map-button").show();
 
   // --------------------- VARIABLES -----------------------------
 
@@ -37,19 +46,6 @@
   };
 
 
-  function cloudVariables () {
-
-    // Input Variables
-    var skifeildInput = document.getElementById('skifieldInput');
-    var getNightInput = document.getElementById('nightInput');
-    var nightInput = parseInt(getNightInput.value);
-    var getGuestInput = document.getElementById('guestInput');
-    var guestInput = parseInt(getGuestInput.value);
-    var getfamilyCheck = document.getElementById('familyCheck');
-    var familyCheck = getfamilyCheck.checked;
-
-  }
-
 
 
 // --------------------- PLUGINS BEGIN --------------------
@@ -71,7 +67,8 @@
     $('.tlt').textillate({
       in: {
         effect: 'fadeInLeft',
-        sync: true
+        sync: true,
+        delay: 1750
       }
     });
   }
@@ -85,7 +82,8 @@
     dots: true,
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+		infinite: false
   });
 
   // Parlsey Validation:
@@ -96,7 +94,7 @@
   });
 
   form.subscribe('parsley:form:success', function(e) {
-    $.fn.fullpage.silentMoveTo(1, 2);
+    $.fn.fullpage.moveSlideRight();
   });
 
   // Parsley Ends
@@ -391,7 +389,7 @@
 
   // -------------------- CLICK FUNCTIONS ----------------------------
 
-  $(submitBtn).click(function() {
+  $('#submitBtn').click(function() {
 
     // Input Variables
     var skifeildInput = document.getElementById('skifieldInput');
@@ -478,19 +476,24 @@
     // ---------------- CONDITIONALS -----------------
     // ** Conditionals are organized into sections based on location **
 
+		// *** SKI FIELD INPUT VALUES:
+		// 1 = Cardrona
+		// 2 = Treble Cone
+		// 3 = The Remarkables
+
     // ----Treble Cone:------
 
     // Hostel & Hotel
 
-    if ((skifeildInput.value == 'Treble Cone') && (getGuestInput.value == 1) && (getNightInput.value <= 1)) {
+    if ((skifeildInput.value == '2') && (getGuestInput.value == 1) && (getNightInput.value <= 1)) {
 
       // Change Image
-      accomImage.src = 'img/hostel.jpeg';
-      accomImage2.src = 'img/hostel.jpeg';
-      accomImage3.src = 'img/hotel.jpeg';
-      accomImage4.src = 'img/hotel.jpeg';
-      accomImage5.src = 'img/hotel.jpeg';
-      accomImage6.src = 'img/hotel.jpeg';
+      accomImage.src = 'img/card-images/treb-hostel-1.jpg';
+      accomImage2.src = 'img/card-images/treb-hostel-2.jpg';
+      accomImage3.src = 'img/card-images/treb-hotel-1.jpg';
+      accomImage4.src = 'img/card-images/treb-hotel-2.jpg';
+      accomImage5.src = 'img/card-images/treb-hotel-3.jpg';
+      accomImage6.src = 'img/card-images/treb-hotel-4.jpg';
 
       // Change Accomodation
       accomName.textContent = 'Treble Cone Hostel';
@@ -540,27 +543,27 @@
       maxGuest5.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
 
-      // Remove ammenities
-      wifi.remove();
-      wifi2.remove();
-      disabled.remove();
-      disabled2.remove();
-      family.remove();
-      family2.remove();
+			// Remove ammenities
+			wifi.style.color='#FFFFFF';
+			wifi2.style.color='#FFFFFF';
+			disabled.style.color='#FFFFFF';
+			disabled2.style.color='#FFFFFF';
+			family.style.color='#FFFFFF';
+			family2.style.color='#FFFFFF';
 
     }
 
     // Hotel & House
 
-  else if ((skifeildInput.value === 'Treble Cone') && (getGuestInput.value == 2) && (getNightInput.value <= 10)) {
+  else if ((skifeildInput.value === '2') && (getGuestInput.value == 2) && (getNightInput.value <= 10)) {
 
-    // Change Image
-    accomImage.src = 'img/hotel.jpeg';
-    accomImage2.src = 'img/hotel.jpeg';
-    accomImage3.src = 'img/hotel.jpeg';
-    accomImage4.src = 'img/house.jpeg';
-    accomImage5.src = 'img/house.jpeg';
-    accomImage6.src = 'img/house.jpeg';
+		// Change Image
+		accomImage.src = 'img/card-images/treb-hotel-1.jpg';
+		accomImage2.src = 'img/card-images/treb-hotel-2.jpg';
+		accomImage3.src = 'img/card-images/treb-hotel-3.jpg';
+		accomImage4.src = 'img/card-images/treb-house-1.jpg';
+		accomImage5.src = 'img/card-images/treb-house-2.jpg';
+		accomImage6.src = 'img/card-images/treb-house-3.jpg';
 
     // Change Accomodation
     accomName.textContent = 'Treble Cone Hotel';
@@ -613,15 +616,16 @@
     }
 
     // Hostel, Hotel & House
-    else if ((skifeildInput.value == 'Treble Cone') && (getGuestInput.value == 1) && (getNightInput.value <= 5)) {
+    else if ((skifeildInput.value == '2') && (getGuestInput.value == 1) && (getNightInput.value <= 5)) {
 
       // Change Image
-      accomImage.src = 'img/hostel.jpeg';
-      accomImage2.src = 'img/hostel.jpeg';
-      accomImage3.src = 'img/hotel.jpeg';
-      accomImage4.src = 'img/hotel.jpeg';
-      accomImage5.src = 'img/house.jpeg';
-      accomImage6.src = 'img/house.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/treb-hostel-1.jpg';
+      accomImage2.src = 'img/card-images/treb-hostel-2.jpg';
+      accomImage3.src = 'img/card-images/treb-hotel-1.jpg';
+      accomImage4.src = 'img/card-images/treb-hotel-2.jpg';
+      accomImage5.src = 'img/card-images/treb-house-1.jpg';
+      accomImage6.src = 'img/card-images/treb-house-2.jpg';
 
       // Change Accomodation
       accomName.textContent = 'Treble Cone Hostel';
@@ -671,26 +675,27 @@
       maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
 
-      // Remove ammenities
-      wifi.remove();
-      wifi2.remove();
-      disabled.remove();
-      disabled2.remove();
-      family.remove();
-      family2.remove();
+			// Remove ammenities
+			wifi.style.color='#FFFFFF';
+			wifi2.style.color='#FFFFFF';
+			disabled.style.color='#FFFFFF';
+			disabled2.style.color='#FFFFFF';
+			family.style.color='#FFFFFF';
+			family2.style.color='#FFFFFF';
 
     }
 
     // House
-    else if ((skifeildInput.value == 'Treble Cone') && ((getGuestInput.value == 1) && (getNightInput.value >= 10)) || ( ((getNightInput.value == 2) && ((getGuestInput.value >= 3) || (getGuestInput.value <= 4)))))    {
+    else if ((skifeildInput.value == '2') && ((getGuestInput.value == 1) && (getNightInput.value >= 10)) || ( ((getNightInput.value == 2) && ((getGuestInput.value >= 3) || (getGuestInput.value <= 4)))))    {
 
       // Change Image
-      accomImage.src = 'img/house.jpeg';
-      accomImage2.src = 'img/house.jpeg';
-      accomImage3.src = 'img/house.jpeg';
-      accomImage4.src = 'img/house.jpeg';
-      accomImage5.src = 'img/house.jpeg';
-      accomImage6.src = 'img/house.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/treb-house-1.jpg';
+      accomImage2.src = 'img/card-images/treb-house-2.jpg';
+      accomImage3.src = 'img/card-images/treb-house-3.jpg';
+      accomImage4.src = 'img/card-images/treb-house-4.jpg';
+      accomImage5.src = 'img/card-images/treb-house-5.jpg';
+      accomImage6.src = 'img/card-images/treb-house-6.jpg';
 
       // Change Accomodation
       accomName.textContent = 'Treble Cone House';
@@ -743,15 +748,15 @@
     }
 
     // Motel, Hotel & House
-    else if ((skifeildInput.value == 'Treble Cone') && (getGuestInput.value == 2) && ((getNightInput.value >= 3) || (getNightInput.value <= 5 )) ) {
+    else if ((skifeildInput.value == '2') && (getGuestInput.value == 2) && ((getNightInput.value >= 3) || (getNightInput.value <= 5 )) ) {
 
-      // Change Image
-      accomImage.src = 'img/motel.jpeg';
-      accomImage2.src = 'img/motel.jpeg';
-      accomImage3.src = 'img/hotel.jpeg';
-      accomImage4.src = 'img/hotel.jpeg';
-      accomImage5.src = 'img/house.jpeg';
-      accomImage6.src = 'img/house.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/treb-motel-1.jpg';
+      accomImage2.src = 'img/card-images/treb-motel-2.jpg';
+      accomImage3.src = 'img/card-images/treb-hotel-1.jpg';
+      accomImage4.src = 'img/card-images/treb-hotel-2.jpg';
+      accomImage5.src = 'img/card-images/treb-house-1.jpg';
+      accomImage6.src = 'img/card-images/treb-house-2.jpg';
 
       // Change Accomodation
       accomName.textContent = 'Treble Cone Motel';
@@ -805,15 +810,15 @@
 
 
     // Motel & House
-    else if ((skifeildInput.value == 'Treble Cone') && ((getGuestInput.value >= 2) && (getGuestInput.value <= 4) && (getNightInput.value > 3)) ) {
+    else if ((skifeildInput.value == '2') && ((getGuestInput.value >= 2) && (getGuestInput.value <= 4) && (getNightInput.value > 3)) ) {
 
-      // Change Image
-      accomImage.src = 'img/motel.jpeg';
-      accomImage2.src = 'img/motel.jpeg';
-      accomImage3.src = 'img/motel.jpeg';
-      accomImage4.src = 'img/house.jpeg';
-      accomImage5.src = 'img/house.jpeg';
-      accomImage6.src = 'img/house.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/treb-motel-1.jpg';
+      accomImage2.src = 'img/card-images/treb-motel-2.jpg';
+      accomImage3.src = 'img/card-images/treb-motel-3.jpg';
+      accomImage4.src = 'img/card-images/treb-house-1.jpg';
+      accomImage5.src = 'img/card-images/treb-house-2.jpg';
+      accomImage6.src = 'img/card-images/treb-house-3.jpg';
 
       // Change Accomodation
       accomName.textContent = 'Treble Cone Motel';
@@ -866,15 +871,15 @@
     }
 
     // Hotel Output
-    if ((skifeildInput.value == 'Treble Cone') && (getGuestInput.value == 2) && (getNightInput.value == 1)) {
+    if ((skifeildInput.value == '2') && (getGuestInput.value == 2) && (getNightInput.value == 1)) {
 
-      // Change Image
-      accomImage.src = 'img/hotel.jpeg';
-      accomImage2.src = 'img/hotel.jpeg';
-      accomImage3.src = 'img/hotel.jpeg';
-      accomImage4.src = 'img/hotel.jpeg';
-      accomImage5.src = 'img/hotel.jpeg';
-      accomImage6.src = 'img/hotel.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/treb-hotel-1.jpg';
+      accomImage2.src = 'img/card-images/treb-hotel-2.jpg';
+      accomImage3.src = 'img/card-images/treb-hotel-3.jpg';
+      accomImage4.src = 'img/card-images/treb-hotel-4.jpg';
+      accomImage5.src = 'img/card-images/treb-hotel-5.jpg';
+      accomImage6.src = 'img/card-images/treb-hotel-6.jpg';
 
       // Change Accomodation
       accomName.textContent = 'Treble Cone Hotel';
@@ -932,15 +937,15 @@
 
     // Hostel & Hotel
 
-    if ((skifeildInput.value == 'Cardrona') && (getGuestInput.value == 1) && (getNightInput.value <= 1)) {
+    if ((skifeildInput.value == '1') && (getGuestInput.value == 1) && (getNightInput.value <= 1)) {
 
-      // Change Image
-      accomImage.src = 'img/hostel.jpeg';
-      accomImage2.src = 'img/hostel.jpeg';
-      accomImage3.src = 'img/hotel.jpeg';
-      accomImage4.src = 'img/hotel.jpeg';
-      accomImage5.src = 'img/hotel.jpeg';
-      accomImage6.src = 'img/hotel.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/car-hostel-1.jpg';
+      accomImage2.src = 'img/card-images/car-hostel-2.jpg';
+      accomImage3.src = 'img/card-images/car-hotel-1.jpg';
+      accomImage4.src = 'img/card-images/car-hotel-2.jpg';
+      accomImage5.src = 'img/card-images/car-hotel-3.jpg';
+      accomImage6.src = 'img/card-images/car-hotel-4.jpg';
 
       // Change Accomodation
       accomName.textContent = 'Cardrona Hostel';
@@ -991,26 +996,26 @@
       maxGuest6.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
 
       // Remove ammenities
-      wifi.remove();
-      wifi2.remove();
-      disabled.remove();
-      disabled2.remove();
-      family.remove();
-      family2.remove();
+      wifi.style.color='#FFFFFF';
+      wifi2.style.color='#FFFFFF';
+      disbaled.style.color='#FFFFFF';
+      disabled2.style.color='#FFFFFF';
+			family.style.color='#FFFFFF';
+			family2.style.color='#FFFFFF';
 
     }
 
     // Hotel & House
 
-    else if ((skifeildInput.value === 'Cardrona') && (getGuestInput.value == 2) && (getNightInput.value <= 10)) {
+    else if ((skifeildInput.value === '1') && (getGuestInput.value == 2) && (getNightInput.value <= 10)) {
 
-      // Change Image
-      accomImage.src = 'img/hotel.jpeg';
-      accomImage2.src = 'img/hotel.jpeg';
-      accomImage3.src = 'img/hotel.jpeg';
-      accomImage4.src = 'img/house.jpeg';
-      accomImage5.src = 'img/house.jpeg';
-      accomImage6.src = 'img/house.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/car-hotel-1.jpg';
+      accomImage2.src = 'img/card-images/car-hotel-2.jpg';
+      accomImage3.src = 'img/card-images/car-hotel-3.jpg';
+      accomImage4.src = 'img/card-images/car-house-1.jpg';
+      accomImage5.src = 'img/card-images/car-house-2.jpg';
+      accomImage6.src = 'img/card-images/car-house-3.jpg';
 
       // Change Accomodation
       accomName.textContent = 'Cardrona Hotel';
@@ -1063,15 +1068,15 @@
     }
 
     // Hostel, Hotel & House
-    else if ((skifeildInput.value == 'Cardrona') && (getGuestInput.value == 1) && (getNightInput.value <= 5)) {
+    else if ((skifeildInput.value == '1') && (getGuestInput.value == 1) && (getNightInput.value <= 5)) {
 
-      // Change Image
-      accomImage.src = 'img/hostel.jpeg';
-      accomImage2.src = 'img/hostel.jpeg';
-      accomImage3.src = 'img/hotel.jpeg';
-      accomImage4.src = 'img/hotel.jpeg';
-      accomImage5.src = 'img/house.jpeg';
-      accomImage6.src = 'img/house.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/car-hostel-1.jpg';
+      accomImage2.src = 'img/card-images/car-hostel-2.jpg';
+      accomImage3.src = 'img/card-images/car-hotel-1.jpg';
+      accomImage4.src = 'img/card-images/car-hotel-2.jpg';
+      accomImage5.src = 'img/card-images/car-house-1.jpg';
+      accomImage6.src = 'img/card-images/car-house-2.jpg';
 
       // Change Accomodation
       accomName.textContent = 'Cardrona Hostel';
@@ -1121,26 +1126,26 @@
       maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
 
-      // Remove ammenities
-      wifi.remove();
-      wifi2.remove();
-      disabled.remove();
-      disabled2.remove();
-      family.remove();
-      family2.remove();
+			// Remove ammenities
+			wifi.style.color='#FFFFFF';
+			wifi2.style.color='#FFFFFF';
+			disabled.style.color='#FFFFFF';
+			disabled2.style.color='#FFFFFF';
+			family.style.color='#FFFFFF';
+			family2.style.color='#FFFFFF';
 
     }
 
     // House
-    else if ((skifeildInput.value == 'Cardrona') && ((getGuestInput.value == 1) && (getNightInput.value >= 10)) || ( ((getNightInput.value == 2) && ((getGuestInput.value >= 3) || (getGuestInput.value <= 4)))))    {
+    else if ((skifeildInput.value == '1') && ((getGuestInput.value == 1) && (getNightInput.value >= 10)) || ( ((getNightInput.value == 2) && ((getGuestInput.value >= 3) || (getGuestInput.value <= 4)))))    {
 
-      // Change Image
-      accomImage.src = 'img/house.jpeg';
-      accomImage2.src = 'img/house.jpeg';
-      accomImage3.src = 'img/house.jpeg';
-      accomImage4.src = 'img/house.jpeg';
-      accomImage5.src = 'img/house.jpeg';
-      accomImage6.src = 'img/house.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/car-house-1.jpg';
+      accomImage2.src = 'img/card-images/car-house-2.jpg';
+      accomImage3.src = 'img/card-images/car-house-3.jpg';
+      accomImage4.src = 'img/card-images/car-house-4.jpg';
+      accomImage5.src = 'img/card-images/car-house-5.jpg';
+      accomImage6.src = 'img/card-images/car-house-6.jpg';
 
       // Change Accomodation
       accomName.textContent = 'Cardrona House';
@@ -1193,15 +1198,15 @@
     }
 
     // Motel, Hotel & House
-    else if ((skifeildInput.value == 'Cardrona') && (getGuestInput.value == 2) && ((getNightInput.value >= 3) || (getNightInput.value <= 5 )) ) {
+    else if ((skifeildInput.value == '1') && (getGuestInput.value == 2) && ((getNightInput.value >= 3) || (getNightInput.value <= 5 )) ) {
 
-      // Change Image
-      accomImage.src = 'img/motel.jpeg';
-      accomImage2.src = 'img/motel.jpeg';
-      accomImage3.src = 'img/hotel.jpeg';
-      accomImage4.src = 'img/hotel.jpeg';
-      accomImage5.src = 'img/house.jpeg';
-      accomImage6.src = 'img/house.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/car-motel-1.jpg';
+      accomImage2.src = 'img/card-images/car-motel-2.jpg';
+      accomImage3.src = 'img/card-images/car-hotel-1.jpg';
+      accomImage4.src = 'img/card-images/car-hotel-2.jpg';
+      accomImage5.src = 'img/card-images/car-house-1.jpg';
+      accomImage6.src = 'img/card-images/car-house-2.jpg';
 
       // Change Accomodation
       accomName.textContent = 'Cardrona Motel';
@@ -1255,15 +1260,15 @@
 
 
     // Motel & House
-    else if ((skifeildInput.value == 'Cardrona') && ((getGuestInput.value >= 2) && (getGuestInput.value <= 4) && (getNightInput.value > 3)) ) {
+    else if ((skifeildInput.value == '1') && ((getGuestInput.value >= 2) && (getGuestInput.value <= 4) && (getNightInput.value > 3)) ) {
 
-      // Change Image
-      accomImage.src = 'img/motel.jpeg';
-      accomImage2.src = 'img/motel.jpeg';
-      accomImage3.src = 'img/motel.jpeg';
-      accomImage4.src = 'img/house.jpeg';
-      accomImage5.src = 'img/house.jpeg';
-      accomImage6.src = 'img/house.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/car-motel-1.jpg';
+      accomImage2.src = 'img/card-images/car-motel-2.jpg';
+      accomImage3.src = 'img/card-images/car-motel-3.jpg';
+      accomImage4.src = 'img/card-images/car-house-1.jpg';
+      accomImage5.src = 'img/card-images/car-house-2.jpg';
+      accomImage6.src = 'img/card-images/car-house-3.jpg';
 
       // Change Accomodation
       accomName.textContent = 'Cardrona Motel';
@@ -1316,15 +1321,15 @@
     }
 
     // Hotel Output
-    if ((skifeildInput.value == 'Cardrona') && (getGuestInput.value == 2) && (getNightInput.value == 1)) {
+    if ((skifeildInput.value == '1') && (getGuestInput.value == 2) && (getNightInput.value == 1)) {
 
-      // Change Image
-      accomImage.src = 'img/hotel.jpeg';
-      accomImage2.src = 'img/hotel.jpeg';
-      accomImage3.src = 'img/hotel.jpeg';
-      accomImage4.src = 'img/hotel.jpeg';
-      accomImage5.src = 'img/hotel.jpeg';
-      accomImage6.src = 'img/hotel.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/car-hotel-1.jpg';
+      accomImage2.src = 'img/card-images/car-hotel-2.jpg';
+      accomImage3.src = 'img/card-images/car-hotel-3.jpg';
+      accomImage4.src = 'img/card-images/car-hotel-4.jpg';
+      accomImage5.src = 'img/card-images/car-hotel-5.jpg';
+      accomImage6.src = 'img/card-images/car-hotel-6.jpg';
 
       // Change Accomodation
       accomName.textContent = 'Cardrona Hotel';
@@ -1382,15 +1387,15 @@
 
     // Hostel & Hotel
 
-    if ((skifeildInput.value == 'The Remarkables') && (getGuestInput.value == 1) && (getNightInput.value <= 1)) {
+    if ((skifeildInput.value == '3') && (getGuestInput.value == 1) && (getNightInput.value <= 1)) {
 
-      // Change Image
-      accomImage.src = 'img/hostel.jpeg';
-      accomImage2.src = 'img/hostel.jpeg';
-      accomImage3.src = 'img/hotel.jpeg';
-      accomImage4.src = 'img/hotel.jpeg';
-      accomImage5.src = 'img/hotel.jpeg';
-      accomImage6.src = 'img/hotel.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/remark-hostel-1.jpg';
+      accomImage2.src = 'img/card-images/remark-hostel-2.jpg';
+      accomImage3.src = 'img/card-images/remark-hotel-1.jpg';
+      accomImage4.src = 'img/card-images/remark-hotel-2.jpg';
+      accomImage5.src = 'img/card-images/remark-hotel-3.jpg';
+      accomImage6.src = 'img/card-images/remark-hotel-4.jpg';
 
       // Change Accomodation
       accomName.textContent = 'The Remarkables Hostel';
@@ -1440,27 +1445,27 @@
       maxGuest5.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
 
-      // Remove ammenities
-      wifi.remove();
-      wifi2.remove();
-      disabled.remove();
-      disabled2.remove();
-      family.remove();
-      family2.remove();
+			// Remove ammenities
+			wifi.style.color='#FFFFFF';
+			wifi2.style.color='#FFFFFF';
+			disabled.style.color='#FFFFFF';
+			disabled2.style.color='#FFFFFF';
+			family.style.color='#FFFFFF';
+			family2.style.color='#FFFFFF';
 
     }
 
     // Hotel & House
 
-    else if ((skifeildInput.value === 'The Remarkables') && (getGuestInput.value == 2) && (getNightInput.value <= 10)) {
+    else if ((skifeildInput.value === '3') && (getGuestInput.value == 2) && (getNightInput.value <= 10)) {
 
-      // Change Image
-      accomImage.src = 'img/hotel.jpeg';
-      accomImage2.src = 'img/hotel.jpeg';
-      accomImage3.src = 'img/hotel.jpeg';
-      accomImage4.src = 'img/house.jpeg';
-      accomImage5.src = 'img/house.jpeg';
-      accomImage6.src = 'img/house.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/remark-hotel-1.jpg';
+      accomImage2.src = 'img/card-images/remark-hotel-2.jpg';
+      accomImage3.src = 'img/card-images/remark-hotel-3.jpg';
+      accomImage4.src = 'img/card-images/remark-house-1.jpg';
+      accomImage5.src = 'img/card-images/remark-house-2.jpg';
+      accomImage6.src = 'img/card-images/remark-house-3.jpg';
 
       // Change Accomodation
       accomName.textContent = 'The Remarkables Hotel';
@@ -1513,15 +1518,15 @@
     }
 
     // Hostel, Hotel & House
-    else if ((skifeildInput.value == 'The Remarkables') && (getGuestInput.value == 1) && (getNightInput.value <= 5)) {
+    else if ((skifeildInput.value == '3') && (getGuestInput.value == 1) && (getNightInput.value <= 5)) {
 
-      // Change Image
-      accomImage.src = 'img/hostel.jpeg';
-      accomImage2.src = 'img/hostel.jpeg';
-      accomImage3.src = 'img/hotel.jpeg';
-      accomImage4.src = 'img/hotel.jpeg';
-      accomImage5.src = 'img/house.jpeg';
-      accomImage6.src = 'img/house.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/remark-hostel-1.jpg';
+      accomImage2.src = 'img/card-images/remark-hostel-2.jpg';
+      accomImage3.src = 'img/card-images/remark-hotel-1.jpg';
+      accomImage4.src = 'img/card-images/remark-hotel-2.jpg';
+      accomImage5.src = 'img/card-images/remark-house-1.jpg';
+      accomImage6.src = 'img/card-images/remark-house-2.jpg';
 
       // Change Accomodation
       accomName.textContent = 'The Remarkables Hostel';
@@ -1571,26 +1576,26 @@
       maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
 
-      // Remove ammenities
-      wifi.remove();
-      wifi2.remove();
-      disabled.remove();
-      disabled2.remove();
-      family.remove();
-      family2.remove();
+			// Remove ammenities
+			wifi.style.color='#FFFFFF';
+			wifi2.style.color='#FFFFFF';
+			disabled.style.color='#FFFFFF';
+			disabled2.style.color='#FFFFFF';
+			family.style.color='#FFFFFF';
+			family2.style.color='#FFFFFF';
 
     }
 
     // House
-    else if ((skifeildInput.value == 'The Remarkables') && ((getGuestInput.value == 1) && (getNightInput.value >= 10)) || ( ((getNightInput.value == 2) && ((getGuestInput.value >= 3) || (getGuestInput.value <= 4)))))    {
+    else if ((skifeildInput.value == '3') && ((getGuestInput.value == 1) && (getNightInput.value >= 10)) || ( ((getNightInput.value == 2) && ((getGuestInput.value >= 3) || (getGuestInput.value <= 4)))))    {
 
-      // Change Image
-      accomImage.src = 'img/house.jpeg';
-      accomImage2.src = 'img/house.jpeg';
-      accomImage3.src = 'img/house.jpeg';
-      accomImage4.src = 'img/house.jpeg';
-      accomImage5.src = 'img/house.jpeg';
-      accomImage6.src = 'img/house.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/remark-house-1.jpg';
+      accomImage2.src = 'img/card-images/remark-house-2.jpg';
+      accomImage3.src = 'img/card-images/remark-house-3.jpg';
+      accomImage4.src = 'img/card-images/remark-house-4.jpg';
+      accomImage5.src = 'img/card-images/remark-house-5.jpg';
+      accomImage6.src = 'img/card-images/remark-house-6.jpg';
 
       // Change Accomodation
       accomName.textContent = 'The Remarkables House';
@@ -1643,15 +1648,15 @@
     }
 
     // Motel, Hotel & House
-    else if ((skifeildInput.value == 'The Remarkables') && (getGuestInput.value == 2) && ((getNightInput.value >= 3) || (getNightInput.value <= 5 )) ) {
+    else if ((skifeildInput.value == '3') && (getGuestInput.value == 2) && ((getNightInput.value >= 3) || (getNightInput.value <= 5 )) ) {
 
-      // Change Image
-      accomImage.src = 'img/motel.jpeg';
-      accomImage2.src = 'img/motel.jpeg';
-      accomImage3.src = 'img/hotel.jpeg';
-      accomImage4.src = 'img/hotel.jpeg';
-      accomImage5.src = 'img/house.jpeg';
-      accomImage6.src = 'img/house.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/remark-motel-1.jpg';
+      accomImage2.src = 'img/card-images/remark-motel-2.jpg';
+      accomImage3.src = 'img/card-images/remark-hotel-1.jpg';
+      accomImage4.src = 'img/card-images/remark-hotel-2.jpg';
+      accomImage5.src = 'img/card-images/remark-house-1.jpg';
+      accomImage6.src = 'img/card-images/remark-house-2.jpg';
 
       // Change Accomodation
       accomName.textContent = 'The Remarkables Motel';
@@ -1705,15 +1710,15 @@
 
 
     // Motel & House
-    else if ((skifeildInput.value == 'The Remarkables') && ((getGuestInput.value >= 2) && (getGuestInput.value <= 4) && (getNightInput.value > 3)) ) {
+    else if ((skifeildInput.value == '3') && ((getGuestInput.value >= 2) && (getGuestInput.value <= 4) && (getNightInput.value > 3)) ) {
 
-      // Change Image
-      accomImage.src = 'img/motel.jpeg';
-      accomImage2.src = 'img/motel.jpeg';
-      accomImage3.src = 'img/motel.jpeg';
-      accomImage4.src = 'img/house.jpeg';
-      accomImage5.src = 'img/house.jpeg';
-      accomImage6.src = 'img/house.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/remark-motel-1.jpg';
+      accomImage2.src = 'img/card-images/remark-motel-2.jpg';
+      accomImage3.src = 'img/card-images/remark-motel-3.jpg';
+      accomImage4.src = 'img/card-images/remark-house-1.jpg';
+      accomImage5.src = 'img/card-images/remark-house-2.jpg';
+      accomImage6.src = 'img/card-images/remark-house-3.jpg';
 
       // Change Accomodation
       accomName.textContent = 'The Remarkables Motel';
@@ -1766,15 +1771,15 @@
     }
 
     // Hotel Output
-    if ((skifeildInput.value == 'The Remarkables') && (getGuestInput.value == 2) && (getNightInput.value == 1)) {
+    if ((skifeildInput.value == '3') && (getGuestInput.value == 2) && (getNightInput.value == 1)) {
 
-      // Change Image
-      accomImage.src = 'img/hotel.jpeg';
-      accomImage2.src = 'img/hotel.jpeg';
-      accomImage3.src = 'img/hotel.jpeg';
-      accomImage4.src = 'img/hotel.jpeg';
-      accomImage5.src = 'img/hotel.jpeg';
-      accomImage6.src = 'img/hotel.jpeg';
+			// Change Image
+      accomImage.src = 'img/card-images/remark-hotel-1.jpg';
+      accomImage2.src = 'img/card-images/remark-hotel-2.jpg';
+      accomImage3.src = 'img/card-images/remark-hotel-3.jpg';
+      accomImage4.src = 'img/card-images/remark-hotel-4.jpg';
+      accomImage5.src = 'img/card-images/remark-hotel-5.jpg';
+      accomImage6.src = 'img/card-images/remark-hotel-6.jpg';
 
       // Change Accomodation
       accomName.textContent = 'The Remarkables Hotel';

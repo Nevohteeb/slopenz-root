@@ -19,6 +19,15 @@
 </head>
 
 <body>
+  <!-- Loader -->
+  <div class="loader-cont">
+    <div class="loader-box">
+      <div class="loader-spin spin1"></div>
+      <div class="loader-spin spin2"></div>
+      <div class="loader-spin spin3"></div>
+      <div class="loader-spin spin4"></div>
+    </div>
+  </div>
   <!-- - - - - - - - - - - - - OUTER WRAPPER BEGINS - - - - -  - - - - -->
   <div id="wrapper">
     <!-- NAVBAR BEGINS -->
@@ -81,11 +90,11 @@
                 </div>
                 <div class="form-group">
                   <label for="holidaySelect">Select Your Skifield:</label>
-                  <select class="form-control" id="skifieldInput" data-parsley-required="true">
-                    <option selected>Choose...</option>
-                    <option>Cardrona</option>
-                    <option>Treble Cone</option>
-                    <option>The Remarkables</option>
+                  <select class="form-control" id="skifieldInput" data-parsley-required="true"  data-parsley-min="1" data-parsley-required-message="Please select Ski Field">
+                    <option value="">Choose...</option>
+                    <option value="1">Cardrona</option>
+                    <option value="2">Treble Cone</option>
+                    <option value="3">The Remarkables</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -114,19 +123,20 @@
               <div id="accomodationMap" style='width: 40vw; height: 60vh;'>
               </div>
             </div>
+            <a href="#section1/slide2"><button id="startAgainBtn">Start New Search</button></a>
           </div>
           <!-- Carousel is attatached to outputRight container via JS -->
           <div class="outputRight">
             <!-- Card One Begins -->
             <div class="card" style="width: 18rem;">
-              <img id="accomImage" src="img/house.jpeg" class="card-img-top" alt="Cardrona House">
+              <img id="accomImage" src="" class="card-img-top">
               <div class="card-body">
-                <h5 class="card-title" id="accomName">Cardrona House</h5>
-                <p class="card-text" id="pricePerNight">$240 per night</p>
-                <p class="card-text" id="minNight">Min 2 Nigths</p>
-                <p class="card-text" id="maxNight">Max 15 Nights</p>
-                <p class="card-text" id="minGuest">Min 1 Guest</p>
-                <p class="card-text" id="maxGuest">Max 4 Guests</p>
+                <h5 class="card-title" id="accomName"></h5>
+                <p class="card-text" id="pricePerNight"></p>
+                <p class="card-text" id="minNight"></p>
+                <p class="card-text" id="maxNight"></p>
+                <p class="card-text" id="minGuest"></p>
+                <p class="card-text" id="maxGuest"></p>
                 <div class="ammenitiesContainer">
                   <div class="ammenities" id="wifi">
                     <i class="fa fa-wifi" aria-hidden="true"></i>
@@ -148,14 +158,14 @@
             <!-- Card One Ends -->
             <!-- Card Two Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="img/house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage2">
+              <img src="" class="card-img-top" id="accomImage2">
               <div class="card-body">
-                <h5 class="card-title" id="accomName2">Cardrona House</h5>
-                <p class="card-text" id="pricePerNight2">$240 per night</p>
-                <p class="card-text" id="minNight2">Min 2 Nigths</p>
-                <p class="card-text" id="maxNight2">Max 15 Nights</p>
-                <p class="card-text" id="minGuest2">Min 1 Guest</p>
-                <p class="card-text" id="maxGuest2">Max 4 Guests</p>
+                <h5 class="card-title" id="accomName2"></h5>
+                <p class="card-text" id="pricePerNight2"></p>
+                <p class="card-text" id="minNight2"></p>
+                <p class="card-text" id="maxNight2"></p>
+                <p class="card-text" id="minGuest2"></p>
+                <p class="card-text" id="maxGuest2"></p>
                 <div class="ammenitiesContainer">
                   <div class="ammenities" id=wifi2>
                     <i class="fa fa-wifi" aria-hidden="true"></i>
@@ -177,14 +187,14 @@
             <!-- Card Two Ends -->
             <!-- Card Three Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="img/house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage3">
+              <img src="" class="card-img-top"  id="accomImage3">
               <div class="card-body">
-                <h5 class="card-title" id="accomName3">Cardrona House</h5>
-                <p class="card-text" id="pricePerNight3">$240 per night</p>
-                <p class="card-text" id="minNight3">Min 2 Nigths</p>
-                <p class="card-text" id="maxNight3">Max 15 Nights</p>
-                <p class="card-text" id="minGuest3">Min 1 Guest</p>
-                <p class="card-text" id="maxGuest3">Max 4 Guests</p>
+                <h5 class="card-title" id="accomName3"></h5>
+                <p class="card-text" id="pricePerNight3"></p>
+                <p class="card-text" id="minNight3"></p>
+                <p class="card-text" id="maxNight3"></p>
+                <p class="card-text" id="minGuest3"></p>
+                <p class="card-text" id="maxGuest3"></p>
                 <div class="ammenitiesContainer">
                   <div class="ammenities" id="wifi3">
                     <i class="fa fa-wifi" aria-hidden="true"></i>
@@ -206,14 +216,14 @@
             <!-- Card Three Ends -->
             <!-- Card Four Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="img/house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage4">
+              <img src="" class="card-img-top"  id="accomImage4">
               <div class="card-body">
-                <h5 class="card-title" id="accomName4">Cardrona House</h5>
-                <p class="card-text" id="pricePerNight4">$240 per night</p>
-                <p class="card-text" id="minNight4">Min 2 Nigths</p>
-                <p class="card-text" id="maxNight4">Max 15 Nights</p>
-                <p class="card-text" id="minGuest4">Min 1 Guest</p>
-                <p class="card-text" id="maxGuest4">Max 4 Guests</p>
+                <h5 class="card-title" id="accomName4"></h5>
+                <p class="card-text" id="pricePerNight4"></p>
+                <p class="card-text" id="minNight4"></p>
+                <p class="card-text" id="maxNight4"></p>
+                <p class="card-text" id="minGuest4"></p>
+                <p class="card-text" id="maxGuest4"></p>
                 <div class="ammenitiesContainer">
                   <div class="ammenities" id="wifi4">
                     <i class="fa fa-wifi" aria-hidden="true"></i>
@@ -235,14 +245,14 @@
             <!-- Card Four Ends -->
             <!-- Card Five Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="img/house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage5">
+              <img src="" class="card-img-top" alt="Cardrona House" id="accomImage5">
               <div class="card-body">
-                <h5 class="card-title" id="accomName5">Cardrona House</h5>
-                <p class="card-text" id="pricePerNight5">$240 per night</p>
-                <p class="card-text" id="minNight5">Min 2 Nigths</p>
-                <p class="card-text" id="maxNight5">Max 15 Nights</p>
-                <p class="card-text" id="minGuest5">Min 1 Guest</p>
-                <p class="card-text" id="maxGuest5">Max 4 Guests</p>
+                <h5 class="card-title" id="accomName5"></h5>
+                <p class="card-text" id="pricePerNight5"></p>
+                <p class="card-text" id="minNight5"></p>
+                <p class="card-text" id="maxNight5"></p>
+                <p class="card-text" id="minGuest5"></p>
+                <p class="card-text" id="maxGuest5"></p>
                 <div class="ammenitiesContainer">
                   <div class="ammenities" id="wifi5">
                     <i class="fa fa-wifi" aria-hidden="true"></i>
@@ -264,14 +274,14 @@
             <!-- Card Five Ends -->
             <!-- Card Six Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="img/house.jpeg" class="card-img-top" alt="Cardrona House" id="accomImage6">
+              <img src="" class="card-img-top" id="accomImage6">
               <div class="card-body">
-                <h5 class="card-title" id="accomName6">Cardrona House</h5>
-                <p class="card-text" id="pricePerNight6">$240 per night</p>
-                <p class="card-text" id="minNight6">Min 2 Nigths</p>
-                <p class="card-text" id="maxNight6">Max 15 Nights</p>
-                <p class="card-text" id="minGuest6">Min 1 Guest</p>
-                <p class="card-text" id="maxGuest6">Max 4 Guests</p>
+                <h5 class="card-title" id="accomName6"></h5>
+                <p class="card-text" id="pricePerNight6"></p>
+                <p class="card-text" id="minNight6"></p>
+                <p class="card-text" id="maxNight6"></p>
+                <p class="card-text" id="minGuest6"></p>
+                <p class="card-text" id="maxGuest6"></p>
                 <div class="ammenitiesContainer">
                   <div class="ammenities" id=wifi6>
                     <i class="fa fa-wifi" aria-hidden="true"></i>
