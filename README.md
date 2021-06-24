@@ -1,4 +1,4 @@
-# SLOPE NZ 
+# SLOPE NZ
 ### Accomodation Finder by Ciaran Slow
 
 An accomodation finder for finding accomodation near NZ Ski Fields.
@@ -11,9 +11,9 @@ This project uses HTML, CSS and JS. It makes uses of multiple JS Plugins & Libra
 
 ## PROBLEM:
 
-Due to COVID-19 tourism to Queenstown and Wanka has significantly reduced, impacting local business operators majorly. Both of these regions rely heavily on tourism as their primary industries.  
+Due to COVID-19 tourism to Queenstown and Wanaka has significantly reduced, impacting local business operators majorly. Both of these regions rely heavily on tourism as their primary industries.  
 
-To try to minimize the ongoing impact Tourism NZ has decided to launch a campaign targeting the upcoming ski season as a way to attract more business for the region from both local and international tourists. 
+To try to minimize the ongoing impact Tourism NZ has decided to launch a campaign targeting the upcoming ski season as a way to attract more business for the region from both local and international tourists.
 
 
 ## SOLUTION:
@@ -22,7 +22,7 @@ Development of a showcase website that allows users useful booking information f
 
 The accommodation finder will allow user to search for accommodation based on:
 Ski field selection - show results close by
-Number of Guests 
+Number of Guests
 Number of Nights
 
 
@@ -32,7 +32,7 @@ Number of Nights
 
 ### JQuery
 
-Predominantly used for function calls and onclick events
+Predominantly used for function calls and on-click events
 
 
 ### Bootstraps
@@ -52,7 +52,7 @@ Used for Input Validation
 
 ### Textillate JS
 
-Used to animate homescreen Title and subtitle
+Used to animate home-screen Title and subtitle
 
 
 ### Fullpage JS
@@ -60,14 +60,14 @@ Used to animate homescreen Title and subtitle
 Used to enable Single Page Application sideways scroll
 
 
-### Font Awesome v4.0 
+### Font Awesome v4.0
 
 Used for all card icons - Free Wifi, Family Friendly and Disabled Access.
 
 
 ### Mapbox
 
-Used for interactive maps on both the output and skifield screens.
+Used for interactive maps on both the output and ski field screens.
 
 
 ### Gulp
@@ -93,7 +93,7 @@ Used for running Node, Gulp and GitHub commits.
 
 ### Adobe Illustrator
 
-Used to create logos and required graphic assests
+Used to create logos and required graphic assets.
 
 ### Adobe XD
 
@@ -114,5 +114,3 @@ Used for batch image resizing and cropping for card images
 All JS has been written to conform to the Idiomatic JS style guide.
 
 ### HTML & CSS CODE VALIDATED VIA W3 SHCOOLS VALIDATORS
-
-
