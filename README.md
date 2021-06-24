@@ -27,7 +27,7 @@ Number of Nights
 
 
 
-## Libraries & Plugins used within the project:
+## LIBRARIES & PLUGINS:
 
 
 ### JQuery
@@ -81,7 +81,7 @@ Used to install and run Gulp.
 
 
 
-## Production Tools Used:
+## PRODUCTION TOOLS USED:
 
 ### Atom Editor
 
