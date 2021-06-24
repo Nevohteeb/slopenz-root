@@ -30,52 +30,52 @@ Number of Nights
 ## LIBRARIES & PLUGINS:
 
 
-### JQuery
+### * JQuery
 
 Predominantly used for function calls and onclick events
 
 
-### Bootstraps
+### * Bootstraps
 
 Used for form and card design
 
 
-### Slick JS
+### * Slick JS
 
 Used for output carousel
 
 
-### Parsley JS
+### * Parsley JS
 
 Used for Input Validation
 
 
-### Textillate JS
+### * Textillate JS
 
 Used to animate homescreen Title and subtitle
 
 
-### Fullpage JS
+### * Fullpage JS
 
 Used to enable Single Page Application sideways scroll
 
 
-### Font Awesome v4.0 
+### * Font Awesome v4.0 
 
 Used for all card icons - Free Wifi, Family Friendly and Disabled Access.
 
 
-### Mapbox
+### * Mapbox
 
 Used for interactive maps on both the output and skifield screens.
 
 
-### Gulp
+### * Gulp
 
 Used for JS linting, Sass and live server.
 
 
-### Node JS
+### * Node JS
 
 Used to install and run Gulp.
 
@@ -83,27 +83,27 @@ Used to install and run Gulp.
 
 ## PRODUCTION TOOLS USED:
 
-### Atom Editor
+### * Atom Editor
 
 Used to write and edit all code.
 
-### Terminal
+### * Terminal
 
 Used for running Node, Gulp and GitHub commits.
 
-### Adobe Illustrator
+### * Adobe Illustrator
 
 Used to create logos and required graphic assests
 
-### Adobe XD
+### * Adobe XD
 
 Used to create Wireframes, Concepts and Hifi.
 
-### Google Chrome Browser
+### * Google Chrome Browser
 
 Inspect and Console used for in browser design. Network used to manage load times
 
-### BIRME - website
+### * BIRME - website
 
 Used for batch image resizing and cropping for card images
 
