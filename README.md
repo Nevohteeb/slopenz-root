@@ -113,4 +113,6 @@ Used for batch image resizing and cropping for card images
 
 All JS has been written to conform to the Idiomatic JS style guide.
 
+### HTML & CSS CODE VALIDATED VIA W3 SHCOOLS VALIDATORS
+
 
