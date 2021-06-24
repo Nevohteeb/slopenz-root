@@ -66,11 +66,8 @@ Used to animate home-screen Title and subtitle
 Used to enable Single Page Application sideways scroll
 
 
-<<<<<<< HEAD
+
 ### Font Awesome v4.0
-=======
-### * Font Awesome v4.0 
->>>>>>> 8b0ecfeea00fe4d5a4cdc85c8235b5e47f5dfade
 
 Used for all card icons - Free Wifi, Family Friendly and Disabled Access.
 
