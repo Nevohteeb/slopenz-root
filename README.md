@@ -9,11 +9,15 @@ This project uses HTML, CSS and JS. It makes uses of multiple JS Plugins & Libra
 
 
 
+
+
 ## PROBLEM:
 
 Due to COVID-19 tourism to Queenstown and Wanaka has significantly reduced, impacting local business operators majorly. Both of these regions rely heavily on tourism as their primary industries.  
 
 To try to minimize the ongoing impact Tourism NZ has decided to launch a campaign targeting the upcoming ski season as a way to attract more business for the region from both local and international tourists.
+
+
 
 
 ## SOLUTION:
@@ -27,90 +31,103 @@ Number of Nights
 
 
 
+
+
 ## LIBRARIES & PLUGINS:
 
 
-### JQuery
+### * JQuery
 
 Predominantly used for function calls and on-click events
 
 
-### Bootstraps
+### * Bootstraps
 
 Used for form and card design
 
 
-### Slick JS
+### * Slick JS
 
 Used for output carousel
 
 
-### Parsley JS
+### * Parsley JS
 
 Used for Input Validation
 
 
-### Textillate JS
+### * Textillate JS
 
 Used to animate home-screen Title and subtitle
 
 
-### Fullpage JS
+### * Fullpage JS
 
 Used to enable Single Page Application sideways scroll
 
 
+<<<<<<< HEAD
 ### Font Awesome v4.0
+=======
+### * Font Awesome v4.0 
+>>>>>>> 8b0ecfeea00fe4d5a4cdc85c8235b5e47f5dfade
 
 Used for all card icons - Free Wifi, Family Friendly and Disabled Access.
 
 
-### Mapbox
+### * Mapbox
 
 Used for interactive maps on both the output and ski field screens.
 
 
-### Gulp
+### * Gulp
 
 Used for JS linting, Sass and live server.
 
 
-### Node JS
+### * Node JS
 
 Used to install and run Gulp.
 
 
 
+
+
 ## PRODUCTION TOOLS USED:
 
-### Atom Editor
+### * Atom Editor
 
 Used to write and edit all code.
 
-### Terminal
+### * Terminal
 
 Used for running Node, Gulp and GitHub commits.
 
-### Adobe Illustrator
+### * Adobe Illustrator
 
 Used to create logos and required graphic assets.
 
-### Adobe XD
+### * Adobe XD
 
 Used to create Wireframes, Concepts and Hifi.
 
-### Google Chrome Browser
+### * Google Chrome Browser
 
 Inspect and Console used for in browser design. Network used to manage load times
 
-### BIRME - website
+### * BIRME - website
 
 Used for batch image resizing and cropping for card images
+
+
 
 
 
 ## STYLE GUIDE
 
 All JS has been written to conform to the Idiomatic JS style guide.
+
+
+
 
 ### HTML & CSS CODE VALIDATED VIA W3 SHCOOLS VALIDATORS
