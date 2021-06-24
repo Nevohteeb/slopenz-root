@@ -22,11 +22,9 @@
   <!-- Loader -->
   <div class="loader-cont">
     <div class="loader-box">
-      <div class="loader-spin spin1"></div>
-      <div class="loader-spin spin2"></div>
-      <div class="loader-spin spin3"></div>
-      <div class="loader-spin spin4"></div>
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1788.13 1788.25"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:70px;}</style></defs><path class="cls-1" d="M1569.5,1050.18,1177,653.82,846.58,1026,602.43,780.84q-231.63,267.88-461.1,533.24c219.61,390.8,695.28,547.54,1100.55,368.15,417.86-185,617.87-656,460.58-1085.09C1549.45,179.7,1099.9-61.31,655.67,66.39,225.52,190-15.87,608.43,40.15,1003.45"/></svg>
     </div>
+    <h2 id="loading">LOADING</h2>
   </div>
   <!-- - - - - - - - - - - - - OUTER WRAPPER BEGINS - - - - -  - - - - -->
   <div id="wrapper">
@@ -86,10 +84,10 @@
               <div id="searchForm">
                 <div class="form-group">
                   <label for="nameInput">Your Name:</label>
-                  <input type="name" class="form-control" id="nameInput" data-parsley-required-message="Please enter your name" data-parsley-pattern="^[a-zA-Z ]+$" placeholder="Max 10 char." data-parsley-required="true" maxlength="10">
+                  <input type="text" class="form-control" id="nameInput" data-parsley-required-message="Please enter your name" data-parsley-pattern="^[a-zA-Z ]+$" placeholder="Max 10 char." data-parsley-required="true" maxlength="10">
                 </div>
                 <div class="form-group">
-                  <label for="holidaySelect">Select Your Skifield:</label>
+                  <label for="skifieldInput">Select Your Skifield:</label>
                   <select class="form-control" id="skifieldInput" data-parsley-required="true"  data-parsley-min="1" data-parsley-required-message="Please select Ski Field">
                     <option value="">Choose...</option>
                     <option value="1">Cardrona</option>
@@ -99,12 +97,12 @@
                 </div>
                 <div class="form-group">
                   <label for="nameInput">Number of Nights</label>
-                  <input type="name" class="form-control" id="nightInput" placeholder="Max of 15 nights" data-parsley-required-message="Please enter number of nights you wish to stay" data-parsley-required="true" data-parsley-type="number"
+                  <input type="text" class="form-control" id="nightInput" placeholder="Max of 15 nights" data-parsley-required-message="Please enter number of nights you wish to stay" data-parsley-required="true" data-parsley-type="number"
                     data-parsley-max="15">
                 </div>
                 <div class="form-group">
                   <label for="nameInput">Number of Guests</label>
-                  <input type="name" class="form-control" id="guestInput" placeholder="Max of 4" data-parsley-required-message="Please enter number of guests" data-parsley-required="true" data-parsley-type="number" data-parsley-max="4">
+                  <input type="text" class="form-control" id="guestInput" placeholder="Max of 4" data-parsley-required-message="Please enter number of guests" data-parsley-required="true" data-parsley-type="number" data-parsley-max="4">
                 </div>
                 <button id="submitBtn">See available rooms!</button>
               </div>
@@ -129,9 +127,9 @@
           <div class="outputRight">
             <!-- Card One Begins -->
             <div class="card" style="width: 18rem;">
-              <img id="accomImage" src="" class="card-img-top">
+              <img src="#" class="card-img-top" alt="#" id="accomImage">
               <div class="card-body">
-                <h5 class="card-title" id="accomName"></h5>
+                <h5 class="card-title" id="accomName">#</h5>
                 <p class="card-text" id="pricePerNight"></p>
                 <p class="card-text" id="minNight"></p>
                 <p class="card-text" id="maxNight"></p>
@@ -151,16 +149,16 @@
                     <p>Family<br>Friendly</p>
                   </div>
                 </div>
-                <a href="#" class="btn btn-primary card-btn" target="_blank" id="cardBtn">View Site</a>
-                <button class="viewOnMapBtn" id="viewOnMapBtn1">View on Map</button>
+                <a href="#" class="btn btn-primary card-btn" target="_blank" >View Site</a>
+                <button class="viewOnMapBtn cardBtn" id="viewOnMapBtn1">View on Map</button>
               </div>
             </div>
             <!-- Card One Ends -->
             <!-- Card Two Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="" class="card-img-top" id="accomImage2">
+              <img src="#" class="card-img-top" alt="#" id="accomImage2">
               <div class="card-body">
-                <h5 class="card-title" id="accomName2"></h5>
+                <h5 class="card-title" id="accomName2">#</h5>
                 <p class="card-text" id="pricePerNight2"></p>
                 <p class="card-text" id="minNight2"></p>
                 <p class="card-text" id="maxNight2"></p>
@@ -180,16 +178,16 @@
                     <p>Family<br>Friendly</p>
                   </div>
                 </div>
-                <a href="#" class="btn btn-primary card-btn" target="_blank" id="cardBtn">View Site</a>
-                <button class="viewOnMapBtn" id="viewOnMapBtn2">View on Map</button>
+                <a href="#" class="btn btn-primary card-btn" target="_blank" >View Site</a>
+                <button class="viewOnMapBtn cardBtn" id="viewOnMapBtn2">View on Map</button>
               </div>
             </div>
             <!-- Card Two Ends -->
             <!-- Card Three Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="" class="card-img-top"  id="accomImage3">
+              <img src="#" class="card-img-top" alt="#" id="accomImage3">
               <div class="card-body">
-                <h5 class="card-title" id="accomName3"></h5>
+                <h5 class="card-title" id="accomName3">#</h5>
                 <p class="card-text" id="pricePerNight3"></p>
                 <p class="card-text" id="minNight3"></p>
                 <p class="card-text" id="maxNight3"></p>
@@ -209,16 +207,16 @@
                     <p>Family<br>Friendly</p>
                   </div>
                 </div>
-                <a href="#" class="btn btn-primary card-btn" target="_blank" id="cardBtn">View Site</a>
-                <button class="viewOnMapBtn" id="viewOnMapBtn3">View on Map</button>
+                <a href="#" class="btn btn-primary card-btn" target="_blank" >View Site</a>
+                <button class="viewOnMapBtn cardBtn" id="viewOnMapBtn3">View on Map</button>
               </div>
             </div>
             <!-- Card Three Ends -->
             <!-- Card Four Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="" class="card-img-top"  id="accomImage4">
+              <img src="#" class="card-img-top" alt="#" id="accomImage4">
               <div class="card-body">
-                <h5 class="card-title" id="accomName4"></h5>
+                <h5 class="card-title" id="accomName4">#</h5>
                 <p class="card-text" id="pricePerNight4"></p>
                 <p class="card-text" id="minNight4"></p>
                 <p class="card-text" id="maxNight4"></p>
@@ -238,16 +236,16 @@
                     <p>Family<br>Friendly</p>
                   </div>
                 </div>
-                <a href="#" class="btn btn-primary card-btn" target="_blank" id="cardBtn">View Site</a>
-                <button class="viewOnMapBtn" id="viewOnMapBtn4">View on Map</button>
+                <a href="#" class="btn btn-primary card-btn" target="_blank" >View Site</a>
+                <button class="viewOnMapBtn cardBtn" id="viewOnMapBtn4">View on Map</button>
               </div>
             </div>
             <!-- Card Four Ends -->
             <!-- Card Five Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="" class="card-img-top" alt="Cardrona House" id="accomImage5">
+              <img src="#" class="card-img-top" alt="#" id="accomImage5">
               <div class="card-body">
-                <h5 class="card-title" id="accomName5"></h5>
+                <h5 class="card-title" id="accomName5">#</h5>
                 <p class="card-text" id="pricePerNight5"></p>
                 <p class="card-text" id="minNight5"></p>
                 <p class="card-text" id="maxNight5"></p>
@@ -267,16 +265,16 @@
                     <p>Family<br>Friendly</p>
                   </div>
                 </div>
-                <a href="#" class="btn btn-primary card-btn" target="_blank" id="cardBtn">View Site</a>
-                <button class="viewOnMapBtn" id="viewOnMapBtn5">View on Map</button>
+                <a href="#" class="btn btn-primary card-btn" target="_blank" >View Site</a>
+                <button class="viewOnMapBtn cardBtn" id="viewOnMapBtn5">View on Map</button>
               </div>
             </div>
             <!-- Card Five Ends -->
             <!-- Card Six Begins -->
             <div class="card" style="width: 18rem;">
-              <img src="" class="card-img-top" id="accomImage6">
+              <img src="#" class="card-img-top" alt="#" id="accomImage6">
               <div class="card-body">
-                <h5 class="card-title" id="accomName6"></h5>
+                <h5 class="card-title" id="accomName6">#</h5>
                 <p class="card-text" id="pricePerNight6"></p>
                 <p class="card-text" id="minNight6"></p>
                 <p class="card-text" id="maxNight6"></p>
@@ -296,8 +294,8 @@
                     <p>Family<br>Friendly</p>
                   </div>
                 </div>
-                <a href="#" class="btn btn-primary card-btn" target="_blank" id="cardBtn">View Site</a>
-                <button class="viewOnMapBtn" id="viewOnMapBtn6">View on Map</button>
+                <a href="#" class="btn btn-primary card-btn" target="_blank" >View Site</a>
+                <button class="viewOnMapBtn cardBtn" id="viewOnMapBtn6">View on Map</button>
               </div>
             </div>
             <!-- Card Six Ends -->
@@ -363,11 +361,11 @@
         </div>
         <!-- SLIDE 5 ENDS -->
       </div>
-      <!-- SECTION ONE ENDS --------------------------------------------------------->
+      <!-- SECTION ONE ENDS -->
     </div>
-    <!-- FULLPAGE ENDS ------------------------------------------------------>
+    <!-- -  FULLPAGE ENDS -->
   </div>
-  <!-- OUTER WRAPPER ENDS - - - - - - - - - - - -->
+  <!-- - OUTER WRAPPER ENDS - - - - - - - - - - - -->
 
 
 

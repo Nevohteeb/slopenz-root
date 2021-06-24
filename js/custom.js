@@ -4,7 +4,7 @@
   'use strict';
 
 	$(window).load(function() {
-		$(".loader-cont").fadeOut(750);
+		$(".loader-cont").delay(5000).fadeOut(250);
 	});
 
   // Bring back Map Buttons on Page Load:
@@ -164,7 +164,7 @@
       .setPopup(new mapboxgl.Popup({
           offset: 25
         })
-        .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+      .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
       .addTo(map);
   });
 
@@ -336,54 +336,198 @@
 
   //  MAP BOX ENDS
 
-  // --------------------- VIEW ON MAP CLICKS ----------------------
+  // --------------------- VIEW ON MAP on CLICKS ----------------------
 
-  function viewOnMapHostel () {
-    $(viewOnMap).click(function(){
-      map2.flyTo({
-        center: [
-          168.9492151232965, -44.8731916471041
-        ],
-        zoom: 15,
-        essential: true
-      });
+  function viewOnMapCardronaHostel () {
+    map2.flyTo({
+      center: [
+        169.13219559174127, -44.68893813243455
+      ],
+      zoom: 15,
+      essential: true
     });
+    var el = document.createElement('div');
+    el.className = 'marker';
+
+    new mapboxgl.Marker(el)
+      .setLngLat([169.13219559174127, -44.68893813243455])
+      .addTo(map2);
   }
 
-  function viewOnMapHotel () {
-    $(viewOnMap).click(function(){
-      map2.flyTo({
-        center: [
-          168.9492151232965, -44.8731916471041
-        ],
-        zoom: 15,
-        essential: true
-      });
+  function viewOnMapCardronaHotel () {
+    map2.flyTo({
+      center: [
+        169.1124773942083, -44.694874763845164
+      ],
+      zoom: 15,
+      essential: true
     });
+    var el = document.createElement('div');
+    el.className = 'marker';
+
+    new mapboxgl.Marker(el)
+      .setLngLat([169.1124773942083, -44.694874763845164])
+      .addTo(map2);
   }
 
-  function viewOnMapMotel () {
-    $(viewOnMap).click(function(){
-      map2.flyTo({
-        center: [
-          168.9492151232965, -44.8731916471041
-        ],
-        zoom: 15,
-        essential: true
-      });
+  function viewOnMapCardronaMotel () {
+    map2.flyTo({
+      center: [
+        169.00366437116998, -44.87981089694391
+      ],
+      zoom: 15,
+      essential: true
     });
+    var el = document.createElement('div');
+    el.className = 'marker';
+
+    new mapboxgl.Marker(el)
+      .setLngLat([169.00366437116998, -44.87981089694391])
+      .addTo(map2);
   }
 
-  function viewOnMapHouse () {
-    $(viewOnMap).click(function(){
-      map2.flyTo({
-        center: [
-          168.9492151232965, -44.8731916471041
-        ],
-        zoom: 15,
-        essential: true
-      });
+  function viewOnMapCardronaHouse () {
+    map2.flyTo({
+      center: [
+        169.00347125213642, -44.8828897581751
+      ],
+      zoom: 15,
+      essential: true
     });
+    var el = document.createElement('div');
+    el.className = 'marker';
+
+    new mapboxgl.Marker(el)
+      .setLngLat([169.00347125213642, -44.8828897581751])
+      .addTo(map2);
+  }
+
+  function viewOnMapTrebleHostel () {
+    map2.flyTo({
+      center: [
+        169.13219559174127, -44.68893813243455
+      ],
+      zoom: 15,
+      essential: true
+    });
+    var el = document.createElement('div');
+    el.className = 'marker';
+
+    new mapboxgl.Marker(el)
+      .setLngLat([169.13219559174127, -44.68893813243455])
+      .addTo(map2);
+  }
+
+  function viewOnMapTrebleHotel () {
+    map2.flyTo({
+      center: [
+        169.10931640646848, -44.70004173622024
+      ],
+      zoom: 15,
+      essential: true
+    });
+    var el = document.createElement('div');
+    el.className = 'marker';
+
+    new mapboxgl.Marker(el)
+      .setLngLat([169.10931640646848, -44.70004173622024])
+      .addTo(map2);
+  }
+
+  function viewOnMapTrebleMotel () {
+    map2.flyTo({
+      center: [
+        169.10930793408215, -44.70071663279667
+      ],
+      zoom: 15,
+      essential: true
+    });
+    var el = document.createElement('div');
+    el.className = 'marker';
+
+    new mapboxgl.Marker(el)
+      .setLngLat([169.10930793408215, -44.70071663279667])
+      .addTo(map2);
+  }
+
+  function viewOnMapTrebleHouse () {
+    map2.flyTo({
+      center: [
+        169.11144297228662, -44.700975914736674
+      ],
+      zoom: 15,
+      essential: true
+    });
+    var el = document.createElement('div');
+    el.className = 'marker';
+
+    new mapboxgl.Marker(el)
+      .setLngLat([169.11144297228662, -44.700975914736674])
+      .addTo(map2);
+  }
+
+  function viewOnMapRemarkHostel () {
+    map2.flyTo({
+      center: [
+        168.7218454959018, -45.01662425610656,
+      ],
+      zoom: 15,
+      essential: true
+    });
+    var el = document.createElement('div');
+    el.className = 'marker';
+
+    new mapboxgl.Marker(el)
+      .setLngLat([168.7218454959018, -45.01662425610656])
+      .addTo(map2);
+  }
+
+  function viewOnMapRemarkHotel () {
+    map2.flyTo({
+      center: [
+        168.75496879470174, -45.076871556951126
+      ],
+      zoom: 15,
+      essential: true
+    });
+    var el = document.createElement('div');
+    el.className = 'marker';
+
+    new mapboxgl.Marker(el)
+      .setLngLat([168.75496879470174, -45.076871556951126])
+      .addTo(map2);
+  }
+
+  function viewOnMapRemarkMotel () {
+    map2.flyTo({
+      center: [
+        168.75433918868447, -45.07581331256583
+      ],
+      zoom: 15,
+      essential: true
+    });
+    var el = document.createElement('div');
+    el.className = 'marker';
+
+    new mapboxgl.Marker(el)
+      .setLngLat([168.75433918868447, -45.07581331256583])
+      .addTo(map2);
+  }
+
+  function viewOnMapRemarkHouse () {
+    map2.flyTo({
+      center: [
+        168.73088242104754, -45.02902556915285
+      ],
+      zoom: 15,
+      essential: true
+    });
+    var el = document.createElement('div');
+    el.className = 'marker';
+
+    new mapboxgl.Marker(el)
+      .setLngLat([168.73088242104754, -45.02902556915285])
+      .addTo(map2);
   }
 
   // -------------------- CLICK FUNCTIONS ----------------------------
@@ -462,14 +606,6 @@
     var disabled2 = document.getElementById('disabled2');
     var family = document.getElementById('family');
     var family2 = document.getElementById('family2');
-
-    // Get "View On Map" Buttons
-    var viewOnMap = document.getElementById('viewOnMapBtn1');
-    var viewOnMap2 = document.getElementById('viewOnMapBtn2');
-    var viewOnMap3 = document.getElementById('viewOnMapBtn3');
-    var viewOnMap4 = document.getElementById('viewOnMapBtn4');
-    var viewOnMap5 = document.getElementById('viewOnMapBtn5');
-    var viewOnMap6 = document.getElementById('viewOnMapBtn6');
 
 
     // ---------------- CONDITIONALS -----------------
@@ -550,6 +686,19 @@
 			family.style.color='#FFFFFF';
 			family2.style.color='#FFFFFF';
 
+      // View On Map On Clicks:
+      $('#viewOnMapBtn1').click(viewOnMapTrebleHostel);
+
+      $('#viewOnMapBtn2').click(viewOnMapTrebleHostel);
+
+      $('#viewOnMapBtn3').click(viewOnMapTrebleHotel);
+
+      $('#viewOnMapBtn4').click(viewOnMapTrebleHotel);
+
+      $('#viewOnMapBtn5').click(viewOnMapTrebleHotel);
+
+      $('#viewOnMapBtn6').click(viewOnMapTrebleHotel);
+
     }
 
     // Hotel & House
@@ -611,6 +760,19 @@
     maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
     maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
     maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+    // View On Map On Clicks:
+    $('#viewOnMapBtn1').click(viewOnMapTrebleHotel);
+
+    $('#viewOnMapBtn2').click(viewOnMapTrebleHotel);
+
+    $('#viewOnMapBtn3').click(viewOnMapTrebleHotel);
+
+    $('#viewOnMapBtn4').click(viewOnMapTrebleHouse);
+
+    $('#viewOnMapBtn5').click(viewOnMapTrebleHouse);
+
+    $('#viewOnMapBtn6').click(viewOnMapTrebleHouse);
 
     }
 
@@ -682,12 +844,99 @@
 			family.style.color='#FFFFFF';
 			family2.style.color='#FFFFFF';
 
+      // View On Map On Clicks:
+      $('#viewOnMapBtn1').click(viewOnMapTrebleHostel);
+
+      $('#viewOnMapBtn2').click(viewOnMapTrebleHostel);
+
+      $('#viewOnMapBtn3').click(viewOnMapTrebleHotel);
+
+      $('#viewOnMapBtn4').click(viewOnMapTrebleHotel);
+
+      $('#viewOnMapBtn5').click(viewOnMapTrebleHouse);
+
+      $('#viewOnMapBtn6').click(viewOnMapTrebleHouse);
+
     }
 
     // House
-    else if ((skifeildInput.value == '2') && ((getGuestInput.value == 1) && (getNightInput.value >= 10)) || ( ((getNightInput.value == 2) && ((getGuestInput.value >= 3) || (getGuestInput.value <= 4)))))    {
+
+    else if ((skifeildInput.value == '2') && (getGuestInput.value == 1) && (getNightInput.value >= 10)) {
 
       // Change Image
+      accomImage.src = 'img/card-images/treb-house-1.jpg';
+      accomImage2.src = 'img/card-images/treb-house-2.jpg';
+      accomImage3.src = 'img/card-images/treb-house-3.jpg';
+      accomImage4.src = 'img/card-images/treb-house-4.jpg';
+      accomImage5.src = 'img/card-images/treb-house-5.jpg';
+      accomImage6.src = 'img/card-images/treb-house-6.jpg';
+
+      // Change Accomodation
+      accomName.textContent = 'Treble Cone House';
+      accomName2.textContent = 'Treble Cone House';
+      accomName3.textContent = 'Treble Cone House';
+      accomName4.textContent = 'Treble Cone House';
+      accomName5.textContent = 'Treble Cone House';
+      accomName6.textContent = 'Treble Cone House';
+
+      // Change Price Per Night
+      pricePerNight.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
+      // Change Max Nights
+      maxNight.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+      // View On Map On Clicks:
+      $('#viewOnMapBtn1').click(viewOnMapTrebleHouse);
+
+      $('#viewOnMapBtn2').click(viewOnMapTrebleHouse);
+
+      $('#viewOnMapBtn3').click(viewOnMapTrebleHouse);
+
+      $('#viewOnMapBtn4').click(viewOnMapTrebleHouse);
+
+      $('#viewOnMapBtn5').click(viewOnMapTrebleHouse);
+
+      $('#viewOnMapBtn6').click(viewOnMapTrebleHouse);
+
+    }
+
+    // House
+    else if ((skifeildInput.value == '2') && ((getNightInput.value == 2) || (getNightInput.value > 10)) && ((getGuestInput.value == 3) || (getGuestInput.value == 4)))    {
+
 			// Change Image
       accomImage.src = 'img/card-images/treb-house-1.jpg';
       accomImage2.src = 'img/card-images/treb-house-2.jpg';
@@ -743,6 +992,19 @@
       maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+      // View On Map On Clicks:
+      $('#viewOnMapBtn1').click(viewOnMapTrebleHouse);
+
+      $('#viewOnMapBtn2').click(viewOnMapTrebleHouse);
+
+      $('#viewOnMapBtn3').click(viewOnMapTrebleHouse);
+
+      $('#viewOnMapBtn4').click(viewOnMapTrebleHouse);
+
+      $('#viewOnMapBtn5').click(viewOnMapTrebleHouse);
+
+      $('#viewOnMapBtn6').click(viewOnMapTrebleHouse);
 
     }
 
@@ -805,11 +1067,24 @@
       maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
 
+      // View On Map On Clicks:
+      $('#viewOnMapBtn1').click(viewOnMapTrebleMotel);
+
+      $('#viewOnMapBtn2').click(viewOnMapTrebleMotel);
+
+      $('#viewOnMapBtn3').click(viewOnMapTrebleHotel);
+
+      $('#viewOnMapBtn4').click(viewOnMapTrebleHotel);
+
+      $('#viewOnMapBtn5').click(viewOnMapTrebleHouse);
+
+      $('#viewOnMapBtn6').click(viewOnMapTrebleHouse);
+
     }
 
 
     // Motel & House
-    else if ((skifeildInput.value == '2') && ((getGuestInput.value >= 2) && (getGuestInput.value <= 4) && (getNightInput.value > 3)) ) {
+    else if ((skifeildInput.value == '2') && ((getGuestInput.value >= 2) || (getGuestInput.value <= 4)) && ((getNightInput.value >= 3) || (getNightInput.value < 11)) ) {
 
 			// Change Image
       accomImage.src = 'img/card-images/treb-motel-1.jpg';
@@ -867,10 +1142,23 @@
       maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
 
+      // View On Map On Clicks:
+      $('#viewOnMapBtn1').click(viewOnMapTrebleMotel);
+
+      $('#viewOnMapBtn2').click(viewOnMapTrebleMotel);
+
+      $('#viewOnMapBtn3').click(viewOnMapTrebleMotel);
+
+      $('#viewOnMapBtn4').click(viewOnMapTrebleHouse);
+
+      $('#viewOnMapBtn5').click(viewOnMapTrebleHouse);
+
+      $('#viewOnMapBtn6').click(viewOnMapTrebleHouse);
+
     }
 
     // Hotel Output
-    if ((skifeildInput.value == '2') && (getGuestInput.value == 2) && (getNightInput.value == 1)) {
+    else if ((skifeildInput.value == '2') && (getGuestInput.value == 2) && (getNightInput.value == 1)) {
 
 			// Change Image
       accomImage.src = 'img/card-images/treb-hotel-1.jpg';
@@ -928,6 +1216,19 @@
       maxGuest5.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
 
+      // View On Map On Clicks:
+      $('#viewOnMapBtn1').click(viewOnMapTrebleHotel);
+
+      $('#viewOnMapBtn2').click(viewOnMapTrebleHotel);
+
+      $('#viewOnMapBtn3').click(viewOnMapTrebleHotel);
+
+      $('#viewOnMapBtn4').click(viewOnMapTrebleHotel);
+
+      $('#viewOnMapBtn5').click(viewOnMapTrebleHotel);
+
+      $('#viewOnMapBtn6').click(viewOnMapTrebleHotel);
+
     }
 
 
@@ -936,7 +1237,7 @@
 
     // Hostel & Hotel
 
-    if ((skifeildInput.value == '1') && (getGuestInput.value == 1) && (getNightInput.value <= 1)) {
+    else if ((skifeildInput.value == '1') && (getGuestInput.value == 1) && (getNightInput.value <= 1)) {
 
 			// Change Image
       accomImage.src = 'img/card-images/car-hostel-1.jpg';
@@ -1002,6 +1303,18 @@
 			family.style.color='#FFFFFF';
 			family2.style.color='#FFFFFF';
 
+      $('#viewOnMapBtn1').click(viewOnMapCardronaHostel);
+
+      $('#viewOnMapBtn2').click(viewOnMapCardronaHostel);
+
+      $('#viewOnMapBtn3').click(viewOnMapCardronaHotel);
+
+      $('#viewOnMapBtn4').click(viewOnMapCardronaHotel);
+
+      $('#viewOnMapBtn5').click(viewOnMapCardronaHotel);
+
+      $('#viewOnMapBtn6').click(viewOnMapCardronaHotel);
+
     }
 
     // Hotel & House
@@ -1063,6 +1376,18 @@
       maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+      $('#viewOnMapBtn1').click(viewOnMapCardronaHotel);
+
+      $('#viewOnMapBtn2').click(viewOnMapCardronaHotel);
+
+      $('#viewOnMapBtn3').click(viewOnMapCardronaHotel);
+
+      $('#viewOnMapBtn4').click(viewOnMapCardronaHouse);
+
+      $('#viewOnMapBtn5').click(viewOnMapCardronaHouse);
+
+      $('#viewOnMapBtn6').click(viewOnMapCardronaHouse);
 
     }
 
@@ -1133,10 +1458,22 @@
 			family.style.color='#FFFFFF';
 			family2.style.color='#FFFFFF';
 
+      $('#viewOnMapBtn1').click(viewOnMapCardronaHostel);
+
+      $('#viewOnMapBtn2').click(viewOnMapCardronaHostel);
+
+      $('#viewOnMapBtn3').click(viewOnMapCardronaHotel);
+
+      $('#viewOnMapBtn4').click(viewOnMapCardronaHotel);
+
+      $('#viewOnMapBtn5').click(viewOnMapCardronaHouse);
+
+      $('#viewOnMapBtn6').click(viewOnMapCardronaHouse);
+
     }
 
     // House
-    else if ((skifeildInput.value == '1') && ((getGuestInput.value == 1) && (getNightInput.value >= 10)) || ( ((getNightInput.value == 2) && ((getGuestInput.value >= 3) || (getGuestInput.value <= 4)))))    {
+    else if ((skifeildInput.value == '1') && ((getNightInput.value == 2) || (getNightInput.value > 10)) && ((getGuestInput.value == 3) || (getGuestInput.value == 4)))    {
 
 			// Change Image
       accomImage.src = 'img/card-images/car-house-1.jpg';
@@ -1193,6 +1530,90 @@
       maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+      $('#viewOnMapBtn1').click(viewOnMapCardronaHouse);
+
+      $('#viewOnMapBtn2').click(viewOnMapCardronaHouse);
+
+      $('#viewOnMapBtn3').click(viewOnMapCardronaHouse);
+
+      $('#viewOnMapBtn4').click(viewOnMapCardronaHouse);
+
+      $('#viewOnMapBtn5').click(viewOnMapCardronaHouse);
+
+      $('#viewOnMapBtn6').click(viewOnMapCardronaHouse);
+
+    }
+
+    else if ((skifeildInput.value == '1') && (getGuestInput.value == 1) && (getNightInput.value >= 10)) {
+
+      // Change Image
+      accomImage.src = 'img/card-images/car-house-1.jpg';
+      accomImage2.src = 'img/card-images/car-house-2.jpg';
+      accomImage3.src = 'img/card-images/car-house-3.jpg';
+      accomImage4.src = 'img/card-images/car-house-4.jpg';
+      accomImage5.src = 'img/card-images/car-house-5.jpg';
+      accomImage6.src = 'img/card-images/car-house-6.jpg';
+
+      // Change Accomodation
+      accomName.textContent = 'Cardrona House';
+      accomName2.textContent = 'Cardrona House';
+      accomName3.textContent = 'Cardrona House';
+      accomName4.textContent = 'Cardrona House';
+      accomName5.textContent = 'Cardrona House';
+      accomName6.textContent = 'Cardrona House';
+
+      // Change Price Per Night
+      pricePerNight.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
+      // Change Max Nights
+      maxNight.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+      $('#viewOnMapBtn1').click(viewOnMapCardronaHouse);
+
+      $('#viewOnMapBtn2').click(viewOnMapCardronaHouse);
+
+      $('#viewOnMapBtn3').click(viewOnMapCardronaHouse);
+
+      $('#viewOnMapBtn4').click(viewOnMapCardronaHouse);
+
+      $('#viewOnMapBtn5').click(viewOnMapCardronaHouse);
+
+      $('#viewOnMapBtn6').click(viewOnMapCardronaHouse);
 
     }
 
@@ -1255,11 +1676,23 @@
       maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
 
+      $('#viewOnMapBtn1').click(viewOnMapCardronaMotel);
+
+      $('#viewOnMapBtn2').click(viewOnMapCardronaMotel);
+
+      $('#viewOnMapBtn3').click(viewOnMapCardronaHotel);
+
+      $('#viewOnMapBtn4').click(viewOnMapCardronaHotel);
+
+      $('#viewOnMapBtn5').click(viewOnMapCardronaHouse);
+
+      $('#viewOnMapBtn6').click(viewOnMapCardronaHouse);
+
     }
 
 
     // Motel & House
-    else if ((skifeildInput.value == '1') && ((getGuestInput.value >= 2) && (getGuestInput.value <= 4) && (getNightInput.value > 3)) ) {
+    else if ((skifeildInput.value == '1') && ((getGuestInput.value >= 2) || (getGuestInput.value <= 4)) && (getNightInput.value > 3) ) {
 
 			// Change Image
       accomImage.src = 'img/card-images/car-motel-1.jpg';
@@ -1317,10 +1750,22 @@
       maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
 
+      $('#viewOnMapBtn1').click(viewOnMapCardronaMotel);
+
+      $('#viewOnMapBtn2').click(viewOnMapCardronaMotel);
+
+      $('#viewOnMapBtn3').click(viewOnMapCardronaMotel);
+
+      $('#viewOnMapBtn4').click(viewOnMapCardronaHouse);
+
+      $('#viewOnMapBtn5').click(viewOnMapCardronaHouse);
+
+      $('#viewOnMapBtn6').click(viewOnMapCardronaHouse);
+
     }
 
     // Hotel Output
-    if ((skifeildInput.value == '1') && (getGuestInput.value == 2) && (getNightInput.value == 1)) {
+    else if ((skifeildInput.value == '1') && (getGuestInput.value == 2) && (getNightInput.value == 1)) {
 
 			// Change Image
       accomImage.src = 'img/card-images/car-hotel-1.jpg';
@@ -1378,6 +1823,18 @@
       maxGuest5.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
 
+      $('#viewOnMapBtn1').click(viewOnMapCardronaHotel);
+
+      $('#viewOnMapBtn2').click(viewOnMapCardronaHotel);
+
+      $('#viewOnMapBtn3').click(viewOnMapCardronaHotel);
+
+      $('#viewOnMapBtn4').click(viewOnMapCardronaHotel);
+
+      $('#viewOnMapBtn5').click(viewOnMapCardronaHotel);
+
+      $('#viewOnMapBtn6').click(viewOnMapCardronaHotel);
+
     }
 
 
@@ -1386,7 +1843,7 @@
 
     // Hostel & Hotel
 
-    if ((skifeildInput.value == '3') && (getGuestInput.value == 1) && (getNightInput.value <= 1)) {
+    else if ((skifeildInput.value == '3') && (getGuestInput.value == 1) && (getNightInput.value <= 1)) {
 
 			// Change Image
       accomImage.src = 'img/card-images/remark-hostel-1.jpg';
@@ -1452,6 +1909,18 @@
 			family.style.color='#FFFFFF';
 			family2.style.color='#FFFFFF';
 
+      $('#viewOnMapBtn1').click(viewOnMapRemarkHostel);
+
+      $('#viewOnMapBtn2').click(viewOnMapRemarkHostel);
+
+      $('#viewOnMapBtn3').click(viewOnMapRemarkHotel);
+
+      $('#viewOnMapBtn4').click(viewOnMapRemarkHotel);
+
+      $('#viewOnMapBtn5').click(viewOnMapRemarkHotel);
+
+      $('#viewOnMapBtn6').click(viewOnMapRemarkHotel);
+
     }
 
     // Hotel & House
@@ -1513,6 +1982,18 @@
       maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+      $('#viewOnMapBtn1').click(viewOnMapRemarkHotel);
+
+      $('#viewOnMapBtn2').click(viewOnMapRemarkHotel);
+
+      $('#viewOnMapBtn3').click(viewOnMapRemarkHotel);
+
+      $('#viewOnMapBtn4').click(viewOnMapRemarkHouse);
+
+      $('#viewOnMapBtn5').click(viewOnMapRemarkHouse);
+
+      $('#viewOnMapBtn6').click(viewOnMapRemarkHouse);
 
     }
 
@@ -1583,10 +2064,94 @@
 			family.style.color='#FFFFFF';
 			family2.style.color='#FFFFFF';
 
+      $('#viewOnMapBtn1').click(viewOnMapCardronaHostel);
+
+      $('#viewOnMapBtn2').click(viewOnMapCardronaHostel);
+
+      $('#viewOnMapBtn3').click(viewOnMapCardronaHotel);
+
+      $('#viewOnMapBtn4').click(viewOnMapCardronaHotel);
+
+      $('#viewOnMapBtn5').click(viewOnMapCardronaHouse);
+
+      $('#viewOnMapBtn6').click(viewOnMapCardronaHouse);
+
+    }
+
+    else if ((skifeildInput.value == '3') && ((getNightInput.value == 2) || (getNightInput.value > 10)) && ((getGuestInput.value == 3) || (getGuestInput.value == 4))) {
+
+      // Change Image
+      accomImage.src = 'img/card-images/remark-house-1.jpg';
+      accomImage2.src = 'img/card-images/remark-house-2.jpg';
+      accomImage3.src = 'img/card-images/remark-house-3.jpg';
+      accomImage4.src = 'img/card-images/remark-house-4.jpg';
+      accomImage5.src = 'img/card-images/remark-house-5.jpg';
+      accomImage6.src = 'img/card-images/remark-house-6.jpg';
+
+      // Change Accomodation
+      accomName.textContent = 'The Remarkables House';
+      accomName2.textContent = 'The Remarkables House';
+      accomName3.textContent = 'The Remarkables House';
+      accomName4.textContent = 'The Remarkables House';
+      accomName5.textContent = 'The Remarkables House';
+      accomName6.textContent = 'The Remarkables House';
+
+      // Change Price Per Night
+      pricePerNight.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight2.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight3.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight4.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+      pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Min Nights
+      minNight.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight2.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight3.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight4.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight5.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+      minNight6.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
+
+      // Change Max Nights
+      maxNight.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight2.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight3.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight4.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight5.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+      maxNight6.textContent = 'Max ' + hotelData.house.maxNight + ' Nights';
+
+      // Change Min Guests
+      minGuest.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest2.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest3.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest4.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest5.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+      minGuest6.textContent = 'Max ' + hotelData.house.minCapacity + ' Guests';
+
+      // Change Max Guests
+      maxGuest.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest2.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest3.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+      maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+      $('#viewOnMapBtn1').click(viewOnMapRemarkHouse);
+
+      $('#viewOnMapBtn2').click(viewOnMapRemarkHouse);
+
+      $('#viewOnMapBtn3').click(viewOnMapRemarkHouse);
+
+      $('#viewOnMapBtn4').click(viewOnMapRemarkHouse);
+
+      $('#viewOnMapBtn5').click(viewOnMapRemarkHouse);
+
+      $('#viewOnMapBtn6').click(viewOnMapRemarkHouse);
+
     }
 
     // House
-    else if ((skifeildInput.value == '3') && ((getGuestInput.value == 1) && (getNightInput.value >= 10)) || ( ((getNightInput.value == 2) && ((getGuestInput.value >= 3) || (getGuestInput.value <= 4)))))    {
+    else if ((skifeildInput.value == '3') && (getGuestInput.value == 1) && (getNightInput.value >= 10)) {
 
 			// Change Image
       accomImage.src = 'img/card-images/remark-house-1.jpg';
@@ -1643,6 +2208,18 @@
       maxGuest4.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
+
+      $('#viewOnMapBtn1').click(viewOnMapRemarkHouse);
+
+      $('#viewOnMapBtn2').click(viewOnMapRemarkHouse);
+
+      $('#viewOnMapBtn3').click(viewOnMapRemarkHouse);
+
+      $('#viewOnMapBtn4').click(viewOnMapRemarkHouse);
+
+      $('#viewOnMapBtn5').click(viewOnMapRemarkHouse);
+
+      $('#viewOnMapBtn6').click(viewOnMapRemarkHouse);
 
     }
 
@@ -1705,11 +2282,23 @@
       maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
 
+      $('#viewOnMapBtn1').click(viewOnMapRemarkMotel);
+
+      $('#viewOnMapBtn2').click(viewOnMapRemarkMotel);
+
+      $('#viewOnMapBtn3').click(viewOnMapRemarkHotel);
+
+      $('#viewOnMapBtn4').click(viewOnMapRemarkHotel);
+
+      $('#viewOnMapBtn5').click(viewOnMapRemarkHouse);
+
+      $('#viewOnMapBtn6').click(viewOnMapRemarkHouse);
+
     }
 
 
     // Motel & House
-    else if ((skifeildInput.value == '3') && ((getGuestInput.value >= 2) && (getGuestInput.value <= 4) && (getNightInput.value > 3)) ) {
+    else if ((skifeildInput.value == '3') && ((getGuestInput.value >= 2) || (getGuestInput.value <= 4)) && (getNightInput.value > 3)) {
 
 			// Change Image
       accomImage.src = 'img/card-images/remark-motel-1.jpg';
@@ -1767,10 +2356,22 @@
       maxGuest5.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.house.maxCapacity + ' Guests';
 
+      $('#viewOnMapBtn1').click(viewOnMapRemarkMotel);
+
+      $('#viewOnMapBtn2').click(viewOnMapRemarkMotel);
+
+      $('#viewOnMapBtn3').click(viewOnMapRemarkMotel);
+
+      $('#viewOnMapBtn4').click(viewOnMapRemarkHouse);
+
+      $('#viewOnMapBtn5').click(viewOnMapRemarkHouse);
+
+      $('#viewOnMapBtn6').click(viewOnMapRemarkHouse);
+
     }
 
     // Hotel Output
-    if ((skifeildInput.value == '3') && (getGuestInput.value == 2) && (getNightInput.value == 1)) {
+    else if ((skifeildInput.value == '3') && (getGuestInput.value == 2) && (getNightInput.value == 1)) {
 
 			// Change Image
       accomImage.src = 'img/card-images/remark-hotel-1.jpg';
@@ -1827,6 +2428,18 @@
       maxGuest4.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
       maxGuest5.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
       maxGuest6.textContent = 'Max ' + hotelData.hotel.maxCapacity + ' Guests';
+
+      $('#viewOnMapBtn1').click(viewOnMapRemarkHostel);
+
+      $('#viewOnMapBtn2').click(viewOnMapRemarkHostel);
+
+      $('#viewOnMapBtn3').click(viewOnMapRemarkHotel);
+
+      $('#viewOnMapBtn4').click(viewOnMapRemarkHotel);
+
+      $('#viewOnMapBtn5').click(viewOnMapRemarkHotel);
+
+      $('#viewOnMapBtn6').click(viewOnMapRemarkHotel);
 
     }
 

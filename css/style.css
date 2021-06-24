@@ -341,10 +341,9 @@ select,
 input[type="text"] {
   width: 100%;
   display: inline-block;
-  height: 30px;
   padding: 4px 6px;
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 1em;
   line-height: 20px;
   color: #555555;
   vertical-align: middle;
@@ -354,7 +353,6 @@ input[type="text"] {
 }
 
 input[type="text"] {
-  background-color: #ddd;
   border: 1px solid #ccc;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -365,14 +363,7 @@ input[type="text"] {
           transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 
-input[type="text"]:focus {
-  background-color: #fff;
-  border-color: #8D121A;
-  outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px #8D121A, 0 0 8px #ED303C;
-     -moz-box-shadow: inset 0 1px 1px #8D121A, 0 0 8px #ED303C;
-          box-shadow: inset 0 1px 1px #8D121A, 0 0 8px #ED303C;
-}
+
 
 label {
   display: block;
