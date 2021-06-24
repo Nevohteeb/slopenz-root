@@ -9,11 +9,15 @@ This project uses HTML, CSS and JS. It makes uses of multiple JS Plugins & Libra
 
 
 
+
+
 ## PROBLEM:
 
 Due to COVID-19 tourism to Queenstown and Wanka has significantly reduced, impacting local business operators majorly. Both of these regions rely heavily on tourism as their primary industries.  
 
 To try to minimize the ongoing impact Tourism NZ has decided to launch a campaign targeting the upcoming ski season as a way to attract more business for the region from both local and international tourists. 
+
+
 
 
 ## SOLUTION:
@@ -24,6 +28,8 @@ The accommodation finder will allow user to search for accommodation based on:
 Ski field selection - show results close by
 Number of Guests 
 Number of Nights
+
+
 
 
 
@@ -81,6 +87,8 @@ Used to install and run Gulp.
 
 
 
+
+
 ## PRODUCTION TOOLS USED:
 
 ### * Atom Editor
@@ -109,9 +117,14 @@ Used for batch image resizing and cropping for card images
 
 
 
+
+
 ## STYLE GUIDE
 
 All JS has been written to conform to the Idiomatic JS style guide.
+
+
+
 
 ### HTML & CSS CODE VALIDATED VIA W3 SHCOOLS VALIDATORS
 
