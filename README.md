@@ -1,4 +1,4 @@
-<img src="img/lospenzlogo.png" width="200">
+<img src="img/slopenzlogo.png" width="200">
 # SLOPE NZ 
 ### Accomodation Finder by Ciaran Slow
 
