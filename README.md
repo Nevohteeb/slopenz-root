@@ -29,41 +29,51 @@ Number of Nights
 
 ## Libraries & Plugins used within the project:
 
+
 ### JQuery
 
 Predominantly used for function calls and onclick events
+
 
 ### Bootstraps
 
 Used for form and card design
 
+
 ### Slick JS
 
 Used for output carousel
+
 
 ### Parsley JS
 
 Used for Input Validation
 
+
 ### Textillate JS
 
 Used to animate homescreen Title and subtitle
+
 
 ### Fullpage JS
 
 Used to enable Single Page Application sideways scroll
 
+
 ### Font Awesome v4.0 
 
 Used for all card icons - Free Wifi, Family Friendly and Disabled Access.
+
 
 ### Mapbox
 
 Used for interactive maps on both the output and skifield screens.
 
+
 ### Gulp
 
 Used for JS linting, Sass and live server.
+
 
 ### Node JS
 
