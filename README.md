@@ -1,3 +1,8 @@
+<p align="center">
+<img src="img/github/mockup.png" width="700">
+</p>
+<br>
+
 # SLOPE NZ
 ### Accomodation Finder by Ciaran Slow
 
@@ -8,8 +13,8 @@ The project is a Summative Web Dev project for Yoobee Colleges Wellington.
 This project uses HTML, CSS and JS. It makes uses of multiple JS Plugins & Libraries.
 
 
-
-
+<br>
+<br>
 
 ## PROBLEM:
 
@@ -17,7 +22,8 @@ Due to COVID-19 tourism to Queenstown and Wanaka has significantly reduced, impa
 
 To try to minimize the ongoing impact Tourism NZ has decided to launch a campaign targeting the upcoming ski season as a way to attract more business for the region from both local and international tourists.
 
-
+<br>
+<br>
 
 
 ## SOLUTION:
@@ -29,8 +35,8 @@ Ski field selection - show results close by
 Number of Guests
 Number of Nights
 
-
-
+<br>
+<br>
 
 
 ## LIBRARIES & PLUGINS:
@@ -46,7 +52,7 @@ $('#submitBtn').click(function() {
 };
 ```
 
-### * Bootstraps
+### * Bootstraps <https://getbootstrap.com/>
 
 Used for form and card design
 
@@ -84,7 +90,7 @@ Used for form and card design
 ```
 
 
-### * Slick JS
+### * Slick JS <https://kenwheeler.github.io/slick/>
 
 Used for output carousel
 
@@ -99,7 +105,7 @@ Used for output carousel
 ```
 
 
-### * Parsley JS
+### * Parsley JS <https://parsleyjs.org/>
 
 Used for Input Validation on search form
 
@@ -115,7 +121,7 @@ var form = $('#parent').parsley();
   ```
 
 
-### * Textillate JS
+### * Textillate JS <https://textillate.js.org/>
 
 Used to animate home-screen Title and subtitle
 
@@ -134,7 +140,7 @@ function doText () {
   ```
 
 
-### * Fullpage JS
+### * Fullpage JS <https://alvarotrigo.com/fullPage/>
 
 Used to enable Single Page Application sideways scroll
 
@@ -151,12 +157,12 @@ Used to enable Single Page Application sideways scroll
 ```
 
 
-### Font Awesome v4.0
+### Font Awesome v4.0 <https://fontawesome.com/v4.7/>
 
 Used for all card icons - Free Wifi, Family Friendly and Disabled Access.
 
 
-### * Mapbox
+### * Mapbox <https://www.mapbox.com/>
 
 Used for interactive maps on both the output and ski field screens. Here is a fly to example:
 
@@ -179,16 +185,22 @@ function viewOnMapRemarkHouse () {
   ```
 
 
-### * Gulp
+### * Gulp <https://gulpjs.com/>
 
 Used for JS linting, Sass and live server.
 
+<p align="center">
+<img src="img/github/gulpexample.png" width="700">
+</p>
 
-### * Node JS
+
+### * Node JS <https://nodejs.org/>
 
 Used to install and run Gulp.
 
+<br>
 
+<br>
 
 
 
@@ -214,23 +226,22 @@ Used to create Wireframes, Concepts and Hifi.
 
 Inspect and Console used for in browser design. Network used to manage load times
 
-### * BIRME - website
+### * BIRME - website <https://www.birme.net/>
 
 Used for batch image resizing and cropping for card images
 
-### * LucidChart - website
+### * LucidChart - website <https://www.lucidchart.com/>
 
-USed for creating user flow diagrams
+Used for creating user flow diagrams
 
+<br>
+<br>
 
-
-
-
-## STYLE GUIDE
+## JAVASCRIPT STYLE GUIDE - Idiomatic <https://github.com/rwaldron/idiomatic.js/>
 
 All JS has been written to conform to the Idiomatic JS style guide.
 
-
-
+<br>
+<br>
 
 ### HTML & CSS CODE VALIDATED VIA W3 SHCOOLS VALIDATORS
