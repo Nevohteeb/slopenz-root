@@ -68,7 +68,7 @@
       in: {
         effect: 'fadeInLeft',
         sync: true,
-        delay: 1750
+        delay: 7000
       }
     });
   }
