@@ -237,7 +237,7 @@ Used for creating user flow diagrams
 <br>
 <br>
 
-## JAVASCRIPT STYLE GUIDE - Idiomatic <https://github.com/rwaldron/idiomatic.js/>
+### JAVASCRIPT STYLE GUIDE - Idiomatic <https://github.com/rwaldron/idiomatic.js/>
 
 All JS has been written to conform to the Idiomatic JS style guide.
 
@@ -245,3 +245,28 @@ All JS has been written to conform to the Idiomatic JS style guide.
 <br>
 
 ### HTML & CSS CODE VALIDATED VIA W3 SHCOOLS VALIDATORS
+
+<br>
+
+### CSS
+https://jigsaw.w3.org/css-validator/validator.html.en
+<p align="center">
+<img src="img/github/csspass.png" width="700">
+</p>
+<br>
+
+### HTML
+<htps://validator.w3.org/>
+<p align="center">
+<img src="img/github/htmlvalid.png" width="700">
+</p>
+Errors in HTML are due to button being a descendat of an anchor tag. This is required in order to enable the entire button to be clicked and link to work.
+
+### JS
+JS linted via gulp. No errors in lint or console.
+<p align="center">
+<img src="img/github/lintexample.png" width="700">
+</p>
+<br>
+
+
