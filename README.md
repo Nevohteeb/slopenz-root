@@ -235,34 +235,135 @@ Used for batch image resizing and cropping for card images
 Used for creating user flow diagrams
 
 <br>
-<br>
-
-### JAVASCRIPT STYLE GUIDE - Idiomatic <https://github.com/rwaldron/idiomatic.js/>
-
-All JS has been written to conform to the Idiomatic JS style guide.
-
-<br>
-<br>
-
-### HTML & CSS CODE VALIDATED VIA W3 SHCOOLS VALIDATORS
 
 <br>
 
-### CSS
+## JAVASCRIPT STYLE GUIDE - Idiomatic <https://github.com/rwaldron/idiomatic.js/>
+
+All JS has been written to conform to the Idiomatic JS style guide. 
+
+Areas of the Idiomatic guide include:
+<br>
+
+### Use of Whitespace: 
+
+This is to increase readibility. This especially iomportant when declaring conditionals.
+
+Example of this in my code: (Note whitespace between the two plugin functions and comments)
+
+```javascript
+
+// --------------------- PLUGINS BEGIN --------------------
+
+// Fullpage Begins:
+
+  $('#fullpage').fullpage({
+    css3: true,
+    verticalCentered: true,
+    resize: true,
+    sectionSelector: '.section',
+    slideSelector: '.slide'
+  });
+
+  $.fn.fullpage.setAllowScrolling(false);
+
+  // Textillate Begins:
+  function doText () {
+    $('.tlt').textillate({
+      in: {
+        effect: 'fadeInLeft',
+        sync: true,
+        delay: 7000
+      }
+    });
+  }
+
+```
+
+### Consistency: 
+
+This is also to increase readibility. Choosing single or double quotes doesnt matter but you must stick to one.
+
+### Naming: 
+
+This is extremely important for consistency. Use thougful and kind names in camelCase which allow readers to know their meaning.
+
+An example in my cide:
+
+```javascript
+
+$('#submitBtn').click(function() {
+
+    // Input Variables
+    var skifeildInput = document.getElementById('skifieldInput');
+    var getNightInput = document.getElementById('nightInput');
+    var nightInput = parseInt(getNightInput.value);
+    var getGuestInput = document.getElementById('guestInput');
+    var guestInput = parseInt(getGuestInput.value);
+
+    // Get Card Elements:
+
+    // Images
+    var accomImage = document.getElementById('accomImage');
+    var accomImage2 = document.getElementById('accomImage2');
+    var accomImage3 = document.getElementById('accomImage3');
+    var accomImage4 = document.getElementById('accomImage4');
+    var accomImage5 = document.getElementById('accomImage5');
+    var accomImage6 = document.getElementById('accomImage6');
+
+```
+### Comments: 
+
+Must be single line above the code. No end of line comments. Multi line is good.
+
+Example of my implementation:
+
+```javascript
+// ---------------- CONDITIONALS -----------------
+    // ** Conditionals are organized into sections based on location **
+
+		// *** SKI FIELD INPUT VALUES:
+		// 1 = Cardrona
+		// 2 = Treble Cone
+		// 3 = The Remarkables
+
+    // ----Treble Cone:------
+
+    // Hostel & Hotel
+
+    if ((skifeildInput.value == '2') && (getGuestInput.value == 1) && (getNightInput.value <= 1)) {
+
+      // Change Image
+      accomImage.src = 'img/card-images/treb-hostel-1.jpg';
+      accomImage2.src = 'img/card-images/treb-hostel-2.jpg';
+      accomImage3.src = 'img/card-images/treb-hotel-1.jpg';
+      accomImage4.src = 'img/card-images/treb-hotel-2.jpg';
+      accomImage5.src = 'img/card-images/treb-hotel-3.jpg';
+      accomImage6.src = 'img/card-images/treb-hotel-4.jpg';
+  ```
+
+
+<br>
+<br>
+
+## VALIDATION - HTML/CSS AND JS
+
+
+### CSS:
 https://jigsaw.w3.org/css-validator/validator.html.en
 <p align="center">
 <img src="img/github/csspass.png" width="700">
 </p>
 <br>
 
-### HTML
+### HTML:
 <htps://validator.w3.org/>
 <p align="center">
 <img src="img/github/htmlvalid.png" width="700">
 </p>
 Errors in HTML are due to button being a descendat of an anchor tag. This is required in order to enable the entire button to be clicked and link to work.
 
-### JS
+### JS:
 JS linted via gulp. No errors in lint or console.
 <p align="center">
 <img src="img/github/lintexample.png" width="700">
