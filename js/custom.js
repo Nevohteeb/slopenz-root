@@ -4,7 +4,7 @@
   'use strict';
 
 	$(window).load(function() {
-		$(".loader-cont").delay(5000).fadeOut(250);
+		$(".loader-cont").delay(7000).fadeOut(250);
 	});
 
   // Bring back Map Buttons on Page Load:
