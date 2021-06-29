@@ -247,7 +247,7 @@ Areas of the Idiomatic guide include:
 
 ### Use of Whitespace: 
 
-This is to increase readibility. This especially iomportant when declaring conditionals.
+This is to increase readibility. This especially important when declaring conditionals.
 
 Example of this in my code: (Note whitespace between the two plugin functions and comments)
 
