@@ -567,6 +567,14 @@
     var pricePerNight5 = document.getElementById('pricePerNight5');
     var pricePerNight6 = document.getElementById('pricePerNight6');
 
+    // Price Totals
+    var priceTotal = document.getElementById('priceTotal');
+    var priceTotal2 = document.getElementById('priceTotal2');
+    var priceTotal3 = document.getElementById('priceTotal3');
+    var priceTotal4 = document.getElementById('priceTotal4');
+    var priceTotal5 = document.getElementById('priceTotal5');
+    var priceTotal6 = document.getElementById('priceTotal6');
+
     // Min Night
     var minNight = document.getElementById('minNight');
     var minNight2 = document.getElementById('minNight2');
@@ -645,6 +653,15 @@
       pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight5.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hostel.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hostel.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+
 
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
@@ -729,6 +746,14 @@
     pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
     pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
 
+    // Change Price Totals
+    priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+    priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+    priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+    priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+    priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+    priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+
     // Change Min Nights
     minNight.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
     minNight2.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
@@ -803,6 +828,14 @@
       pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hostel.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hostel.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
 
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
@@ -887,6 +920,14 @@
       pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
 
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
       minNight2.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
@@ -961,6 +1002,14 @@
       pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
 
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
       minNight2.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
@@ -1034,6 +1083,14 @@
       pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.motel.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.motel.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
 
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
@@ -1110,6 +1167,14 @@
       pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
 
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.motel.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.motel.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.motel.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
       minNight2.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
@@ -1183,6 +1248,14 @@
       pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight5.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
 
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
@@ -1262,6 +1335,14 @@
       pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight5.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hostel.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hostel.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
 
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
@@ -1345,6 +1426,14 @@
       pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
 
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
       minNight2.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
@@ -1417,6 +1506,14 @@
       pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hostel.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hostel.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
 
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
@@ -1499,6 +1596,14 @@
       pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
 
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
       minNight2.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
@@ -1570,6 +1675,14 @@
       pricePerNight4.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
 
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
@@ -1643,6 +1756,14 @@
       pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.motel.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.motel.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
 
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
@@ -1718,6 +1839,14 @@
       pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
 
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.motel.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.motel.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.motel.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
       minNight2.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
@@ -1790,6 +1919,14 @@
       pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight5.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
 
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
@@ -1868,6 +2005,14 @@
       pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight5.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hostel.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hostel.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
 
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
@@ -1951,6 +2096,14 @@
       pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
 
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
       minNight2.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
@@ -2023,6 +2176,14 @@
       pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hostel.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hostel.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
 
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.hostel.minNight + ' Nights';
@@ -2104,6 +2265,14 @@
       pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
 
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
       minNight2.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
@@ -2177,6 +2346,14 @@
       pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
 
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
       minNight2.textContent = 'Min ' + hotelData.house.minNight + ' Nights';
@@ -2249,6 +2426,14 @@
       pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
+
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.motel.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.motel.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
 
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
@@ -2324,6 +2509,14 @@
       pricePerNight5.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.house.pricePerNight + ' per Night';
 
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.motel.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.motel.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.motel.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.house.pricePerNight);
+
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
       minNight2.textContent = 'Min ' + hotelData.motel.minNight + ' Nights';
@@ -2396,6 +2589,14 @@
       pricePerNight4.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight5.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
       pricePerNight6.textContent = '$' + hotelData.hotel.pricePerNight + ' per Night';
+
+      // Change Price Totals
+      priceTotal.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal2.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal3.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal4.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal5.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
+      priceTotal6.textContent = 'Total for ' + nightInput + ' nights = $' + (nightInput * hotelData.hotel.pricePerNight);
 
       // Change Min Nights
       minNight.textContent = 'Min ' + hotelData.hotel.minNight + ' Nights';
